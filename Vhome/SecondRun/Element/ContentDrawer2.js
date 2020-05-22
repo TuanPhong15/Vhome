@@ -3,7 +3,7 @@ import { Text, View, SafeAreaView, TouchableOpacity, Dimensions, ScrollView, Ima
 import Modal from "react-native-modal";
 const screenWidth = Dimensions.get('window').width;
 const screenHeight = Dimensions.get('window').height;
-export default function HeaderDraw2 () { 
+export default function ContentDrawer2({ navigation }) { 
 
     const [unhideModalSV, hideModalSV] = useState(false)
     const [unhideModalSV1, hideModalSV1] = useState(false)

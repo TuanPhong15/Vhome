@@ -43,9 +43,7 @@ function ServiceDraw() {
 
     )
 }
-
 function ServiceDraw2() {
-
     return (
         <Slack.Navigator
             drawerStyle={{

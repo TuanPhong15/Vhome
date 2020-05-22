@@ -1,11 +1,19 @@
 import React, { useState } from 'react';
 import { Text, View, SafeAreaView, TouchableOpacity, Dimensions, ScrollView, Image, TextInput, StyleSheet } from "react-native";
 import Modal from "react-native-modal";
+import { NavigationContainer, useNavigation, useScrollToTop, StackActions } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
+import {
+    createDrawerNavigator,
+    DrawerContentScrollView,
+    DrawerItemList,
+    DrawerItem
+} from '@react-navigation/drawer';
 const screenWidth = Dimensions.get('window').width;
 const screenHeight = Dimensions.get('window').height;
 
 
-export default function ContentDrawer() {
+export default function ContentDrawer({navigation}) {
     const [unhideModal, hideModal] = useState(false)
     const [unhideModal1, hideModal1] = useState(false)
     const [unhideModal2, hideModal2] = useState(false)
