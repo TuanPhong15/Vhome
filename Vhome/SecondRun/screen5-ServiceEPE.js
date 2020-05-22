@@ -19,7 +19,7 @@ class FlatlistItem extends Component {
     render() {
         return (
             <View style={{ flex: 1, flexDirection: 'column', justifyContent: 'center', marginTop: 10, marginBottom: 10 }}>
-                <View style={{ backgroundColor: "orange", width: screenWidth * 11 / 12, height: 45, justifyContent:'center',alignSelf:'center' }}>
+                <View style={{ backgroundColor: '#F59031', width: screenWidth * 11 / 12, height: 45, justifyContent:'center',alignSelf:'center' }}>
                     <Text style={{ color: 'white', fontSize: 20, marginLeft: 10 }}>{this.props.item.title}</Text>
                 </View>
                 <View style={{ flexDirection: 'column' }}>

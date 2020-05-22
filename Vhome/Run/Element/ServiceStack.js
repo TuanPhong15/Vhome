@@ -25,26 +25,26 @@ export default function ServiceStack2() {
             <Stack.Screen name='Home function' component={Services}
                 options={{
                     headerStyle: {
-                        backgroundColor: 'orange'
+                        backgroundColor: '#F59031'
                     }, headerTitle: props => <TextTitle {...props} />,
                     headerLeft: props => <OpenDrawer {...props} />
                 }} />
             <Stack.Screen name='Thông báo' component={Notification}
                 options={{
                     headerStyle: {
-                        backgroundColor: 'orange'
+                        backgroundColor: '#F59031'
                     }, headerBackTitleVisible: false, headerTintColor: 'white'
                 }} />
             <Stack.Screen name='Lịch sử' component={History}
                 options={{
                     headerStyle: {
-                        backgroundColor: 'orange'
+                        backgroundColor: '#F59031'
                     }, headerBackTitleVisible: false, headerTintColor: 'white'
                 }} />
             <Stack.Screen name='Điểm thưởng' component={Reward}
                 options={{
                     headerStyle: {
-                        backgroundColor: 'orange'
+                        backgroundColor: '#F59031'
                     }, headerBackTitleVisible: false, headerTintColor: 'white'
                 }} />
 

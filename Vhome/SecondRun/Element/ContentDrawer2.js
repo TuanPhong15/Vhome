@@ -3,7 +3,7 @@ import { Text, View, SafeAreaView, TouchableOpacity, Dimensions, ScrollView, Ima
 import Modal from "react-native-modal";
 const screenWidth = Dimensions.get('window').width;
 const screenHeight = Dimensions.get('window').height;
-export default function ContentDrawer2({ navigation }) { 
+export default function ContentDrawer2 ({navigation}) { 
 
     const [unhideModalSV, hideModalSV] = useState(false)
     const [unhideModalSV1, hideModalSV1] = useState(false)
@@ -39,7 +39,7 @@ export default function ContentDrawer2({ navigation }) {
                         fontSize: 20, right: screenWidth / 7
 
                     }}>Tiếp tục </Text></TouchableOpacity  >
-                <TouchableOpacity onPress={() => hideModalSV(!unhideModalSV)}><Text style={{ fontSize: 20, left: screenWidth / 10, color: 'orange' }}>Huỷ</Text></TouchableOpacity>
+                <TouchableOpacity onPress={() => hideModalSV(!unhideModalSV)}><Text style={{ fontSize: 20, left: screenWidth / 10, color: '#F59031' }}>Huỷ</Text></TouchableOpacity>
             </View>
         </Modal>
         <Modal
@@ -54,7 +54,7 @@ export default function ContentDrawer2({ navigation }) {
             <SafeAreaView style={{ flex: 1 }}>
                 <View style={{ flexDirection: 'column', borderRadius: 15, alignItems: 'center', width: screenWidth - 25, alignSelf: 'center', backgroundColor: 'white' }}>
                     <View style={{ flexDirection: 'row' }}>
-                        <Text style={{ fontSize: 26, color: 'orange', top: 5 }}>Giới thiệu về V-Home</Text>
+                        <Text style={{ fontSize: 26, color: '#F59031', top: 5 }}>Giới thiệu về V-Home</Text>
 
                         <TouchableOpacity onPress={() => hideModalSV1(!unhideModalSV1)} >
                             <Image style={{ left: screenWidth / 13, height: 32 * 80 / 100, width: 32 * 80 / 100, top: 6 }}
@@ -106,7 +106,7 @@ export default function ContentDrawer2({ navigation }) {
             </View>
         </Modal>
 
-        <View style={{ backgroundColor: "orange", height: screenHeight / 3.4 }}>
+        <View style={{ backgroundColor: '#F59031', height: screenHeight / 3.4 }}>
             <SafeAreaView style={{ alignItems: 'center', height: 130 }}>
                 <Image source={require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/ava_provider.png')}
                     style={{ resizeMode: 'contain', height: '105%' }}></Image>
@@ -114,7 +114,7 @@ export default function ContentDrawer2({ navigation }) {
             <View style={{ justifyContent: 'center', alignSelf: 'center' }}><Text style={{ fontSize: 20, color: 'white' }}>Nguyễn Tuấn Anh</Text></View>
             <View style={{ height: 45, alignItems: 'center' }}><Image style={{ resizeMode: 'contain', height: '90%', position: 'absolute' }}
                 source={require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/introductory_code.png')}></Image>
-                <Text style={{ fontSize: 18, color: 'orange', top: 10, left: 10 }}>0</Text>
+                <Text style={{ fontSize: 18, color: '#F59031', top: 10, left: 10 }}>0</Text>
             </View>
         </View>
         <ScrollView scrollToOverflowEnabled='false' >

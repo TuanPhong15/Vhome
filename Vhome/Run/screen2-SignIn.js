@@ -117,10 +117,10 @@ export default function SignIn({ navigation }) {
                 </View>
 <View style={{position:'relative',alignItems:'center'}}>
     <View style={{ left:85 }}><TouchableOpacity onPress={() => navigation.navigate("Đăng ký")} >
-                <Text style={{  fontSize: 16,color:'#F17730' }} >Đăng kí ngay</Text></TouchableOpacity></View>
+                <Text style={{  fontSize: 16,color:'#F59031' }} >Đăng kí ngay</Text></TouchableOpacity></View>
             <Text style={{marginTop:-20,right:50, color: 'grey', fontSize: 16 }}>Bạn chưa có tài khoản?</Text>
-            <TouchableOpacity onPress={() => navigation.navigate("Lấy lại mật khẩu")}><Text style={{top:20,  color: '#F17730', fontSize: 16,textDecorationLine:'underline' }}>Quên mật khẩu</Text></TouchableOpacity>
-            <Text style={{ top: 150, color: '#F17730', fontSize: 14 }}>19008644</Text>    
+            <TouchableOpacity onPress={() => navigation.navigate("Lấy lại mật khẩu")}><Text style={{top:20,  color: '#F59031', fontSize: 16,textDecorationLine:'underline' }}>Quên mật khẩu</Text></TouchableOpacity>
+            <Text style={{ top: 150, color: '#F59031', fontSize: 14 }}>19008644</Text>    
         </View>
       </View>
     );

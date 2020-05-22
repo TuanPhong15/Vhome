@@ -35,13 +35,13 @@ const styles = StyleSheet.create({
         alignItems: 'center', width: screenWidth, backgroundColor: 'white', justifyContent: 'center'
     },
     containerI: { marginBottom: 10, resizeMode: 'contain', height: '90%' },
-    containerII: { backgroundColor: "#F17730", height: 1, width: screenWidth * 3 / 3.5 },
-    containerIII: { backgroundColor: "#F17730", width: 1, height: screenWidth * 1 / 6 },
+    containerII: { backgroundColor:'#F59031', height: 1, width: screenWidth * 3 / 3.5 },
+    containerIII: { backgroundColor:'#F59031', width: 1, height: screenWidth * 1 / 6 },
     containerIV: { width: 182.5, height: 53.75 },
-    containerV: { backgroundColor: "#F17730", width: 1, height: screenWidth * 1 / 6 },
+    containerV: { backgroundColor:'#F59031', width: 1, height: screenWidth * 1 / 6 },
     containerVI: { width: 182.5, height: 53.75, marginTop: -1 },
     footer: {
         top: screenHeight / 6
-        , color: '#F17730', fontSize: 15
+        , color: '#F59031', fontSize: 15
     }
 });

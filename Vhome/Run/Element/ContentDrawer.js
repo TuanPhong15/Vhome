@@ -80,7 +80,7 @@ export default function ContentDrawer({navigation}) {
                     </View>
                 </SafeAreaView>
             </Modal>
-            <View style={{ backgroundColor: "orange", height: screenHeight / 3.4 }}>
+            <View style={{ backgroundColor: '#F59031', height: screenHeight / 3.4 }}>
                 <SafeAreaView style={{ alignItems: 'center', height: 130 }}>
                     <Image source={require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/ava_user.png')}
                         style={{ resizeMode: 'contain', height: '105%' }}></Image>

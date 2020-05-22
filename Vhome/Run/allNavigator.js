@@ -29,7 +29,6 @@ const screenHeight = Dimensions.get('window').height;
 const Stack = createStackNavigator();
 const Slack = createDrawerNavigator();
 function ServiceDraw() {
-
     return (
         <Slack.Navigator
             drawerStyle={{
@@ -75,7 +74,7 @@ export default function App() {
                     component={SignIn}
                     options={{
                         headerStyle: {
-                            backgroundColor: 'orange',
+                            backgroundColor: '#F59031',
                         },
                         headerTintColor: 'white', headerBackTitleVisible: false
 
@@ -85,7 +84,7 @@ export default function App() {
                     component={SignIn2}
                     options={{
                         headerStyle: {
-                            backgroundColor: 'orange',
+                            backgroundColor: '#F59031',
                         },
                         headerTintColor: 'white', headerBackTitleVisible: false, title: 'Đăng nhập'
                     }}
@@ -94,7 +93,7 @@ export default function App() {
                     component={SignUp}
                     options={{
                         headerStyle: {
-                            backgroundColor: 'orange',
+                            backgroundColor: '#F59031',
                         },
                         headerTintColor: 'white', headerBackTitleVisible: false
                     }} />
@@ -102,21 +101,21 @@ export default function App() {
                     component={SignUp2}
                     options={{
                         headerStyle: {
-                            backgroundColor: 'orange',
+                            backgroundColor: '#F59031',
                         },
                         headerTintColor: 'white', headerBackTitleVisible: false, title: 'Đăng ký'
                     }} />
                 <Stack.Screen name="Lấy lại mật khẩu" component={Pass}
                     options={{
                         headerStyle: {
-                            backgroundColor: 'orange'
+                            backgroundColor: '#F59031'
                         }, headerTintColor: 'white', headerBackTitleVisible: false
                     }} />
                 <Stack.Screen name='forgetPass2'
                     component={Pass2}
                     options={{
                         headerStyle: {
-                            backgroundColor: 'orange',
+                            backgroundColor: '#F59031',
                         },
                         headerTintColor: 'white', headerBackTitleVisible: false, title: 'Lấy lại mật khẩu'
                     }} />
@@ -138,22 +137,22 @@ export default function App() {
                 />
                 <Stack.Screen name="HealthCare" component={HealthCare} options={{
                     headerStyle: {
-                        backgroundColor: 'orange'
+                        backgroundColor: '#F59031'
                     }, headerBackTitleVisible: false, headerTintColor: 'white', headerTitle: "Chăm sóc sức khoẻ"
                 }} />
                 <Stack.Screen name="Environment" component={Environment} options={{
                     headerStyle: {
-                        backgroundColor: 'orange'
+                        backgroundColor: '#F59031'
                     }, headerBackTitleVisible: false, headerTintColor: 'white'
                 }} />
                 <Stack.Screen name="Electric" component={Electric} options={{
                     headerStyle: {
-                        backgroundColor: 'orange'
+                        backgroundColor: '#F59031'
                     }, headerBackTitleVisible: false, headerTintColor: 'white'
                 }} />
                 <Stack.Screen name="fixHome" component={fixHome} options={{
                     headerStyle: {
-                        backgroundColor: 'orange'
+                        backgroundColor: '#F59031'
                     }, headerBackTitleVisible: false, headerTintColor: 'white'
                 }} />
             </Stack.Navigator>
