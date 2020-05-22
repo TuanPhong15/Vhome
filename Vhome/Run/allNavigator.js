@@ -16,61 +16,20 @@ import SignUp from './screen3-SignUp'
 import SignUp2 from '../SecondRun/screen3-SignUpEPE'
 import Pass from './screen4-forgetPass'
 import Pass2 from '../SecondRun/screen4-forgetPassEPE'
-import Services from './screen5-Service'
-import Services2 from '../SecondRun/screen5-ServiceEPE'
-import Notification from './screen6-Notification'
-import Notification2 from '../SecondRun/screen6-NotificationEPE'
-import History from './screen7-History'
-import History2 from '../SecondRun/screen7-HistoryEPE'
-import Reward from './screen8-Reward'
-import Reward2 from '../SecondRun/screen8-RewardEPE'
 import HealthCare from './screen9-HealthCare'
-import HealthCare2 from '../SecondRun/screen9-HealthCareEPE'
 import Environment from './screen10-Environment'
 import Electric from './screen11-Electric'
 import fixHome from './screen12-fixHome'
-import TextTitle from './Element/TextTitle'
-import HeaderDraw2 from './Element/HeaderDraw2'
-import ServiceStack2 from '../SecondRun/ServiceStack2'
+import ContentDrawer2 from '../SecondRun/Element/ContentDrawer2'
+import ServiceStack2 from '../SecondRun/Element/ServiceStack2'
+import ServiceStack from './Element/ServiceStack'
 const screenWidth = Dimensions.get('window').width;
 const screenHeight = Dimensions.get('window').height;
 const Stack = createStackNavigator();
 const Slack = createDrawerNavigator();
 
 
-function ServiceStack() {
-    return (
-        <Stack.Navigator>
-            <Stack.Screen name='Home function' component={Services}
-                options={{
-                    headerStyle: {
-                        backgroundColor: 'orange'
-                    }, headerTitle: props => <TextTitle {...props} />,
-                    headerLeft: props => <DrawDraw {...props} />
-                }} />
-            <Stack.Screen name='Thông báo' component={Notification}
-                options={{
-                    headerStyle: {
-                        backgroundColor: 'orange'
-                    }, headerBackTitleVisible: false, headerTintColor: 'white'
-                }} />
-            <Stack.Screen name='Lịch sử' component={History}
-                options={{
-                    headerStyle: {
-                        backgroundColor: 'orange'
-                    }, headerBackTitleVisible: false, headerTintColor: 'white'
-                }} />
-            <Stack.Screen name='Điểm thưởng' component={Reward}
-                options={{
-                    headerStyle: {
-                        backgroundColor: 'orange'
-                    }, headerBackTitleVisible: false, headerTintColor: 'white'
-                }} />
 
-        </Stack.Navigator>
-
-    )
-}
 
 function ServiceDraw() {
 
@@ -79,7 +38,7 @@ function ServiceDraw() {
             drawerStyle={{
                 backgroundColor: 'white', width: 11 * screenWidth / 12
             }}
-            drawerContent={props => <HeaderDraw {...props} />}>
+            drawerContent={props => <ContentDrawer {...props} />}>
             <Slack.Screen name="allServices"
                 component={ServiceStack}></Slack.Screen>
 
@@ -87,7 +46,7 @@ function ServiceDraw() {
 
     )
 }
-function HeaderDraw({ navigation }) {
+function ContentDrawer({ navigation }) {
     const [unhideModal, hideModal] = useState(false)
     const [unhideModal1, hideModal1] = useState(false)
     const [unhideModal2, hideModal2] = useState(false)
@@ -357,7 +316,7 @@ function ServiceDraw2() {
             drawerStyle={{
                 backgroundColor: 'white', width: 11 * screenWidth / 12
             }}
-            drawerContent={props => <HeaderDraw2 {...props} />}>
+            drawerContent={props => <ContentDrawer2 {...props} />}>
             <Slack.Screen name="allServices"
                 component={ServiceStack2}></Slack.Screen>
 
@@ -365,25 +324,7 @@ function ServiceDraw2() {
 
     )
 }
-function DrawDraw() {
-    const { openDrawer } = useNavigation()
-    return (
-        <View style={{
-            height: 90,
-            flexDirection: 'row',
-            justifyContent: 'flex-start',
-            alignItems: 'center'
-        }}>
-            <TouchableOpacity style={{ marginLeft: 5, marginTop: -5 }}
-                onPress={openDrawer}>
-                <Image
-                    style={{ width: 35, height: 35, tintColor: 'white' }}
-                    source={require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/menu2.png')}
-                />
-            </TouchableOpacity>
-        </View>)
 
-}
 
 export default function App() {
 
