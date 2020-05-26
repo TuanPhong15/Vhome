@@ -1,11 +1,14 @@
-import React, { Component, useState } from 'react';
-import { AppRegistry, View, Image, TouchableOpacity, Text, TextInput, StyleSheet, Button,Dimensions } from 'react-native';
-const screenWidth = Dimensions.get('window').width;
-const screenHeight = Dimensions.get('window').height;
+import React from 'react';
+import {View, Text, StyleSheet} from 'react-native';
 
-export default function Notification ({}){ 
-    return( 
-        <View style={{flex:1,flexDirection:'column',alignItems:'center'}}><Text style={{marginTop:10}}>
-            Không có dữ liệu</Text></View>
-    )
+export default function Notification({}) {
+  return (
+    <View style={styles.Container1}>
+      <Text style={styles.Container2}>Không có dữ liệu</Text>
+    </View>
+  );
 }
+const styles = StyleSheet.create({
+  Container1: {flex: 1, flexDirection: 'column', alignItems: 'center'},
+  Container2: {marginTop: 10},
+});
