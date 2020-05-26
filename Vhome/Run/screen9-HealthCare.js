@@ -90,7 +90,7 @@ export default function HealthCare({ navigation }) {
                                     <View style={{
                                         justifyContent: 'center', alignItems: 'center',
                                         width: (screenWidth / 1.1 - screenWidth / 8.8) / 3,
-                                        height: 50, backgroundColor: 'orange'
+                                        height: 50, backgroundColor:'#F59031'
                                     }}>
                                         <Text style={{ color: 'white', fontSize: 19 }}>Bước 2</Text>
 
@@ -99,11 +99,11 @@ export default function HealthCare({ navigation }) {
                                     <View style={{
                                         justifyContent: 'center', alignItems: 'center',
                                         width: (screenWidth / 1.1 - screenWidth / 8.8) / 3, height: 50,
-                                        backgroundColor: 'orange'
+                                        backgroundColor:'#F59031'
                                     }}>
                                         <Text style={{ color: "white", fontSize: 19 }}>Bước 3</Text>
                                     </View></TouchableOpacity>
-                                <View style={{ borderTopRightRadius: 15, width: screenWidth / 8.8, height: 50, backgroundColor: 'orange', justifyContent: 'center', alignItems: 'center' }}>
+                                <View style={{ borderTopRightRadius: 15, width: screenWidth / 8.8, height: 50, backgroundColor:'#F59031', justifyContent: 'center', alignItems: 'center' }}>
                                     <TouchableOpacity onPress={() => hideModal(!modal)} >
                                         <Image style={{ width: 32 * 80 / 100, height: 32 * 80 / 100 }}
                                             source={require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/close2.png')}></Image>
@@ -231,7 +231,7 @@ export default function HealthCare({ navigation }) {
                             </View>
 
                         </View>
-                        <View style={{ alignItems: 'center', justifyContent: 'center', top: -40, backgroundColor: 'orange', height: 50, borderBottomLeftRadius: 15, borderBottomRightRadius: 15 }}>
+                        <View style={{ alignItems: 'center', justifyContent: 'center', top: -40, backgroundColor:'#F59031', height: 50, borderBottomLeftRadius: 15, borderBottomRightRadius: 15 }}>
                             <TouchableOpacity onPress={() => setScreenOne(!screenOne)}><Text style={{ fontSize: 20, color: 'white', fontWeight: '600' }}>Tiếp theo</Text>
                             </TouchableOpacity>
                         </View>
@@ -253,7 +253,7 @@ export default function HealthCare({ navigation }) {
                                                     justifyContent: 'center', alignItems: 'center',
                                                     borderTopLeftRadius: 15,
                                                     width: (screenWidth / 1.1 - screenWidth / 8.8) / 3,
-                                                    height: 50, backgroundColor: 'orange'
+                                                    height: 50, backgroundColor:'#F59031'
                                                 }}>
                                                     <Text style={{ color: "white", fontSize: 19 }}>Bước 1</Text>
                                                 </View></TouchableOpacity>
@@ -271,11 +271,11 @@ export default function HealthCare({ navigation }) {
                                                 <View style={{
                                                     justifyContent: 'center', alignItems: 'center',
                                                     width: (screenWidth / 1.1 - screenWidth / 8.8) / 3, height: 50,
-                                                    backgroundColor: 'orange'
+                                                    backgroundColor:'#F59031'
                                                 }}>
                                                     <Text style={{ color: "white", fontSize: 19 }}>Bước 3</Text>
                                                 </View></TouchableOpacity>
-                                            <View style={{ borderTopRightRadius: 15, width: screenWidth / 8.8, height: 50, backgroundColor: 'orange', justifyContent: 'center', alignItems: 'center' }}>
+                                            <View style={{ borderTopRightRadius: 15, width: screenWidth / 8.8, height: 50, backgroundColor:'#F59031', justifyContent: 'center', alignItems: 'center' }}>
                                                 <TouchableOpacity onPress={() => hideModal(!modal)} >
                                                     <Image style={{ width: 32 * 80 / 100, height: 32 * 80 / 100 }}
                                                         source={require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/close2.png')}></Image>
@@ -321,7 +321,7 @@ export default function HealthCare({ navigation }) {
 
                                     </View>
 
-                                    <View style={{ alignItems: 'center', justifyContent: 'center', top: -40, backgroundColor: 'orange', height: 50, borderBottomLeftRadius: 15, borderBottomRightRadius: 15 }}>
+                                    <View style={{ alignItems: 'center', justifyContent: 'center', top: -40, backgroundColor:'#F59031', height: 50, borderBottomLeftRadius: 15, borderBottomRightRadius: 15 }}>
                                         <TouchableOpacity onPress={() => setScreenTwo(!screenTwo)}><Text style={{ fontSize: 20, color: 'white', fontWeight: '600' }}>Tiếp theo</Text>
                                         </TouchableOpacity>
                                     </View>
@@ -338,7 +338,7 @@ export default function HealthCare({ navigation }) {
                                                     justifyContent: 'center', alignItems: 'center',
                                                     borderTopLeftRadius: 15,
                                                     width: (screenWidth / 1.1 - screenWidth / 8.8) / 3,
-                                                    height: 50, backgroundColor: 'orange'
+                                                    height: 50, backgroundColor:'#F59031'
                                                 }}>
                                                     <Text style={{ color: "white", fontSize: 19 }}>Bước 1</Text>
                                                 </View></TouchableOpacity>
@@ -347,7 +347,7 @@ export default function HealthCare({ navigation }) {
                                                 <View style={{
                                                     justifyContent: 'center', alignItems: 'center',
                                                     width: (screenWidth / 1.1 - screenWidth / 8.8) / 3,
-                                                    height: 50, backgroundColor: 'orange'
+                                                    height: 50, backgroundColor:'#F59031'
                                                 }}>
                                                     <Text style={{ color: 'white', fontSize: 19 }}>Bước 2</Text>
 
@@ -360,7 +360,7 @@ export default function HealthCare({ navigation }) {
                                                 }}>
                                                     <Text style={{ color: "orange", fontSize: 19 }}>Bước 3</Text>
                                                 </View></TouchableOpacity>
-                                            <View style={{ borderTopRightRadius: 15, width: screenWidth / 8.8, height: 50, backgroundColor: 'orange', justifyContent: 'center', alignItems: 'center' }}>
+                                            <View style={{ borderTopRightRadius: 15, width: screenWidth / 8.8, height: 50, backgroundColor:'#F59031', justifyContent: 'center', alignItems: 'center' }}>
                                                 <TouchableOpacity onPress={() => hideModal(!modal)} >
                                                     <Image style={{ width: 32 * 80 / 100, height: 32 * 80 / 100 }}
                                                         source={require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/close2.png')}></Image>
@@ -475,7 +475,7 @@ export default function HealthCare({ navigation }) {
                                         </View>
                                     </View>
 
-                                    <View style={{ alignItems: 'center', justifyContent: 'center', top: -40, backgroundColor: 'orange', height: 50, borderBottomLeftRadius: 15, borderBottomRightRadius: 15 }}>
+                                    <View style={{ alignItems: 'center', justifyContent: 'center', top: -40, backgroundColor:'#F59031', height: 50, borderBottomLeftRadius: 15, borderBottomRightRadius: 15 }}>
                                         <TouchableOpacity onPress={() => hideModal(!modal)}><Text style={{ fontSize: 20, color: 'white', fontWeight: '600' }}>End</Text>
                                         </TouchableOpacity>
                                     </View>

@@ -45,7 +45,7 @@ export default function ContentDrawer({navigation}) {
                             fontSize: 20, right: screenWidth / 7
 
                         }}>Tiếp tục </Text></TouchableOpacity  >
-                    <TouchableOpacity onPress={() => hideModal(!unhideModal)}><Text style={{ fontSize: 20, left: screenWidth / 10, color: 'orange' }}>Huỷ</Text></TouchableOpacity>
+                    <TouchableOpacity onPress={() => hideModal(!unhideModal)}><Text style={{ fontSize: 20, left: screenWidth / 10,color:'#F59031' }}>Huỷ</Text></TouchableOpacity>
                 </View>
             </Modal>
             <Modal
@@ -60,7 +60,7 @@ export default function ContentDrawer({navigation}) {
                 <SafeAreaView style={{ flex: 1 }}>
                     <View style={{ flexDirection: 'column', borderRadius: 15, alignItems: 'center', width: screenWidth - 25, alignSelf: 'center', backgroundColor: 'white' }}>
                         <View style={{ flexDirection: 'row' }}>
-                            <Text style={{ fontSize: 26, color: 'orange', top: 5 }}>Giới thiệu về V-Home</Text>
+                            <Text style={{ fontSize: 26,color:'#F59031', top: 5 }}>Giới thiệu về V-Home</Text>
 
                             <TouchableOpacity onPress={() => hideModal1(!unhideModal1)} >
                                 <Image style={{ left: screenWidth / 13, height: 32 * 80 / 100, width: 32 * 80 / 100, top: 6 }}
@@ -88,7 +88,7 @@ export default function ContentDrawer({navigation}) {
                 <View style={{ justifyContent: 'center', alignSelf: 'center' }}><Text style={{ fontSize: 20, color: 'white' }}>Lưu Hà</Text></View>
                 <View style={{ height: 45, alignItems: 'center' }}><Image style={{ resizeMode: 'contain', height: '90%', position: 'absolute' }}
                     source={require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/introductory_code.png')}></Image>
-                    <Text style={{ fontSize: 18, color: 'orange', top: 10, left: 10 }}>123456</Text>
+                    <Text style={{ fontSize: 18,color:'#F59031', top: 10, left: 10 }}>123456</Text>
                 </View>
             </View>
             <ScrollView>

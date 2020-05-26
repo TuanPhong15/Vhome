@@ -30,7 +30,7 @@ function HeaderDraw(){
                 <View style={{ height: 45,alignItems:'center'}}><Image style={{resizeMode:'contain',height:'90%',position:'absolute'}}
                 source={require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/introductory_code.png')}></Image>
                 
-                    <Text style={{fontSize:18,color:'orange',top:10,left:10}}>123456</Text>
+                    <Text style={{fontSize:18,color:'#F59031',top:10,left:10}}>123456</Text>
                 </View>
 
                
