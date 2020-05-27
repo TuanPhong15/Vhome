@@ -1,33 +1,49 @@
-import React, { Component, useState } from 'react';
-import { Button, AppRegistry,TouchableHighlight, Dimensions, View, Image, TouchableOpacity, Text, TextInput, StyleSheet } from 'react-native';
-import { NavigationContainer,DrawerActions } from "@react-navigation/native";
-import { createStackNavigator } from "@react-navigation/stack";
+import React from 'react';
+import {
+  TouchableHighlight,
+  Dimensions,
+  View,
+  Image,
+  Text,
+  StyleSheet,
+} from 'react-native';
+import {DrawerActions} from '@react-navigation/native';
 const screenWidth = Dimensions.get('window').width;
 
-export default function newDraw3({ navigation }) {
-    return (<View>
-        <View style={{
-            height: 90,
-            flexDirection: 'row',
-            justifyContent: 'flex-start',
-            alignItems: 'center'
-        }}>
-            <TouchableHighlight style={{ marginLeft: 10, marginTop: 20 }}
-                onPress={() => navigation.dispatch(DrawerActions.openDrawer())}>
-                <Image
-                    style={{ width: 32, height: 32 }}
-                    source={require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/menu2.png')}
-                />
-            </TouchableHighlight>
-        </View>
-        <View styles={{
-            flex: 1,
-            flexDirection: "column",
-            alignItems: 'center',
-            width: screenWidth,
-            backgroundColor: 'white'
-        }}><Text style={{marginLeft:180,marginTop:180,fontSize:20}}>Screen 3</Text>
-        </View>
-         </View >
-    )
+export default function newDraw3({navigation}) {
+  return (
+    <View>
+      <View style={style.container}>
+        <TouchableHighlight
+          style={style.container2}
+          onPress={() => navigation.dispatch(DrawerActions.openDrawer())}>
+          <Image
+            style={style.container3}
+            source={require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/menu2.png')}
+          />
+        </TouchableHighlight>
+      </View>
+      <View styles={style.container4}>
+        <Text style={style.container5}>Screen 3</Text>
+      </View>
+    </View>
+  );
 }
+const style = StyleSheet.creater({
+  container: {
+    height: 90,
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+  },
+  container2: {marginLeft: 10, marginTop: 20},
+  container3: {width: 32, height: 32},
+  container4: {
+    flex: 1,
+    flexDirection: 'column',
+    alignItems: 'center',
+    width: screenWidth,
+    backgroundColor: 'white',
+  },
+  container5: {marginLeft: 180, marginTop: 180, fontSize: 20},
+});
