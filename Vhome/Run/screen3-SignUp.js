@@ -7,6 +7,8 @@ import {
   TextInput,
   StyleSheet,
 } from 'react-native';
+import adr from '../database/adr.json';
+
 export default function SignUp({navigation}) {
   const [Tick, setTick] = useState(true);
   return (
@@ -14,7 +16,7 @@ export default function SignUp({navigation}) {
       <View style={styles.Container2}>
         <Image
           //We are showing the Image from online
-          source={require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/phone.png')}
+          source={{uri: adr.sc3.f1}}
           style={styles.Container3}
         />
         <TextInput
@@ -24,31 +26,19 @@ export default function SignUp({navigation}) {
         />
       </View>
       <View style={styles.Container5}>
-        <Image
-          source={require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/user.png')}
-          style={styles.Container6}
-        />
+        <Image source={{uri: adr.sc3.f2}} style={styles.Container6} />
         <TextInput style={styles.Container7} placeholder="Họ và tên" />
       </View>
       <View style={styles.Container8}>
-        <Image
-          source={require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/pass.png')}
-          style={styles.Container9}
-        />
+        <Image source={{uri: adr.sc3.f3}} style={styles.Container9} />
         <TextInput style={styles.Container10} placeholder="Mật khẩu" />
       </View>
       <View style={styles.Container11}>
-        <Image
-          source={require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/repass.png')}
-          style={styles.Container12}
-        />
+        <Image source={{uri: adr.sc3.f4}} style={styles.Container12} />
         <TextInput style={styles.Container13} placeholder="Nhập lại mật khẩu" />
       </View>
       <View style={styles.Container14}>
-        <Image
-          source={require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/magiamgia.png')}
-          style={styles.Container15}
-        />
+        <Image source={{uri: adr.sc3.f5}} style={styles.Container15} />
 
         <TextInput style={styles.Container16} placeholder="Mã giới thiệu" />
       </View>
@@ -57,11 +47,7 @@ export default function SignUp({navigation}) {
           style={styles.Container18}
           onPress={() => setTick(!Tick)}>
           <Image
-            source={
-              Tick
-                ? require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/tick.png')
-                : require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/tick2.png')
-            }
+            source={Tick ? {uri: adr.sc3.f6} : {uri: adr.sc3.f7}}
             style={styles.Container19}
           />
         </TouchableOpacity>
@@ -71,10 +57,7 @@ export default function SignUp({navigation}) {
       </View>
       <View style={styles.Container21}>
         <TouchableOpacity>
-          <Image
-            source={require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/registration.png')}
-            style={styles.Container22}
-          />
+          <Image source={{uri: adr.sc3.f8}} style={styles.Container22} />
         </TouchableOpacity>
         <Text style={styles.Container23}>Bạn đã có tài khoản?</Text>
 

@@ -1,7 +1,7 @@
 import React, { Component, useState } from 'react';
 import { AppRegistry, View, Image, TouchableOpacity, Text, Dimensions, TextInput, StyleSheet, Button, TouchableNativeFeedbackComponent } from 'react-native';
 import { TouchableHighlight } from 'react-native-gesture-handler';
-
+import adr from '../database/adr.json';
 export default function SignUp2({ navigation }) {
     const screenWidth = Dimensions.get('window').width;
     const screenHeight = Dimensions.get('window').height;

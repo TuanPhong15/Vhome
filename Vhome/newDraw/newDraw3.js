@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 import {DrawerActions} from '@react-navigation/native';
 const screenWidth = Dimensions.get('window').width;
+import adr from '../database/adr.json';
 
 export default function newDraw3({navigation}) {
   return (
@@ -17,10 +18,7 @@ export default function newDraw3({navigation}) {
         <TouchableHighlight
           style={style.container2}
           onPress={() => navigation.dispatch(DrawerActions.openDrawer())}>
-          <Image
-            style={style.container3}
-            source={require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/menu2.png')}
-          />
+          <Image style={style.container3} source={{uri: adr.Draw3.f1}} />
         </TouchableHighlight>
       </View>
       <View styles={style.container4}>

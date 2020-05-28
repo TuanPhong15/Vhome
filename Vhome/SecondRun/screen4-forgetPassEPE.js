@@ -1,7 +1,7 @@
 import React, { Component, useState } from 'react';
 import { AppRegistry, View, Image, TouchableOpacity, Text, TextInput, StyleSheet, Button } from 'react-native'
 import Modal from "react-native-modal";
-
+import adr from '../database/adr.json';
 export default function Pass({ navigation }) {
     const [ModalVisibility, setModalVisibility] = useState(false)
     const goBack = () => {

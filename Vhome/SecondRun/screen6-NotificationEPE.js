@@ -1,5 +1,6 @@
 import React, { Component, useState } from 'react';
 import { AppRegistry, View, Image, TouchableOpacity, Text, TextInput, StyleSheet, Button,Dimensions } from 'react-native';
+import adr from '../database/adr.json';
 const screenWidth = Dimensions.get('window').width;
 const screenHeight = Dimensions.get('window').height;
 

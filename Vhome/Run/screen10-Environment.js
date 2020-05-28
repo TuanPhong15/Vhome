@@ -13,6 +13,7 @@ import {
   Button,
   Dimensions,
 } from 'react-native';
+import adr from '../database/adr.json';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import moment from 'moment';

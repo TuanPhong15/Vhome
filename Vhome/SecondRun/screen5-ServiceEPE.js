@@ -7,6 +7,7 @@ import {
     DrawerItemList,
     DrawerItem, DrawerActions
 } from '@react-navigation/drawer';
+import adr from '../database/adr.json';
 import flatListData2 from '../SecondRun/flatListData5EPE'
 import { useNavigation } from "@react-navigation/native";
 const Slack = createDrawerNavigator();

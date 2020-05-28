@@ -1,3 +1,5 @@
+/* eslint-disable no-sequences */
+/* eslint-disable no-undef */
 //screen 9 cũ
 import React, {useState} from 'react';
 import {
@@ -11,7 +13,7 @@ import {
 } from 'react-native';
 import Modal from 'react-native-modal';
 import moment from 'moment';
-
+import adr from '../database/adr.json';
 import DateTimePickerModal from 'react-native-modal-datetime-picker';
 
 const screenWidth = Dimensions.get('window').width;
@@ -83,7 +85,7 @@ export default function HealthCare() {
                   <TouchableOpacity onPress={() => hideModal(!modal)}>
                     <Image
                       style={styles.Container12}
-                      source={require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/close2.png')}
+                      source={{uri: adr.sc9.f1}}
                     />
                   </TouchableOpacity>
                 </View>
@@ -98,7 +100,7 @@ export default function HealthCare() {
                   <View style={styles.Container16}>
                     <View style={styles.Container17}>
                       <Image
-                        source={require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/user.png')}
+                        source={{uri: adr.sc9.f2}}
                         style={styles.Container18}
                       />
                     </View>
@@ -114,7 +116,7 @@ export default function HealthCare() {
                   <View style={styles.Container21}>
                     <View style={styles.Container22}>
                       <Image
-                        source={require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/phone.png')}
+                        source={{uri: adr.sc9.f3}}
                         style={styles.Container23}
                       />
                     </View>
@@ -130,7 +132,7 @@ export default function HealthCare() {
                   <View style={styles.Container26}>
                     <View style={styles.Container27}>
                       <Image
-                        source={require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/location2.png')}
+                        source={{uri: adr.sc9.f4}}
                         style={styles.Container28}
                       />
                     </View>
@@ -174,7 +176,7 @@ export default function HealthCare() {
                       <TouchableOpacity onPress={() => hideModal(!modal)}>
                         <Image
                           style={styles.Container41}
-                          source={require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/close2.png')}
+                          source={{uri: adr.sc9.f5}}
                         />
                       </TouchableOpacity>
                     </View>
@@ -206,11 +208,11 @@ export default function HealthCare() {
                   <View style={styles.Container42}>
                     <Image
                       style={styles.Container43}
-                      source={require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/calendar.png')}
+                      source={{uri: adr.sc9.f6}}
                     />
                     <Image
                       style={styles.Container44}
-                      source={require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/box.png')}
+                      source={{uri: adr.sc9.f7}}
                     />
                     <View>
                       <TouchableOpacity onPress={showPickerTime}>
@@ -255,7 +257,7 @@ export default function HealthCare() {
                       <TouchableOpacity onPress={() => hideModal(!modal)}>
                         <Image
                           style={styles.Container58}
-                          source={require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/close2.png')}
+                          source={{uri: adr.sc9.f8}}
                         />
                       </TouchableOpacity>
                     </View>
@@ -269,7 +271,7 @@ export default function HealthCare() {
                     <View style={styles.Container61}>
                       <Image
                         style={styles.Container62}
-                        source={require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/box.png')}
+                        source={{uri: adr.sc9.f9}}
                       />
                       <View style={styles.Container63}>
                         <View style={styles.Container64}>
@@ -279,7 +281,7 @@ export default function HealthCare() {
                         </View>
                         <Image
                           style={styles.Container66}
-                          source={require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/list.png')}
+                          source={{uri: adr.sc9.f10}}
                         />
                       </View>
                     </View>
@@ -308,7 +310,7 @@ export default function HealthCare() {
                             <View style={styles.Container74}>
                               <Image
                                 style={styles.Container75}
-                                source={require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/tick3.png')}
+                                source={{uri: adr.sc9.f11}}
                               />
                             </View>
                           )}
@@ -329,7 +331,7 @@ export default function HealthCare() {
                             <View style={styles.Container80}>
                               <Image
                                 style={styles.Container81}
-                                source={require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/tick3.png')}
+                                source={{uri: adr.sc9.f11}}
                               />
                             </View>
                           )}
@@ -350,7 +352,7 @@ export default function HealthCare() {
                             <View style={styles.Container86}>
                               <Image
                                 style={styles.Container87}
-                                source={require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/tick3.png')}
+                                source={{uri: adr.sc9.f11}}
                               />
                             </View>
                           )}
@@ -371,7 +373,7 @@ export default function HealthCare() {
                             <View style={styles.Container92}>
                               <Image
                                 style={styles.Container93}
-                                source={require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/tick3.png')}
+                                source={{uri: adr.sc9.f11}}
                               />
                             </View>
                           )}
@@ -398,16 +400,10 @@ export default function HealthCare() {
           </View>
         )}
       </Modal>
-      <Image
-        style={styles.Container98}
-        source={require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/image/cham-soc-suc-khoe.png')}
-      />
+      <Image style={styles.Container98} source={{uri: adr.sc9.f12}} />
       <Text style={styles.Container99}>Chăm sóc sức khoẻ</Text>
       <TouchableOpacity onPress={() => hideModal(!modal)}>
-        <Image
-          source={require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/call_service.png')}
-          style={styles.Container100}
-        />
+        <Image source={{uri: adr.sc9.f13}} style={styles.Container100} />
       </TouchableOpacity>
     </View>
   );

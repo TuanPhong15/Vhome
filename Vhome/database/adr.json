@@ -1,0 +1,122 @@
+{
+    "sc1": {
+        "f1": "/Users/anhlumi/VHome/Vhome/assets/element/logo.png",
+        "f2": "/Users/anhlumi/VHome/Vhome/assets/element/customer.png",
+        "f3": "/Users/anhlumi/VHome/Vhome/assets/element/employees.png"
+    },
+    "sc2": {
+        "f1": "/Users/anhlumi/VHome/Vhome/assets/element/logo.png",
+        "f2": "/Users/anhlumi/VHome/Vhome/assets/element/phone.png",
+        "f3": "/Users/anhlumi/VHome/Vhome/assets/element/pass.png",
+        "f4": "/Users/anhlumi/VHome/Vhome/assets/element/showpass.png",
+        "f5": "/Users/anhlumi/VHome/Vhome/assets/element/hidepass.png",
+        "f6": "/Users/anhlumi/VHome/Vhome/assets/element/log_in.png"
+    },
+    "sc3": {
+        "f1": "/Users/anhlumi/VHome/Vhome/assets/element/phone.png",
+        "f2": "/Users/anhlumi/VHome/Vhome/assets/element/user.png",
+        "f3": "/Users/anhlumi/VHome/Vhome/assets/element/pass.png",
+        "f4": "/Users/anhlumi/VHome/Vhome/assets/element/repass.png",
+        "f5": "/Users/anhlumi/VHome/Vhome/assets/element/magiamgia.png",
+        "f6": "/Users/anhlumi/VHome/Vhome/assets/element/tick.png",
+        "f7": "/Users/anhlumi/VHome/Vhome/assets/element/tick2.png",
+        "f8": "/Users/anhlumi/VHome/Vhome/assets/element/registration.png"
+    },
+    "sc4": {
+        "f1": "/Users/anhlumi/VHome/Vhome/assets/element/phone.png",
+        "f2": "/Users/anhlumi/VHome/Vhome/assets/element/password_retrieval.png",
+        "f3": "/Users/anhlumi/VHome/Vhome/assets/element/box_vhome.png"
+    },
+    "sc9": {
+        "f1": "/Users/anhlumi/VHome/Vhome/assets/element/close2.png",
+        "f2": "/Users/anhlumi/VHome/Vhome/assets/element/user.png",
+        "f3": "/Users/anhlumi/VHome/Vhome/assets/element/phone.png",
+        "f4": "/Users/anhlumi/VHome/Vhome/assets/element/location2.png",
+        "f5": "/Users/anhlumi/VHome/Vhome/assets/element/close2.png",
+        "f6": "/Users/anhlumi/VHome/Vhome/assets/element/calendar.png",
+        "f7": "/Users/anhlumi/VHome/Vhome/assets/element/box.png",
+        "f8": "/Users/anhlumi/VHome/Vhome/assets/element/close2.png",
+        "f9": "/Users/anhlumi/VHome/Vhome/assets/element/box.png",
+        "f10": "/Users/anhlumi/VHome/Vhome/assets/element/list.png",
+        "f11": "/Users/anhlumi/VHome/Vhome/assets/element/tick3.png",
+        "f12": "/Users/anhlumi/VHome/Vhome/assets/logo/image/cham-soc-suc-khoe.png",
+        "f13": "/Users/anhlumi/VHome/Vhome/assets/element/call_service.png"
+    },
+    "header": {
+        "f1": "/Users/anhlumi/VHome/Vhome/assets/element/menu2.png"
+    },
+    "Draw": {
+        "f1": "/Users/anhlumi/VHome/Vhome/assets/element/ava_user.png",
+        "f2": "/Users/anhlumi/VHome/Vhome/assets/element/introductory_code.png",
+        "f3": "/Users/anhlumi/VHome/Vhome/assets/element/notification.png",
+        "f4": "/Users/anhlumi/VHome/Vhome/assets/element/history.png",
+        "f5": "/Users/anhlumi/VHome/Vhome/assets/element/Reward-Points.png",
+        "f6": "/Users/anhlumi/VHome/Vhome/assets/element/criteria.png",
+        "f7": "/Users/anhlumi/VHome/Vhome/assets/element/logo_vhome_introduce.png",
+        "f8": "/Users/anhlumi/VHome/Vhome/assets/element/cskh.png",
+        "f9": "/Users/anhlumi/VHome/Vhome/assets/element/language.png",
+        "f10": "/Users/anhlumi/VHome/Vhome/assets/element/log_out.png",
+        "f11": "/Users/anhlumi/VHome/Vhome/assets/element/menu2.png"
+    },
+    "Draw1": {
+        "f1": "/Users/anhlumi/VHome/Vhome/assets/element/menu2.png",
+        "f2": "/Users/anhlumi/VHome/Vhome/assets/logo/image/hut-be-phot.png",
+        "f3": "/Users/anhlumi/VHome/Vhome/assets/logo/image/thong-tac-cong.png",
+        "f4": "/Users/anhlumi/VHome/Vhome/assets/logo/image/thong-tac-bon-cau.png",
+        "f5": "/Users/anhlumi/VHome/Vhome/assets/logo/image/thong-tac-chau-rua-bat.png",
+        "f6": "/Users/anhlumi/VHome/Vhome/assets/logo/image/nao-vet-cong-ho-ga.png",
+        "f7": "/Users/anhlumi/VHome/Vhome/assets/logo/image/thau-rua-be-nuoc.png"
+    },
+    "Draw2": {
+        "f1": "/Users/anhlumi/VHome/Vhome/assets/element/menu2.png"
+    },
+    "Draw3": {
+        "f1": "/Users/anhlumi/VHome/Vhome/assets/element/menu2.png"
+    },
+    "ContentDraw": {
+        "f1": "/Users/anhlumi/VHome/Vhome/assets/element/box_policy.png",
+        "f2": "/Users/anhlumi/VHome/Vhome/assets/element/close.png",
+        "f3": "/Users/anhlumi/VHome/Vhome/assets/element/ava_user.png",
+        "f4": "/Users/anhlumi/VHome/Vhome/assets/element/introductory_code.png",
+        "f5": "/Users/anhlumi/VHome/Vhome/assets/element/notification.png",
+        "f6": "/Users/anhlumi/VHome/Vhome/assets/element/next.png",
+        "f7": "/Users/anhlumi/VHome/Vhome/assets/element/history.png",
+        "f8": "/Users/anhlumi/VHome/Vhome/assets/element/Reward-Points.png",
+        "f9": "/Users/anhlumi/VHome/Vhome/assets/element/criteria.png",
+        "f10": "/Users/anhlumi/VHome/Vhome/assets/element/introductory_code.png",
+        "f11": "/Users/anhlumi/VHome/Vhome/assets/element/call_box3.png",
+        "f12": "/Users/anhlumi/VHome/Vhome/assets/element/cskh.png",
+        "f13": "/Users/anhlumi/VHome/Vhome/assets/element/language.png",
+        "f14": "/Users/anhlumi/VHome/Vhome/assets/element/down2.png",
+        "f15": "/Users/anhlumi/VHome/Vhome/assets/element/next.png",
+        "f16": "/Users/anhlumi/VHome/Vhome/assets/element/tick3.png",
+        "f17": "/Users/anhlumi/VHome/Vhome/assets/element/log_out.png"
+    },
+    "OpenDraw": {
+        "f1": "/Users/anhlumi/VHome/Vhome/assets/element/menu2.png"
+    },
+    "Title": {
+        "f1": "/Users/anhlumi/VHome/Vhome/assets/element/search.png"
+    },
+    "OpenDraw2": {
+        "f1": "/Users/anhlumi/VHome/Vhome/assets/element/menu2.png"
+    },
+    "sc2E": {
+        "f1": "/Users/anhlumi/VHome/Vhome/assets/element/logo.png",
+        "f2": "/Users/anhlumi/VHome/Vhome/assets/element/phone.png",
+        "f3": "/Users/anhlumi/VHome/Vhome/assets/element/pass.png",
+        "f4": "/Users/anhlumi/VHome/Vhome/assets/element/showpass.png",
+        "f5": "/Users/anhlumi/VHome/Vhome/assets/element/hidepass.png",
+        "f6": "/Users/anhlumi/VHome/Vhome/assets/element/log_in.png"
+    },
+    "sc3E": {
+        "f1": "/Users/anhlumi/VHome/Vhome/assets/element/phone.png",
+        "f2": "/Users/anhlumi/VHome/Vhome/assets/element/user.png",
+        "f3": "/Users/anhlumi/VHome/Vhome/assets/element/pass.png",
+        "f4": "/Users/anhlumi/VHome/Vhome/assets/element/repass.png",
+        "f5": "/Users/anhlumi/VHome/Vhome/assets/element/supplies.png",
+        "f6": "/Users/anhlumi/VHome/Vhome/assets/element/magiamgia.png",
+        "f7": "/Users/anhlumi/VHome/Vhome/assets/element/tick.png",
+        "f8": "/Users/anhlumi/VHome/Vhome/assets/element/tick2.png",
+    }
+}

@@ -9,7 +9,7 @@ import {
   Image,
 } from 'react-native';
 import Modal from 'react-native-modal';
-
+import adr from '../../database/adr.json';
 const screenWidth = Dimensions.get('window').width;
 const screenHeight = Dimensions.get('window').height;
 export default function ContentDrawer({navigation}) {
@@ -28,7 +28,7 @@ export default function ContentDrawer({navigation}) {
             height: (260 * 45) / 100,
             borderRadius: 10,
           }}
-          source={require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/box_policy.png')}
+          source={{uri: adr.ContentDraw.f1}}
         />
 
         <Text
@@ -86,7 +86,7 @@ export default function ContentDrawer({navigation}) {
                     width: (32 * 80) / 100,
                     top: 6,
                   }}
-                  source={require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/close.png')}
+                  source={{uri: adr.ContentDraw.f2}}
                 />
               </TouchableOpacity>
             </View>
@@ -133,7 +133,7 @@ export default function ContentDrawer({navigation}) {
       <View style={{backgroundColor: '#F59031', height: screenHeight / 3.4}}>
         <SafeAreaView style={{alignItems: 'center', height: 130}}>
           <Image
-            source={require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/ava_user.png')}
+            source={{uri: adr.ContentDraw.f3}}
             style={{resizeMode: 'contain', height: '105%'}}
           />
         </SafeAreaView>
@@ -143,7 +143,7 @@ export default function ContentDrawer({navigation}) {
         <View style={{height: 45, alignItems: 'center'}}>
           <Image
             style={{resizeMode: 'contain', height: '90%', position: 'absolute'}}
-            source={require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/introductory_code.png')}
+            source={{uri: adr.ContentDraw.f4}}
           />
           <Text style={{fontSize: 18, color: '#F59031', top: 10, left: 10}}>
             123456
@@ -155,7 +155,7 @@ export default function ContentDrawer({navigation}) {
           <View style={{flexDirection: 'row'}}>
             <View style={{height: 40}}>
               <Image
-                source={require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/notification.png')}
+                source={{uri: adr.ContentDraw.f5}}
                 style={{
                   justifyContent: 'flex-end',
                   resizeMode: 'contain',
@@ -168,7 +168,7 @@ export default function ContentDrawer({navigation}) {
             </TouchableOpacity>
             <View style={{height: 30}}>
               <Image
-                source={require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/next.png')}
+                source={{uri: adr.ContentDraw.f6}}
                 style={{
                   resizeMode: 'contain',
                   height: '80%',
@@ -190,7 +190,7 @@ export default function ContentDrawer({navigation}) {
           <View style={{flexDirection: 'row'}}>
             <View style={{height: 40}}>
               <Image
-                source={require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/history.png')}
+                source={{uri: adr.ContentDraw.f8}}
                 style={{
                   justifyContent: 'flex-end',
                   resizeMode: 'contain',
@@ -203,7 +203,7 @@ export default function ContentDrawer({navigation}) {
             </TouchableOpacity>
             <View style={{height: 30}}>
               <Image
-                source={require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/next.png')}
+                source={{uri: adr.ContentDraw.f7}}
                 style={{
                   resizeMode: 'contain',
                   height: '80%',
@@ -225,7 +225,7 @@ export default function ContentDrawer({navigation}) {
           <View style={{flexDirection: 'row'}}>
             <View style={{height: 40}}>
               <Image
-                source={require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/Reward-Points.png')}
+                source={{uri: adr.ContentDraw.f8}}
                 style={{
                   justifyContent: 'flex-end',
                   resizeMode: 'contain',
@@ -251,7 +251,7 @@ export default function ContentDrawer({navigation}) {
           <View style={{flexDirection: 'row'}}>
             <View style={{height: 40}}>
               <Image
-                source={require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/criteria.png')}
+                source={{uri: adr.ContentDraw.f9}}
                 style={{
                   justifyContent: 'flex-end',
                   resizeMode: 'contain',
@@ -279,7 +279,7 @@ export default function ContentDrawer({navigation}) {
           <View style={{flexDirection: 'row'}}>
             <View style={{height: 40}}>
               <Image
-                source={require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/logo_vhome_introduce.png')}
+                source={{uri: adr.ContentDraw.f10}}
                 style={{
                   justifyContent: 'flex-end',
                   resizeMode: 'contain',
@@ -310,7 +310,7 @@ export default function ContentDrawer({navigation}) {
               height: (260 * 45) / 100,
               borderRadius: 10,
             }}
-            source={require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/call_box3.png')}
+            source={{uri: adr.ContentDraw.f11}}
           />
 
           <Text
@@ -354,7 +354,7 @@ export default function ContentDrawer({navigation}) {
           <View style={{flexDirection: 'row'}}>
             <View style={{height: 40}}>
               <Image
-                source={require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/cskh.png')}
+                source={{uri: adr.ContentDraw.f12}}
                 style={{
                   justifyContent: 'flex-end',
                   resizeMode: 'contain',
@@ -382,7 +382,7 @@ export default function ContentDrawer({navigation}) {
           <View style={{flexDirection: 'row'}}>
             <View style={{height: 40}}>
               <Image
-                source={require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/language.png')}
+                source={{uri: adr.ContentDraw.f13}}
                 style={{
                   justifyContent: 'flex-end',
                   resizeMode: 'contain',
@@ -397,8 +397,8 @@ export default function ContentDrawer({navigation}) {
               <Image
                 source={
                   unhideState
-                    ? require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/down2.png')
-                    : require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/next.png')
+                    ? {uri: adr.ContentDraw.f14}
+                    : {uri: adr.ContentDraw.f15}
                 }
                 style={{
                   resizeMode: 'contain',
@@ -431,11 +431,7 @@ export default function ContentDrawer({navigation}) {
                 </TouchableOpacity>
                 <View>
                   <Image
-                    source={
-                      VietNamese
-                        ? require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/tick3.png')
-                        : null
-                    }
+                    source={VietNamese ? {uri: adr.ContentDraw.f16} : null}
                     style={{
                       left: screenWidth / 1.75,
                       height: (42 * 9) / 10,
@@ -461,11 +457,7 @@ export default function ContentDrawer({navigation}) {
                 </TouchableOpacity>
                 <View>
                   <Image
-                    source={
-                      VietNamese
-                        ? null
-                        : require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/tick3.png')
-                    }
+                    source={VietNamese ? null : {uri: adr.ContentDraw.f16}}
                     style={{
                       left: screenWidth / 1.75,
                       height: (42 * 9) / 10,
@@ -490,7 +482,7 @@ export default function ContentDrawer({navigation}) {
           <View style={{flexDirection: 'row'}}>
             <View style={{height: 40}}>
               <Image
-                source={require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/log_out.png')}
+                source={{uri: adr.ContentDraw.f17}}
                 style={{
                   justifyContent: 'flex-end',
                   resizeMode: 'contain',

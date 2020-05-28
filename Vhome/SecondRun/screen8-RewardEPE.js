@@ -3,7 +3,7 @@ import { FlatList, View, Image, TouchableOpacity, Text, TextInput, StyleSheet, B
 const screenWidth = Dimensions.get('window').width;
 const screenHeight = Dimensions.get('window').height;
 import flatListdata2 from '../SecondRun/flatListData8EPE'
-
+import adr from '../database/adr.json';
 class FlatlistItem extends Component {
     constructor(props) {
         super(props)

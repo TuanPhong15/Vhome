@@ -16,6 +16,8 @@ import newDraw1 from './newDraw1';
 
 import newDraw2 from './newDraw2';
 import newDraw3 from './newDraw3';
+import adr from '../database/adr.json';
+
 const screenWidth = Dimensions.get('window').width;
 const screenHeight = Dimensions.get('window').height;
 const Stack = createDrawerNavigator();
@@ -24,19 +26,13 @@ function HeaderDraw() {
     <View>
       <View style={styles.container1}>
         <SafeAreaView style={styles.container2}>
-          <Image
-            source={require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/ava_user.png')}
-            style={styles.container3}
-          />
+          <Image source={{uri: adr.Draw.f1}} style={styles.container3} />
         </SafeAreaView>
         <View style={styles.container4}>
           <Text style={styles.container5}>Lưu Hà</Text>
         </View>
         <View style={styles.container6}>
-          <Image
-            style={styles.container7}
-            source={require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/introductory_code.png')}
-          />
+          <Image style={styles.container7} source={{uri: adr.Draw.f2}} />
 
           <Text style={styles.container8}>123456</Text>
         </View>
@@ -44,10 +40,7 @@ function HeaderDraw() {
       <ScrollView>
         <View style={styles.container9}>
           <View style={styles.container10}>
-            <Image
-              source={require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/notification.png')}
-              style={styles.container11}
-            />
+            <Image source={{uri: adr.Draw.f3}} style={styles.container11} />
           </View>
           <TouchableOpacity>
             <Text style={styles.container12}>Thông báo</Text>
@@ -55,10 +48,7 @@ function HeaderDraw() {
         </View>
         <View style={styles.container13}>
           <View style={styles.container14}>
-            <Image
-              source={require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/history.png')}
-              style={styles.container15}
-            />
+            <Image source={{uri: adr.Draw.f4}} style={styles.container15} />
           </View>
           <TouchableOpacity>
             <Text style={styles.container16}>Lịch sử</Text>
@@ -66,10 +56,7 @@ function HeaderDraw() {
         </View>
         <View style={styles.container17}>
           <View style={styles.container18}>
-            <Image
-              source={require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/Reward-Points.png')}
-              style={styles.container19}
-            />
+            <Image source={{uri: adr.Draw.f5}} style={styles.container19} />
           </View>
           <TouchableOpacity>
             <Text style={styles.container20}>Điểm thưởng</Text>
@@ -77,10 +64,7 @@ function HeaderDraw() {
         </View>
         <View style={styles.container21}>
           <View style={styles.container22}>
-            <Image
-              source={require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/criteria.png')}
-              style={styles.container23}
-            />
+            <Image source={{uri: adr.Draw.f6}} style={styles.container23} />
           </View>
           <TouchableOpacity>
             <Text style={styles.container24}>Chính sách và cam kết</Text>
@@ -88,10 +72,7 @@ function HeaderDraw() {
         </View>
         <View style={styles.container25}>
           <View style={styles.container26}>
-            <Image
-              source={require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/logo_vhome_introduce.png')}
-              style={styles.container27}
-            />
+            <Image source={{uri: adr.Draw.f7}} style={styles.container27} />
           </View>
           <TouchableOpacity>
             <Text style={styles.container28}>Giới thiệu về V-Home</Text>
@@ -99,10 +80,7 @@ function HeaderDraw() {
         </View>
         <View style={styles.container29}>
           <View style={styles.container30}>
-            <Image
-              source={require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/cskh.png')}
-              style={styles.container31}
-            />
+            <Image source={{uri: adr.Draw.f8}} style={styles.container31} />
           </View>
           <TouchableOpacity>
             <Text style={styles.container32}>HOTLINE:0123456789</Text>
@@ -110,10 +88,7 @@ function HeaderDraw() {
         </View>
         <View style={styles.container33}>
           <View style={styles.container34}>
-            <Image
-              source={require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/language.png')}
-              style={styles.container35}
-            />
+            <Image source={{uri: adr.Draw.f9}} style={styles.container35} />
           </View>
           <TouchableOpacity>
             <Text style={styles.container36}>Ngôn ngữ </Text>
@@ -121,10 +96,7 @@ function HeaderDraw() {
         </View>
         <View style={styles.container37}>
           <View style={styles.container38}>
-            <Image
-              source={require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/log_out.png')}
-              style={styles.container39}
-            />
+            <Image source={{uri: adr.Draw.f10}} style={styles.container39} />
           </View>
           <TouchableOpacity>
             <Text style={styles.container40}>Đăng xuất</Text>
@@ -147,7 +119,7 @@ export default function App() {
             drawerLabel: 'Home',
             drawerIcon: ({tintColor}) => (
               <Image
-                source={require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/menu2.png')}
+                source={{uri: adr.Draw.f11}}
                 resizeMode="contain"
                 style={styles.container42}
               />
@@ -161,7 +133,7 @@ export default function App() {
             drawerLabel: 'Settings',
             drawerIcon: () => (
               <Image
-                source={require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/menu2.png')}
+                source={{uri: adr.Draw.f11}}
                 resizeMode="contain"
                 style={styles.container43}
               />
@@ -175,7 +147,7 @@ export default function App() {
             drawerLabel: 'Setup',
             drawerIcon: ({tintColor = 'red'}) => (
               <Image
-                source={require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/menu2.png')}
+                source={{uri: adr.Draw.f11}}
                 resizeMode="contain"
                 style={styles.container43}
               />

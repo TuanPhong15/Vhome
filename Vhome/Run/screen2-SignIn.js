@@ -7,23 +7,18 @@ import {
   TextInput,
   StyleSheet,
 } from 'react-native';
+import adr from '../database/adr.json';
 export default function SignIn({navigation}) {
   const [PasswordVisibility, setPasswordVisibility] = useState(true);
 
   return (
     <View style={styles.Container1}>
       <View style={styles.Container2}>
-        <Image
-          source={require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/logo.png')}
-          style={styles.Container3}
-        />
+        <Image source={{uri: adr.sc2.f1}} style={styles.Container3} />
       </View>
       <View style={styles.Container4}>
         <View style={styles.Container5}>
-          <Image
-            source={require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/phone.png')}
-            style={styles.Container6}
-          />
+          <Image source={{uri: adr.sc2.f2}} style={styles.Container6} />
         </View>
 
         <TextInput
@@ -35,10 +30,7 @@ export default function SignIn({navigation}) {
 
       <View style={styles.Container8}>
         <View style={styles.Container9}>
-          <Image
-            source={require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/pass.png')}
-            style={styles.Container10}
-          />
+          <Image source={{uri: adr.sc2.f3}} style={styles.Container10} />
         </View>
         <TextInput
           secureTextEntry={PasswordVisibility}
@@ -50,21 +42,14 @@ export default function SignIn({navigation}) {
           style={styles.Container12}
           onPress={() => setPasswordVisibility(!PasswordVisibility)}>
           <Image
-            source={
-              PasswordVisibility
-                ? require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/showpass.png')
-                : require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/hidepass.png')
-            }
+            source={PasswordVisibility ? {uri: adr.sc2.f4} : {uri: adr.sc2.f5}}
             style={styles.Container13}
           />
         </TouchableOpacity>
       </View>
       <View style={styles.Container14}>
         <TouchableOpacity onPress={() => navigation.navigate('ServiceDraw')}>
-          <Image
-            source={require('/Users/anhlumi/VHome/Vhome/VHomeImg/logo/log_in.png')}
-            style={styles.Container15}
-          />
+          <Image source={{uri: adr.sc2.f6}} style={styles.Container15} />
         </TouchableOpacity>
       </View>
       <View style={styles.Container16}>
