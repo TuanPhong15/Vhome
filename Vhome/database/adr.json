@@ -1,6 +1,6 @@
 {
     "sc1": {
-        "f1": "/Users/anhlumi/VHome/Vhome/assets/element/logo.png",
+        "f1": "/Users/anhlumi/VHome/Vhome/assets/element/logo.pngg",
         "f2": "/Users/anhlumi/VHome/Vhome/assets/element/customer.png",
         "f3": "/Users/anhlumi/VHome/Vhome/assets/element/employees.png"
     },
@@ -41,6 +41,12 @@
         "f11": "/Users/anhlumi/VHome/Vhome/assets/element/tick3.png",
         "f12": "/Users/anhlumi/VHome/Vhome/assets/logo/image/cham-soc-suc-khoe.png",
         "f13": "/Users/anhlumi/VHome/Vhome/assets/element/call_service.png"
+    },
+    "sc11": {
+        "f1": "/Users/anhlumi/VHome/Vhome/assets/logo/image/cham-soc-suc-khoe.png"
+    },
+    "sc12": {
+        "f1": "/Users/anhlumi/VHome/Vhome/assets/logo/image/cham-soc-suc-khoe.png"
     },
     "header": {
         "f1": "/Users/anhlumi/VHome/Vhome/assets/element/menu2.png"
@@ -118,5 +124,50 @@
         "f6": "/Users/anhlumi/VHome/Vhome/assets/element/magiamgia.png",
         "f7": "/Users/anhlumi/VHome/Vhome/assets/element/tick.png",
         "f8": "/Users/anhlumi/VHome/Vhome/assets/element/tick2.png",
+        "f9": "/Users/anhlumi/VHome/Vhome/assets/element/registration.png"
+    },
+    "sc4E": {
+        "f1": "/Users/anhlumi/VHome/Vhome/assets/element/phone.png",
+        "f2": "/Users/anhlumi/VHome/Vhome/assets/element/password_retrieval.png",
+        "f3": "/Users/anhlumi/VHome/Vhome/assets/element/box_vhome.png"
+    },
+    "sc5E": {
+        "f1": "/Users/anhlumi/VHome/Vhome/assets/element/user.png",
+        "f2": "/Users/anhlumi/VHome/Vhome/assets/element/phone.png",
+        "f3": "/Users/anhlumi/VHome/Vhome/assets/element/calendar.png",
+        "f4": "/Users/anhlumi/VHome/Vhome/assets/element/price.png",
+        "f5": "/Users/anhlumi/VHome/Vhome/assets/element/location2.png",
+        "f6": "/Users/anhlumi/VHome/Vhome/assets/element/on.png",
+        "f7": "/Users/anhlumi/VHome/Vhome/assets/element/off.png"
+    },
+    "sc9E": {
+        "f1": "/Users/anhlumi/VHome/Vhome/assets/logo/image/cham-soc-suc-khoe.png"
+    },
+    "ContentDraw2": {
+        "f1": "/Users/anhlumi/VHome/Vhome/assets/element/close.png",
+        "f2": "/Users/anhlumi/VHome/Vhome/assets/element/call_box3.png",
+        "f3":"/Users/anhlumi/VHome/Vhome/assets/element/ava_provider.png",
+                "f4": "/Users/anhlumi/VHome/Vhome/assets/element/introductory_code.png",
+                        "f5": "/Users/anhlumi/VHome/Vhome/assets/element/notification.png",
+                                "f6": "/Users/anhlumi/VHome/Vhome/assets/element/history.png",
+                                        "f7": "/Users/anhlumi/VHome/Vhome/assets/element/Reward-Points.png",
+                                        "f8":"/Users/anhlumi/VHome/Vhome/assets/element/evaluate.png",
+                                                "f9": "/Users/anhlumi/VHome/Vhome/assets/element/criteria.png",
+                                                "f10":"/Users/anhlumi/VHome/Vhome/assets/element/logo_vhome_introduce.png",
+                                                        "f11": "/Users/anhlumi/VHome/Vhome/assets/element/cskh.png",
+                                                                "f12": "/Users/anhlumi/VHome/Vhome/assets/element/language.png",
+                                                                        "f13": "/Users/anhlumi/VHome/Vhome/assets/element/down2.png",
+                                                                                "f14": "/Users/anhlumi/VHome/Vhome/assets/element/next.png",
+                                                                                        "f15": "/Users/anhlumi/VHome/Vhome/assets/element/tick3.png",
+                                                                                                "f16": "/Users/anhlumi/VHome/Vhome/assets/element/log_out.png"
+                                                                                                
+                                                                                        
+                                                                                
+                                                                        
+                                                                
+                                                
+                                        
+                        
+                
     }
 }
