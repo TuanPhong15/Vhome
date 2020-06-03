@@ -7,25 +7,25 @@ import {
   Image,
   StyleSheet,
 } from 'react-native';
-import adr from '../database/adr.json';
+import {Data} from '../database/Data';
 const screenWidth = Dimensions.get('window').width;
 const screenHeight = Dimensions.get('window').height;
 export default function HomeScreen({navigation}) {
   return (
     <View style={styles.header}>
       <View style={{height: screenHeight / 4.4}}>
-        <Image style={styles.containerI} source={{uri: adr.sc1.f1}} />
+        <Image style={styles.containerI} source={Data.screen1.logo} />
       </View>
       <View style={styles.containerII} />
       <View style={styles.containerIII} />
       <TouchableOpacity
         onPress={() => navigation.navigate('Đăng nhập')}
         style={styles.containnerIIIT}>
-        <Image style={styles.containerIV} source={{uri: adr.sc1.f2}} />
+        <Image style={styles.containerIV} source={Data.screen1.customer} />
       </TouchableOpacity>
       <View style={styles.containerV} />
       <TouchableOpacity onPress={() => navigation.navigate('SignIn2')}>
-        <Image style={styles.containerVI} source={{uri: adr.sc1.f3}} />
+        <Image style={styles.containerVI} source={Data.screen1.employees} />
       </TouchableOpacity>
       <Text style={styles.footer}>V-HOME V1.0</Text>
     </View>

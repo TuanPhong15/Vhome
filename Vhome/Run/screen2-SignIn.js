@@ -8,17 +8,18 @@ import {
   StyleSheet,
 } from 'react-native';
 import adr from '../database/adr.json';
+import {Data} from "../database/Data"
 export default function SignIn({navigation}) {
   const [PasswordVisibility, setPasswordVisibility] = useState(true);
 
   return (
     <View style={styles.Container1}>
       <View style={styles.Container2}>
-        <Image source={{uri: adr.sc2.f1}} style={styles.Container3} />
+        <Image source={Data.screen2.logo} style={styles.Container3} />
       </View>
       <View style={styles.Container4}>
         <View style={styles.Container5}>
-          <Image source={{uri: adr.sc2.f2}} style={styles.Container6} />
+          <Image source={Data.screen2.phone} style={styles.Container6} />
         </View>
 
         <TextInput
@@ -30,7 +31,7 @@ export default function SignIn({navigation}) {
 
       <View style={styles.Container8}>
         <View style={styles.Container9}>
-          <Image source={{uri: adr.sc2.f3}} style={styles.Container10} />
+          <Image source={Data.screen2.pass} style={styles.Container10} />
         </View>
         <TextInput
           secureTextEntry={PasswordVisibility}
@@ -42,14 +43,14 @@ export default function SignIn({navigation}) {
           style={styles.Container12}
           onPress={() => setPasswordVisibility(!PasswordVisibility)}>
           <Image
-            source={PasswordVisibility ? {uri: adr.sc2.f4} : {uri: adr.sc2.f5}}
+            source={PasswordVisibility ? Data.screen2.showpass : Data.screen2.hidepass}
             style={styles.Container13}
           />
         </TouchableOpacity>
       </View>
       <View style={styles.Container14}>
         <TouchableOpacity onPress={() => navigation.navigate('ServiceDraw')}>
-          <Image source={{uri: adr.sc2.f6}} style={styles.Container15} />
+          <Image source={Data.screen2.login} style={styles.Container15} />
         </TouchableOpacity>
       </View>
       <View style={styles.Container16}>

@@ -13,9 +13,8 @@ import {
 } from 'react-native';
 import Modal from 'react-native-modal';
 import moment from 'moment';
-import adr from '../database/adr.json';
 import DateTimePickerModal from 'react-native-modal-datetime-picker';
-
+import {Data} from '../database/Data';
 const screenWidth = Dimensions.get('window').width;
 const screenHeight = Dimensions.get('window').height;
 export default function HealthCare() {
@@ -85,7 +84,7 @@ export default function HealthCare() {
                   <TouchableOpacity onPress={() => hideModal(!modal)}>
                     <Image
                       style={styles.Container12}
-                      source={{uri: adr.sc9.f1}}
+                      source={Data.screen9.close2}
                     />
                   </TouchableOpacity>
                 </View>
@@ -100,7 +99,7 @@ export default function HealthCare() {
                   <View style={styles.Container16}>
                     <View style={styles.Container17}>
                       <Image
-                        source={{uri: adr.sc9.f2}}
+                        source={Data.screen9.user}
                         style={styles.Container18}
                       />
                     </View>
@@ -116,7 +115,7 @@ export default function HealthCare() {
                   <View style={styles.Container21}>
                     <View style={styles.Container22}>
                       <Image
-                        source={{uri: adr.sc9.f3}}
+                        source={Data.screen9.phone}
                         style={styles.Container23}
                       />
                     </View>
@@ -132,7 +131,7 @@ export default function HealthCare() {
                   <View style={styles.Container26}>
                     <View style={styles.Container27}>
                       <Image
-                        source={{uri: adr.sc9.f4}}
+                        source={Data.screen9.location2}
                         style={styles.Container28}
                       />
                     </View>
@@ -176,7 +175,7 @@ export default function HealthCare() {
                       <TouchableOpacity onPress={() => hideModal(!modal)}>
                         <Image
                           style={styles.Container41}
-                          source={{uri: adr.sc9.f5}}
+                          source={Data.screen9.close2}
                         />
                       </TouchableOpacity>
                     </View>
@@ -208,11 +207,11 @@ export default function HealthCare() {
                   <View style={styles.Container42}>
                     <Image
                       style={styles.Container43}
-                      source={{uri: adr.sc9.f6}}
+                      source={Data.screen9.calendar}
                     />
                     <Image
                       style={styles.Container44}
-                      source={{uri: adr.sc9.f7}}
+                      source={Data.screen9.box}
                     />
                     <View>
                       <TouchableOpacity onPress={showPickerTime}>
@@ -257,7 +256,7 @@ export default function HealthCare() {
                       <TouchableOpacity onPress={() => hideModal(!modal)}>
                         <Image
                           style={styles.Container58}
-                          source={{uri: adr.sc9.f8}}
+                          source={Data.screen9.close2}
                         />
                       </TouchableOpacity>
                     </View>
@@ -271,7 +270,7 @@ export default function HealthCare() {
                     <View style={styles.Container61}>
                       <Image
                         style={styles.Container62}
-                        source={{uri: adr.sc9.f9}}
+                        source={Data.screen9.box}
                       />
                       <View style={styles.Container63}>
                         <View style={styles.Container64}>
@@ -281,7 +280,7 @@ export default function HealthCare() {
                         </View>
                         <Image
                           style={styles.Container66}
-                          source={{uri: adr.sc9.f10}}
+                          source={Data.screen9.list}
                         />
                       </View>
                     </View>
@@ -310,7 +309,7 @@ export default function HealthCare() {
                             <View style={styles.Container74}>
                               <Image
                                 style={styles.Container75}
-                                source={{uri: adr.sc9.f11}}
+                                source={Data.screen9.tick3}
                               />
                             </View>
                           )}
@@ -331,7 +330,7 @@ export default function HealthCare() {
                             <View style={styles.Container80}>
                               <Image
                                 style={styles.Container81}
-                                source={{uri: adr.sc9.f11}}
+                                source={Data.screen9.tick3}
                               />
                             </View>
                           )}
@@ -352,7 +351,7 @@ export default function HealthCare() {
                             <View style={styles.Container86}>
                               <Image
                                 style={styles.Container87}
-                                source={{uri: adr.sc9.f11}}
+                                source={Data.screen9.tick3}
                               />
                             </View>
                           )}
@@ -373,7 +372,7 @@ export default function HealthCare() {
                             <View style={styles.Container92}>
                               <Image
                                 style={styles.Container93}
-                                source={{uri: adr.sc9.f11}}
+                                source={Data.screen9.tick3}
                               />
                             </View>
                           )}
@@ -400,10 +399,10 @@ export default function HealthCare() {
           </View>
         )}
       </Modal>
-      <Image style={styles.Container98} source={{uri: adr.sc9.f12}} />
+      <Image style={styles.Container98} source={Data.screen9.cssk} />
       <Text style={styles.Container99}>Chăm sóc sức khoẻ</Text>
       <TouchableOpacity onPress={() => hideModal(!modal)}>
-        <Image source={{uri: adr.sc9.f13}} style={styles.Container100} />
+        <Image source={Data.screen9.call_service} style={styles.Container100} />
       </TouchableOpacity>
     </View>
   );

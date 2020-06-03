@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import Modal from 'react-native-modal';
 import adr from '../database/adr.json';
-
+import {Data} from '../database/Data'
 export default function Pass({navigation}) {
   const [ModalVisibility, setModalVisibility] = useState(false);
   const goBack = () => {
@@ -21,7 +21,7 @@ export default function Pass({navigation}) {
       <View style={styles.Container2}>
         <Image
           //We are showing the Image from online
-          source={{uri: adr.sc4.f1}}
+          source={Data.screen4.phone}
           style={styles.Container3}
         />
 
@@ -34,7 +34,7 @@ export default function Pass({navigation}) {
 
       <View style={styles.Container5}>
         <TouchableOpacity onPress={() => setModalVisibility(!ModalVisibility)}>
-          <Image source={{uri: adr.sc4.f2}} style={styles.Container6} />
+          <Image source={Data.screen4.password_retrieval} style={styles.Container6} />
         </TouchableOpacity>
       </View>
       <Text style={styles.Container7}>Bạn chưa nhận được mật khẩu.</Text>
@@ -43,7 +43,7 @@ export default function Pass({navigation}) {
         <Text style={styles.Container8}>Gửi lại mã xác nhận</Text>
       </TouchableOpacity>
       <Modal isVisible={ModalVisibility}>
-        <Image style={styles.Container9} source={{uri: adr.sc4.f3}} />
+        <Image style={styles.Container9} source={Data.screen4.box_vhome} />
 
         <Text style={styles.Container10}>
           Yêu cầu của bạn đã được gửi thành {'\n'} công,bạn sẽ nhận được mật

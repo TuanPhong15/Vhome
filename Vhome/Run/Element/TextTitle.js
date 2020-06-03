@@ -1,5 +1,5 @@
 import React from 'react';
-import adr from '../../database/adr.json';
+import {Data} from '../../database/Data';
 import {View, Image, TextInput, StyleSheet, Dimensions} from 'react-native';
 const screenWidth = Dimensions.get('window').width;
 
@@ -8,7 +8,7 @@ export default function TextTitle() {
     <View style={styles.Container1}>
       <TextInput placeholder="Tìm kiếm dịch vụ" style={styles.Container2} />
       <View style={styles.Container3}>
-        <Image source={{uri: adr.Title.f1}} style={styles.Container4} />
+        <Image source={Data.Title.search} style={styles.Container4} />
       </View>
     </View>
   );

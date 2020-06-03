@@ -338,12 +338,12 @@
 // }
 import React from 'react';
 import {View, Image, Text} from 'react-native';
-import adr from '../database/adr.json';
+import {Data} from '../database/Data';
 export default function Environment() {
   return (
     <View>
       <Text>scren11 neeeeeeeee</Text>
-      <Image source={{uri: adr.sc11.f1}} />
+      <Image source={Data.screen11.cssk} />
     </View>
   );
 }
