@@ -8,8 +8,7 @@ import {
   StyleSheet,
 } from 'react-native';
 import Modal from 'react-native-modal';
-import adr from '../database/adr.json';
-import {Data} from '../database/Data'
+import {Data} from '../database/Data';
 export default function Pass({navigation}) {
   const [ModalVisibility, setModalVisibility] = useState(false);
   const goBack = () => {
@@ -34,7 +33,10 @@ export default function Pass({navigation}) {
 
       <View style={styles.Container5}>
         <TouchableOpacity onPress={() => setModalVisibility(!ModalVisibility)}>
-          <Image source={Data.screen4.password_retrieval} style={styles.Container6} />
+          <Image
+            source={Data.screen4.password_retrieval}
+            style={styles.Container6}
+          />
         </TouchableOpacity>
       </View>
       <Text style={styles.Container7}>Bạn chưa nhận được mật khẩu.</Text>

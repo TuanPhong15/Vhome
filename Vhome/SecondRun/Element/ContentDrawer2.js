@@ -7,11 +7,9 @@ import {
   Dimensions,
   ScrollView,
   Image,
-  TextInput,
   StyleSheet,
 } from 'react-native';
-import adr from '../../database/adr.json';
-
+import {Data} from '../../database/Data';
 import Modal from 'react-native-modal';
 const screenWidth = Dimensions.get('window').width;
 const screenHeight = Dimensions.get('window').height;
@@ -23,95 +21,38 @@ export default function ContentDrawer2({navigation}) {
   const [VietNameseSV, hideVietNameseSV] = useState(false);
   const [unhideStateSV, hideStateSV] = useState(false);
   return (
-    <View style={{flex: 1}}>
+    <View style={style.all}>
       <Modal isVisible={unhideModalSV} animationIn="fadeIn">
-        <Image
-          style={{
-            alignSelf: 'center',
-            width: (718 * 45) / 100,
-            height: (260 * 45) / 100,
-            borderRadius: 10,
-          }}
-          source={{uri: adr}}
-        />
+        <Image style={style.image1} source={Data.ContentDraw2.box_policy} />
 
-        <Text
-          style={{
-            fontSize: 20,
-            textAlign: 'center',
-            position: 'absolute',
-            alignSelf: 'center',
-            fontStyle: 'italic',
-            bottom: screenHeight / 2 - 15,
-          }}>
+        <Text style={style.text1}>
           Đi đến xem chính sách tại: {'\n'}{' '}
-          <Text style={{color: 'blue'}}> http://appvhome.com.</Text>
+          <Text style={style.text2}> http://appvhome.com.</Text>
         </Text>
 
-        <View style={{bottom: 35, flexDirection: 'row', alignSelf: 'center'}}>
+        <View style={style.container1}>
           <TouchableOpacity>
-            <Text
-              style={{
-                fontSize: 20,
-                right: screenWidth / 7,
-              }}>
-              Tiếp tục{' '}
-            </Text>
+            <Text style={style.text3}>Tiếp tục </Text>
           </TouchableOpacity>
           <TouchableOpacity onPress={() => hideModalSV(!unhideModalSV)}>
-            <Text
-              style={{fontSize: 20, left: screenWidth / 10, color: '#F59031'}}>
-              Huỷ
-            </Text>
+            <Text style={style.text4}>Huỷ</Text>
           </TouchableOpacity>
         </View>
       </Modal>
       <Modal isVisible={unhideModalSV1} animationIn="fadeIn">
-        <SafeAreaView style={{flex: 1}}>
-          <View
-            style={{
-              flexDirection: 'column',
-              borderRadius: 15,
-              alignItems: 'center',
-              width: screenWidth - 25,
-              alignSelf: 'center',
-              backgroundColor: 'white',
-            }}>
-            <View style={{flexDirection: 'row'}}>
-              <Text style={{fontSize: 26, color: '#F59031', top: 5}}>
-                Giới thiệu về V-Home
-              </Text>
+        <SafeAreaView style={style.safe1}>
+          <View style={style.container2}>
+            <View style={style.row}>
+              <Text style={style.text5}>Giới thiệu về V-Home</Text>
 
               <TouchableOpacity onPress={() => hideModalSV1(!unhideModalSV1)}>
-                <Image
-                  style={{
-                    left: screenWidth / 13,
-                    height: (32 * 80) / 100,
-                    width: (32 * 80) / 100,
-                    top: 6,
-                  }}
-                  source={{uri: adr.ContentDraw2.f1}}
-                />
+                <Image style={style.image2} source={Data.ContentDraw2.close} />
               </TouchableOpacity>
             </View>
-            <View
-              style={{
-                marginTop: 8,
-                opacity: 0.2,
-                height: 1,
-                width: screenWidth - 25,
-                backgroundColor: 'black',
-              }}
-            />
+            <View style={style.container4} />
 
             <ScrollView>
-              <Text
-                style={{
-                  fontSize: 20,
-                  color: 'grey',
-                  marginBottom: 25,
-                  marginTop: 5,
-                }}>
+              <Text style={style.text6}>
                 V-Home là ứng dụng hỗ trợ khách {'\n'}hàng gọi các dịch vụ từ cơ
                 bản đến {'\n'}phức tạp , trọng tâm là sửa chữa bảo{'\n'}dưỡng đồ
                 điện tử-điện lạnh, thi công{'\n'}xây dựng và cho thuê máy móc.
@@ -135,384 +76,382 @@ export default function ContentDrawer2({navigation}) {
         </SafeAreaView>
       </Modal>
       <Modal isVisible={unhideModalSV2} animationIn="fadeIn">
-        <Image
-          style={{
-            alignSelf: 'center',
-            width: (718 * 45) / 100,
-            height: (260 * 45) / 100,
-            borderRadius: 10,
-          }}
-          source={{uri: adr.ContentDraw2.f2}}
-        />
+        <Image style={style.image3} source={Data.ContentDraw2.call_box3} />
 
-        <Text
-          style={{
-            fontSize: 20,
-            textAlign: 'center',
-            position: 'absolute',
-            alignSelf: 'center',
-            fontWeight: '600',
-            bottom: screenHeight / 2,
-          }}>
-          + 84 19008644
-        </Text>
+        <Text style={style.text7}>+ 84 19008644</Text>
 
-        <View style={{bottom: 35, flexDirection: 'row', alignSelf: 'center'}}>
+        <View style={style.container1}>
           <TouchableOpacity onPress={() => hideModalSV2(!unhideModalSV2)}>
-            <Text
-              style={{
-                fontSize: 20,
-                right: screenWidth / 7,
-                color: 'deepskyblue',
-              }}>
-              Huỷ
-            </Text>
+            <Text style={style.text8}>Huỷ</Text>
           </TouchableOpacity>
           <TouchableOpacity>
-            <Text
-              style={{
-                fontSize: 20,
-                left: screenWidth / 7,
-                fontWeight: '600',
-                color: 'deepskyblue',
-              }}>
-              Gọi
-            </Text>
+            <Text style={style.text9}>Gọi</Text>
           </TouchableOpacity>
         </View>
       </Modal>
 
-      <View style={{backgroundColor: '#F59031', height: screenHeight / 3.4}}>
-        <SafeAreaView style={{alignItems: 'center', height: 130}}>
-          <Image
-            source={{uri: adr.ContentDraw2.f3}}
-            style={{resizeMode: 'contain', height: '105%'}}
-          />
+      <View style={style.container6}>
+        <SafeAreaView style={style.container7}>
+          <Image source={Data.ContentDraw2.ava_provider} style={style.image4} />
         </SafeAreaView>
-        <View style={{justifyContent: 'center', alignSelf: 'center'}}>
-          <Text style={{fontSize: 20, color: 'white'}}>Nguyễn Tuấn Anh</Text>
+        <View style={style.container8}>
+          <Text style={style.text10}>Nguyễn Tuấn Anh</Text>
         </View>
-        <View style={{height: 45, alignItems: 'center'}}>
+        <View style={style.container9}>
           <Image
-            style={{resizeMode: 'contain', height: '90%', position: 'absolute'}}
-            source={{uri: adr.ContentDraw2.f4}}
+            style={style.image5}
+            source={Data.ContentDraw2.introductory_code}
           />
-          <Text style={{fontSize: 18, color: '#F59031', top: 10, left: 10}}>
-            0
-          </Text>
+          <Text style={style.text11}>0</Text>
         </View>
       </View>
       <ScrollView scrollToOverflowEnabled="false">
-        <View style={{flex: 1, flexDirection: 'column', marginTop: 20}}>
-          <View style={{flexDirection: 'row'}}>
-            <View style={{height: 40}}>
+        <View style={style.container10}>
+          <View style={style.row}>
+            <View style={style.height}>
               <Image
-                source={{uri: adr.ContentDraw2.f5}}
-                style={{
-                  justifyContent: 'flex-end',
-                  resizeMode: 'contain',
-                  height: '70%',
-                }}
+                source={Data.ContentDraw2.notification}
+                style={style.image6}
               />
             </View>
             <TouchableOpacity onPress={() => navigation.navigate('Thông báo')}>
-              <Text style={{fontSize: 18, top: 2, left: 10}}>Thông báo</Text>
+              <Text style={style.text13}>Thông báo</Text>
             </TouchableOpacity>
           </View>
-          <View
-            style={{
-              width: (11 * screenWidth) / 12,
-              height: 1,
-              backgroundColor: 'grey',
-              opacity: 0.45,
-            }}
-          />
+          <View style={style.container13} />
         </View>
-        <View style={{flexDirection: 'column', marginTop: 20}}>
-          <View style={{flexDirection: 'row'}}>
-            <View style={{height: 40}}>
-              <Image
-                source={{uri: adr.ContentDraw2.f6}}
-                style={{
-                  justifyContent: 'flex-end',
-                  resizeMode: 'contain',
-                  height: '70%',
-                }}
-              />
+        <View style={style.container14}>
+          <View style={style.row}>
+            <View style={style.height}>
+              <Image source={Data.ContentDraw2.history} style={style.image7} />
             </View>
             <TouchableOpacity onPress={() => navigation.navigate('Lịch sử')}>
-              <Text style={{fontSize: 18, top: 2, left: 10}}>Lịch sử</Text>
+              <Text style={style.text13}>Lịch sử</Text>
             </TouchableOpacity>
           </View>
-          <View
-            style={{
-              width: (11 * screenWidth) / 12,
-              height: 1,
-              backgroundColor: 'grey',
-              opacity: 0.45,
-            }}
-          />
+          <View style={style.container17} />
         </View>
-        <View style={{flexDirection: 'column', marginTop: 20}}>
-          <View style={{flexDirection: 'row'}}>
-            <View style={{height: 40}}>
+        <View style={style.container18}>
+          <View style={style.row}>
+            <View style={style.height}>
               <Image
-                source={{uri: adr.ContentDraw2.f7}}
-                style={{
-                  justifyContent: 'flex-end',
-                  resizeMode: 'contain',
-                  height: '70%',
-                }}
+                source={Data.ContentDraw2.RewardPoint}
+                style={style.image8}
               />
             </View>
             <TouchableOpacity
               onPress={() => navigation.navigate('Điểm thưởng')}>
-              <Text style={{fontSize: 18, top: 2, left: 10}}>Điểm thưởng</Text>
+              <Text style={style.text13}>Điểm thưởng</Text>
             </TouchableOpacity>
           </View>
 
-          <View
-            style={{
-              width: (11 * screenWidth) / 12,
-              height: 1,
-              backgroundColor: 'grey',
-              opacity: 0.45,
-            }}
-          />
+          <View style={style.container21} />
         </View>
-        <View style={{flexDirection: 'column', marginTop: 20}}>
-          <View style={{flexDirection: 'row'}}>
-            <View style={{height: 38, left: 5}}>
-              <Image
-                source={{uri: adr.ContentDraw2.f8}}
-                style={{
-                  justifyContent: 'flex-end',
-                  resizeMode: 'contain',
-                  height: '70%',
-                }}
-              />
+        <View style={style.container22}>
+          <View style={style.row}>
+            <View style={style.container24}>
+              <Image source={Data.ContentDraw2.evaluate} style={style.image9} />
             </View>
             <TouchableOpacity>
-              <Text style={{fontSize: 18, top: 2, left: 20}}>Đánh giá</Text>
+              <Text style={style.text14}>Đánh giá</Text>
             </TouchableOpacity>
           </View>
-          <View
-            style={{
-              width: (11 * screenWidth) / 12,
-              height: 1,
-              backgroundColor: 'grey',
-              opacity: 0.45,
-            }}
-          />
+          <View style={style.container25} />
         </View>
-        <View style={{flexDirection: 'column', marginTop: 20}}>
-          <View style={{flexDirection: 'row'}}>
-            <View style={{height: 40}}>
+        <View style={style.container26}>
+          <View style={style.row}>
+            <View style={style.height}>
               <Image
-                source={{uri: adr.ContentDraw2.f9}}
-                style={{
-                  justifyContent: 'flex-end',
-                  resizeMode: 'contain',
-                  height: '70%',
-                }}
+                source={Data.ContentDraw2.criteria}
+                style={style.image10}
               />
             </View>
             <TouchableOpacity onPress={() => hideModalSV(!unhideModalSV)}>
-              <Text style={{fontSize: 18, top: 2, left: 10}}>
-                Chính sách và cam kết
-              </Text>
+              <Text style={style.text13}>Chính sách và cam kết</Text>
             </TouchableOpacity>
           </View>
-          <View
-            style={{
-              width: (11 * screenWidth) / 12,
-              height: 1,
-              backgroundColor: 'grey',
-              opacity: 0.45,
-            }}
-          />
+          <View style={style.container29} />
         </View>
-        <View style={{flexDirection: 'column', marginTop: 20}}>
-          <View style={{flexDirection: 'row'}}>
-            <View style={{height: 40}}>
+        <View style={style.container30}>
+          <View style={style.row}>
+            <View style={style.height}>
               <Image
-                source={{uri: adr.ContentDraw2.f10}}
-                style={{
-                  justifyContent: 'flex-end',
-                  resizeMode: 'contain',
-                  height: '70%',
-                }}
+                source={Data.ContentDraw2.VHomeIntroduce}
+                style={style.image11}
               />
             </View>
             <TouchableOpacity onPress={() => hideModalSV1(!unhideModalSV1)}>
-              <Text style={{fontSize: 18, top: 2, left: 10}}>
-                Giới thiệu về V-Home
-              </Text>
+              <Text style={style.text13}>Giới thiệu về V-Home</Text>
             </TouchableOpacity>
           </View>
-          <View
-            style={{
-              width: (11 * screenWidth) / 12,
-              height: 1,
-              backgroundColor: 'grey',
-              opacity: 0.45,
-            }}
-          />
+          <View style={style.container33} />
         </View>
-        <View style={{flexDirection: 'column', marginTop: 20}}>
-          <View style={{flexDirection: 'row'}}>
-            <View style={{height: 40}}>
-              <Image
-                source={{uri: adr.ContentDraw2.f11}}
-                style={{
-                  justifyContent: 'flex-end',
-                  resizeMode: 'contain',
-                  height: '70%',
-                }}
-              />
+        <View style={style.container34}>
+          <View style={style.row}>
+            <View style={style.height}>
+              <Image source={Data.ContentDraw2.cskh} style={style.image12} />
             </View>
             <TouchableOpacity onPress={() => hideModalSV2(!unhideModalSV2)}>
-              <Text style={{fontSize: 18, top: 2, left: 10}}>
-                HOTLINE:0123456789
-              </Text>
+              <Text style={style.text13}>HOTLINE:0123456789</Text>
             </TouchableOpacity>
           </View>
-          <View
-            style={{
-              width: (11 * screenWidth) / 12,
-              height: 1,
-              backgroundColor: 'grey',
-              opacity: 0.45,
-            }}
-          />
+          <View style={style.container29} />
         </View>
-        <View style={{flexDirection: 'column', marginTop: 20}}>
-          <View style={{flexDirection: 'row'}}>
-            <View style={{height: 40}}>
+        <View style={style.container26}>
+          <View style={style.row}>
+            <View style={style.height}>
               <Image
-                source={{uri: adr.ContentDraw2.f12}}
-                style={{
-                  justifyContent: 'flex-end',
-                  resizeMode: 'contain',
-                  height: '70%',
-                }}
+                source={Data.ContentDraw2.language}
+                style={style.image10}
               />
             </View>
             <TouchableOpacity onPress={() => hideStateSV(!unhideStateSV)}>
-              <Text style={{fontSize: 18, top: 2, left: 10}}>Ngôn ngữ </Text>
+              <Text style={style.text13}>Ngôn ngữ </Text>
             </TouchableOpacity>
-            <View style={{height: 30}}>
+            <View style={style.height30}>
               <Image
                 source={
                   unhideStateSV
-                    ? {uri: adr.ContentDraw2.f13}
-                    : {uri: adr.ContentDraw2.f14}
+                    ? Data.ContentDraw2.down2
+                    : Data.ContentDraw2.next
                 }
-                style={{
-                  resizeMode: 'contain',
-                  height: '80%',
-                  left: screenWidth / 2,
-                }}
+                style={style.image13}
               />
             </View>
           </View>
-          <View
-            style={{
-              width: (11 * screenWidth) / 12,
-              height: 1,
-              backgroundColor: 'grey',
-              opacity: 0.45,
-            }}
-          />
+          <View style={style.container33} />
         </View>
 
         <View>
           {unhideStateSV && (
-            <View style={{flexDirection: 'column', marginTop: 20, left: 10}}>
-              <View style={{flexDirection: 'row'}}>
-                <View style={{height: 40}} />
+            <View style={style.container35}>
+              <View style={style.row}>
+                <View style={style.height} />
 
                 <TouchableOpacity
                   onPress={() => hideVietNameseSV(!VietNameseSV)}>
-                  <Text style={{fontSize: 18, top: 2, left: 10}}>
-                    Tiếng Việt
-                  </Text>
+                  <Text style={style.text13}>Tiếng Việt</Text>
                 </TouchableOpacity>
                 <View>
                   <Image
-                    source={VietNameseSV ? {uri: adr.ContentDraw2.f15} : null}
-                    style={{
-                      left: screenWidth / 1.75,
-                      height: (42 * 9) / 10,
-                      width: (42 * 9) / 10,
-                    }}
+                    source={VietNameseSV ? Data.ContentDraw2.tick3 : null}
+                    style={style.image14}
                   />
                 </View>
               </View>
-              <View
-                style={{
-                  width: (11 * screenWidth) / 12,
-                  height: 1,
-                  backgroundColor: 'grey',
-                  opacity: 0.45,
-                }}
-              />
-              <View style={{flexDirection: 'row', marginTop: 20}}>
-                <View style={{height: 40}} />
+              <View style={style.container33} />
+              <View style={style.container36}>
+                <View style={style.height} />
                 <TouchableOpacity
                   onPress={() => hideVietNameseSV(!VietNameseSV)}>
-                  <Text style={{fontSize: 18, top: 2, left: 10}}>
-                    Tiếng Anh
-                  </Text>
+                  <Text style={style.text13}>Tiếng Anh</Text>
                 </TouchableOpacity>
                 <View>
                   <Image
-                    source={VietNameseSV ? null : {uri: adr.ContentDraw2.f15}}
-                    style={{
-                      left: screenWidth / 1.75,
-                      height: (42 * 9) / 10,
-                      width: (42 * 9) / 10,
-                    }}
+                    source={VietNameseSV ? null : Data.ContentDraw2.tick3}
+                    style={style.image14}
                   />
                 </View>
               </View>
-              <View
-                style={{
-                  width: (11 * screenWidth) / 12,
-                  height: 1,
-                  backgroundColor: 'grey',
-                  opacity: 0.45,
-                }}
-              />
+              <View style={style.container33} />
             </View>
           )}
         </View>
-        <View style={{flexDirection: 'column', marginTop: 20}}>
-          <View style={{flexDirection: 'row'}}>
-            <View style={{height: 40}}>
-              <Image
-                source={{uri: adr.ContentDraw2.f16}}
-                style={{
-                  justifyContent: 'flex-end',
-                  resizeMode: 'contain',
-                  height: '70%',
-                }}
-              />
+        <View style={style.container26}>
+          <View style={style.row}>
+            <View style={style.height}>
+              <Image source={Data.ContentDraw2.log_out} style={style.image12} />
             </View>
             <TouchableOpacity>
-              <Text style={{fontSize: 18, top: 2, left: 10}}>Đăng xuất</Text>
+              <Text style={style.text13}>Đăng xuất</Text>
             </TouchableOpacity>
           </View>
-          <View
-            style={{
-              width: (11 * screenWidth) / 12,
-              height: 1,
-              backgroundColor: 'grey',
-              opacity: 0.45,
-            }}
-          />
+          <View style={style.container33} />
         </View>
       </ScrollView>
     </View>
   );
 }
+const style = StyleSheet.create({
+  all: {flex: 1},
+  image1: {
+    alignSelf: 'center',
+    width: (718 * 45) / 100,
+    height: (260 * 45) / 100,
+    borderRadius: 10,
+  },
+  text1: {
+    fontSize: 20,
+    textAlign: 'center',
+    position: 'absolute',
+    alignSelf: 'center',
+    fontStyle: 'italic',
+    bottom: screenHeight / 2 - 15,
+  },
+  text2: {color: 'blue'},
+  container1: {bottom: 35, flexDirection: 'row', alignSelf: 'center'},
+  text3: {
+    fontSize: 20,
+    right: screenWidth / 7,
+  },
+  text4: {fontSize: 20, left: screenWidth / 10, color: '#F59031'},
+  safe1: {flex: 1},
+  container2: {
+    flexDirection: 'column',
+    borderRadius: 15,
+    alignItems: 'center',
+    width: screenWidth - 25,
+    alignSelf: 'center',
+    backgroundColor: 'white',
+  },
+  text5: {fontSize: 26, color: '#F59031', top: 5},
+  image2: {
+    left: screenWidth / 13,
+    height: (32 * 80) / 100,
+    width: (32 * 80) / 100,
+    top: 6,
+  },
+  container4: {
+    marginTop: 8,
+    opacity: 0.2,
+    height: 1,
+    width: screenWidth - 25,
+    backgroundColor: 'black',
+  },
+  text6: {
+    fontSize: 20,
+    color: 'grey',
+    marginBottom: 25,
+    marginTop: 5,
+  },
+  image3: {
+    alignSelf: 'center',
+    width: (718 * 45) / 100,
+    height: (260 * 45) / 100,
+    borderRadius: 10,
+  },
+  text7: {
+    fontSize: 20,
+    textAlign: 'center',
+    position: 'absolute',
+    alignSelf: 'center',
+    fontWeight: '600',
+    bottom: screenHeight / 2,
+  },
+  text8: {
+    fontSize: 20,
+    right: screenWidth / 7,
+    color: 'deepskyblue',
+  },
+
+  text9: {
+    fontSize: 20,
+    left: screenWidth / 7,
+    fontWeight: '600',
+    color: 'deepskyblue',
+  },
+  container6: {backgroundColor: '#F59031', height: screenHeight / 3.4},
+  container7: {alignItems: 'center', height: 130},
+  image4: {resizeMode: 'contain', height: '105%'},
+  container8: {justifyContent: 'center', alignSelf: 'center'},
+  text10: {fontSize: 20, color: 'white'},
+  container9: {height: 45, alignItems: 'center'},
+  image5: {resizeMode: 'contain', height: '90%', position: 'absolute'},
+  text11: {fontSize: 18, color: '#F59031', top: 10, left: 10},
+  container10: {flex: 1, flexDirection: 'column', marginTop: 20},
+  image6: {
+    justifyContent: 'flex-end',
+    resizeMode: 'contain',
+    height: '70%',
+  },
+  container13: {
+    width: (11 * screenWidth) / 12,
+    height: 1,
+    backgroundColor: 'grey',
+    opacity: 0.45,
+  },
+  container14: {flexDirection: 'column', marginTop: 20},
+  image7: {
+    justifyContent: 'flex-end',
+    resizeMode: 'contain',
+    height: '70%',
+  },
+  container17: {
+    width: (11 * screenWidth) / 12,
+    height: 1,
+    backgroundColor: 'grey',
+    opacity: 0.45,
+  },
+  container18: {flexDirection: 'column', marginTop: 20},
+  image8: {
+    justifyContent: 'flex-end',
+    resizeMode: 'contain',
+    height: '70%',
+  },
+  container21: {
+    width: (11 * screenWidth) / 12,
+    height: 1,
+    backgroundColor: 'grey',
+    opacity: 0.45,
+  },
+  container22: {flexDirection: 'column', marginTop: 20},
+  text13: {fontSize: 18, top: 2, left: 10},
+  container24: {height: 38, left: 5},
+  image9: {
+    justifyContent: 'flex-end',
+    resizeMode: 'contain',
+    height: '70%',
+  },
+  text14: {fontSize: 18, top: 2, left: 20},
+  container25: {
+    width: (11 * screenWidth) / 12,
+    height: 1,
+    backgroundColor: 'grey',
+    opacity: 0.45,
+  },
+  container26: {flexDirection: 'column', marginTop: 20},
+  image10: {
+    justifyContent: 'flex-end',
+    resizeMode: 'contain',
+    height: '70%',
+  },
+  container29: {
+    width: (11 * screenWidth) / 12,
+    height: 1,
+    backgroundColor: 'grey',
+    opacity: 0.45,
+  },
+  container30: {flexDirection: 'column', marginTop: 20},
+  image11: {
+    justifyContent: 'flex-end',
+    resizeMode: 'contain',
+    height: '70%',
+  },
+  container33: {
+    width: (11 * screenWidth) / 12,
+    height: 1,
+    backgroundColor: 'grey',
+    opacity: 0.45,
+  },
+  container34: {flexDirection: 'column', marginTop: 20},
+  row: {flexDirection: 'row'},
+  height: {height: 40},
+  image12: {
+    justifyContent: 'flex-end',
+    resizeMode: 'contain',
+    height: '70%',
+  },
+  height30: {height: 30},
+  image13: {
+    resizeMode: 'contain',
+    height: '80%',
+    left: screenWidth / 2,
+  },
+  container35: {flexDirection: 'column', marginTop: 20, left: 10},
+  image14: {
+    left: screenWidth / 1.75,
+    height: (42 * 9) / 10,
+    width: (42 * 9) / 10,
+  },
+  container36: {flexDirection: 'row', marginTop: 20},
+});
