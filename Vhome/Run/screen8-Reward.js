@@ -18,10 +18,7 @@ class FlatlistItem extends Component {
     return (
       <View style={styles.Container1}>
         <View style={styles.Container2}>
-          <Image
-            style={styles.Container3}
-            source={{uri: this.props.item.image}}
-          />
+          <Image style={styles.Container3} source={this.props.item.image} />
           <View style={styles.Container4}>
             <Text style={styles.Container5}>{this.props.item.name}</Text>
           </View>

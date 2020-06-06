@@ -31,10 +31,12 @@ export default function ContentDrawer2({navigation}) {
         </Text>
 
         <View style={style.container1}>
-          <TouchableOpacity>
+          <TouchableOpacity style={style.touchableContinue}>
             <Text style={style.text3}>Tiếp tục </Text>
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => hideModalSV(!unhideModalSV)}>
+          <TouchableOpacity
+            style={style.touchableCancel}
+            onPress={() => hideModalSV(!unhideModalSV)}>
             <Text style={style.text4}>Huỷ</Text>
           </TouchableOpacity>
         </View>
@@ -45,7 +47,9 @@ export default function ContentDrawer2({navigation}) {
             <View style={style.row}>
               <Text style={style.text5}>Giới thiệu về V-Home</Text>
 
-              <TouchableOpacity onPress={() => hideModalSV1(!unhideModalSV1)}>
+              <TouchableOpacity
+                style={style.touchableClose}
+                onPress={() => hideModalSV1(!unhideModalSV1)}>
                 <Image style={style.image2} source={Data.ContentDraw2.close} />
               </TouchableOpacity>
             </View>
@@ -81,10 +85,12 @@ export default function ContentDrawer2({navigation}) {
         <Text style={style.text7}>+ 84 19008644</Text>
 
         <View style={style.container1}>
-          <TouchableOpacity onPress={() => hideModalSV2(!unhideModalSV2)}>
+          <TouchableOpacity
+            style={style.touchableForText8}
+            onPress={() => hideModalSV2(!unhideModalSV2)}>
             <Text style={style.text8}>Huỷ</Text>
           </TouchableOpacity>
-          <TouchableOpacity>
+          <TouchableOpacity style={style.touchableForText9}>
             <Text style={style.text9}>Gọi</Text>
           </TouchableOpacity>
         </View>
@@ -114,7 +120,9 @@ export default function ContentDrawer2({navigation}) {
                 style={style.image6}
               />
             </View>
-            <TouchableOpacity onPress={() => navigation.navigate('Thông báo')}>
+            <TouchableOpacity
+              style={style.touchable}
+              onPress={() => navigation.navigate('Thông báo')}>
               <Text style={style.text13}>Thông báo</Text>
             </TouchableOpacity>
           </View>
@@ -125,7 +133,9 @@ export default function ContentDrawer2({navigation}) {
             <View style={style.height}>
               <Image source={Data.ContentDraw2.history} style={style.image7} />
             </View>
-            <TouchableOpacity onPress={() => navigation.navigate('Lịch sử')}>
+            <TouchableOpacity
+              style={style.touchable}
+              onPress={() => navigation.navigate('Lịch sử')}>
               <Text style={style.text13}>Lịch sử</Text>
             </TouchableOpacity>
           </View>
@@ -140,6 +150,7 @@ export default function ContentDrawer2({navigation}) {
               />
             </View>
             <TouchableOpacity
+              style={style.touchable}
               onPress={() => navigation.navigate('Điểm thưởng')}>
               <Text style={style.text13}>Điểm thưởng</Text>
             </TouchableOpacity>
@@ -152,7 +163,7 @@ export default function ContentDrawer2({navigation}) {
             <View style={style.container24}>
               <Image source={Data.ContentDraw2.evaluate} style={style.image9} />
             </View>
-            <TouchableOpacity>
+            <TouchableOpacity style={style.touchable2}>
               <Text style={style.text14}>Đánh giá</Text>
             </TouchableOpacity>
           </View>
@@ -166,7 +177,9 @@ export default function ContentDrawer2({navigation}) {
                 style={style.image10}
               />
             </View>
-            <TouchableOpacity onPress={() => hideModalSV(!unhideModalSV)}>
+            <TouchableOpacity
+              style={style.touchable}
+              onPress={() => hideModalSV(!unhideModalSV)}>
               <Text style={style.text13}>Chính sách và cam kết</Text>
             </TouchableOpacity>
           </View>
@@ -180,7 +193,9 @@ export default function ContentDrawer2({navigation}) {
                 style={style.image11}
               />
             </View>
-            <TouchableOpacity onPress={() => hideModalSV1(!unhideModalSV1)}>
+            <TouchableOpacity
+              style={style.touchable}
+              onPress={() => hideModalSV1(!unhideModalSV1)}>
               <Text style={style.text13}>Giới thiệu về V-Home</Text>
             </TouchableOpacity>
           </View>
@@ -191,7 +206,9 @@ export default function ContentDrawer2({navigation}) {
             <View style={style.height}>
               <Image source={Data.ContentDraw2.cskh} style={style.image12} />
             </View>
-            <TouchableOpacity onPress={() => hideModalSV2(!unhideModalSV2)}>
+            <TouchableOpacity
+              style={style.touchable}
+              onPress={() => hideModalSV2(!unhideModalSV2)}>
               <Text style={style.text13}>HOTLINE:0123456789</Text>
             </TouchableOpacity>
           </View>
@@ -205,7 +222,9 @@ export default function ContentDrawer2({navigation}) {
                 style={style.image10}
               />
             </View>
-            <TouchableOpacity onPress={() => hideStateSV(!unhideStateSV)}>
+            <TouchableOpacity
+              style={style.touchable}
+              onPress={() => hideStateSV(!unhideStateSV)}>
               <Text style={style.text13}>Ngôn ngữ </Text>
             </TouchableOpacity>
             <View style={style.height30}>
@@ -262,7 +281,7 @@ export default function ContentDrawer2({navigation}) {
             <View style={style.height}>
               <Image source={Data.ContentDraw2.log_out} style={style.image12} />
             </View>
-            <TouchableOpacity>
+            <TouchableOpacity style={style.touchable}>
               <Text style={style.text13}>Đăng xuất</Text>
             </TouchableOpacity>
           </View>
@@ -292,9 +311,12 @@ const style = StyleSheet.create({
   container1: {bottom: 35, flexDirection: 'row', alignSelf: 'center'},
   text3: {
     fontSize: 20,
+  },
+  touchableContinue: {
     right: screenWidth / 7,
   },
-  text4: {fontSize: 20, left: screenWidth / 10, color: '#F59031'},
+  text4: {fontSize: 20, color: '#F59031'},
+  touchableCancel: {left: screenWidth / 10},
   safe1: {flex: 1},
   container2: {
     flexDirection: 'column',
@@ -306,11 +328,10 @@ const style = StyleSheet.create({
   },
   text5: {fontSize: 26, color: '#F59031', top: 5},
   image2: {
-    left: screenWidth / 13,
     height: (32 * 80) / 100,
     width: (32 * 80) / 100,
-    top: 6,
   },
+  touchableClose: {left: screenWidth / 13, top: 6},
   container4: {
     marginTop: 8,
     opacity: 0.2,
@@ -340,15 +361,17 @@ const style = StyleSheet.create({
   },
   text8: {
     fontSize: 20,
-    right: screenWidth / 7,
+
     color: 'deepskyblue',
   },
-
+  touchableForText8: {right: screenWidth / 7},
   text9: {
     fontSize: 20,
-    left: screenWidth / 7,
     fontWeight: '600',
     color: 'deepskyblue',
+  },
+  touchableForText9: {
+    left: screenWidth / 7,
   },
   container6: {backgroundColor: '#F59031', height: screenHeight / 3.4},
   container7: {alignItems: 'center', height: 130},
@@ -395,14 +418,16 @@ const style = StyleSheet.create({
     opacity: 0.45,
   },
   container22: {flexDirection: 'column', marginTop: 20},
-  text13: {fontSize: 18, top: 2, left: 10},
+  text13: {fontSize: 18},
+  touchable: {top: 2, left: 10},
   container24: {height: 38, left: 5},
   image9: {
     justifyContent: 'flex-end',
     resizeMode: 'contain',
     height: '70%',
   },
-  text14: {fontSize: 18, top: 2, left: 20},
+  text14: {fontSize: 18},
+  touchable2: {top: 2, left: 20},
   container25: {
     width: (11 * screenWidth) / 12,
     height: 1,

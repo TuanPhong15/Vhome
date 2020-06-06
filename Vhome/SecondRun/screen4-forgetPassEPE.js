@@ -32,16 +32,17 @@ export default function Pass({navigation}) {
       </View>
 
       <View style={style.container2}>
-        <TouchableOpacity onPress={() => setModalVisibility(!ModalVisibility)}>
-          <Image
-            source={Data.screen4E.password_retrieval}
-            style={style.image2}
-          />
+        <TouchableOpacity
+          style={style.touchable2}
+          onPress={() => setModalVisibility(!ModalVisibility)}>
+          <View style={style.takePassword}>
+            <Text style={style.text6}>Lấy lại mật khẩu</Text>
+          </View>
         </TouchableOpacity>
       </View>
       <Text style={style.text}>Bạn chưa nhận được mật khẩu.</Text>
 
-      <TouchableOpacity>
+      <TouchableOpacity style={style.touchable1}>
         <Text style={style.text2}>Gửi lại mã xác nhận</Text>
       </TouchableOpacity>
       <Modal isVisible={ModalVisibility}>
@@ -95,7 +96,8 @@ const style = StyleSheet.create({
   container2: {height: 160, width: 160},
   image2: {resizeMode: 'contain', height: '100%', width: '100%'},
   text: {color: 'grey', fontSize: 18},
-  text2: {color: 'orange', fontSize: 17, marginTop: 10},
+  touchable1: {marginTop: 10},
+  text2: {color: 'orange', fontSize: 17},
   image3: {
     resizeMode: 'contain',
     position: 'absolute',
@@ -122,4 +124,14 @@ const style = StyleSheet.create({
     right: 50,
     bottom: -110,
   },
+  takePassword: {
+    width: (272 * 60) / 100,
+    height: (86 * 60) / 100,
+    backgroundColor: '#F59031',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 60,
+  },
+  text6: {fontSize: 16, color: 'white'},
+  touchable2: {top: 50},
 });

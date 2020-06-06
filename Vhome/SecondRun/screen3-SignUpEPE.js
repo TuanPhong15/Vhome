@@ -85,6 +85,7 @@ export default function SignUp2({navigation}) {
 
         <View>
           <TouchableOpacity
+            style={style.touchable0}
             onPress={() => {
               setShow(!show), setShow2(!show2);
             }}>
@@ -118,12 +119,16 @@ export default function SignUp2({navigation}) {
       )}
 
       <View style={style.container11}>
-        <TouchableOpacity>
-          <Image source={Data.screen3E.registration} style={style.image7} />
+        <TouchableOpacity style={style.touchable4}>
+          <View style={style.registration}>
+            <Text style={style.text5}>Đăng ký</Text>
+          </View>
         </TouchableOpacity>
         <Text style={style.text3}>Bạn đã có tài khoản?</Text>
 
-        <TouchableOpacity onPress={() => navigation.navigate('SignIn2')}>
+        <TouchableOpacity
+          style={style.touchable5}
+          onPress={() => navigation.navigate('SignIn2')}>
           <Text style={style.text4}>Về đăng nhập</Text>
         </TouchableOpacity>
       </View>
@@ -215,9 +220,11 @@ const style = StyleSheet.create({
     borderBottomRightRadius: 20,
   },
   text: {
-    marginLeft: screenWidth / 8,
     fontSize: 16,
     color: 'grey',
+  },
+  touchable0: {
+    marginLeft: screenWidth / 8,
   },
   container6: {
     backgroundColor: 'grey',
@@ -301,6 +308,17 @@ const style = StyleSheet.create({
     height: '80%',
   },
   text3: {fontSize: 15, marginLeft: -120, color: 'grey'},
-  text4: {marginLeft: 120, top: -18, color: 'orange', fontSize: 15},
-  touchable4: {top: 35},
+  text4: {color: 'orange', fontSize: 15},
+  touchable5: {marginLeft: 120, top: -20},
+  touchable4: {bottom: 30},
+  registration: {
+    width: (258 * 60) / 100,
+    height: (86 * 60) / 100,
+    backgroundColor: '#F59031',
+    borderRadius: 60,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  touchable6: {bottom: 20},
+  text5: {fontSize: 18, color: 'white'},
 });

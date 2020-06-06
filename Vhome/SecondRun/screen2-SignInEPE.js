@@ -50,8 +50,12 @@ export default function SignIn2({navigation}) {
         </TouchableOpacity>
       </View>
       <View style={style.container6}>
-        <TouchableOpacity onPress={() => navigation.navigate('ServiceDraw2')}>
-          <Image source={Data.screen2.login} style={style.image5} />
+        <TouchableOpacity
+          style={style.touchable2}
+          onPress={() => navigation.navigate('ServiceDraw2')}>
+          <View style={style.login}>
+            <Text style={style.textLogin}>Đăng nhập</Text>
+          </View>
         </TouchableOpacity>
       </View>
       <View style={style.container7}>
@@ -61,7 +65,9 @@ export default function SignIn2({navigation}) {
           </TouchableOpacity>
         </View>
         <Text style={style.text2}>Bạn chưa có tài khoản?</Text>
-        <TouchableOpacity onPress={() => navigation.navigate('forgetPass2')}>
+        <TouchableOpacity
+          style={style.touchable2}
+          onPress={() => navigation.navigate('forgetPass2')}>
           <Text style={style.text3}>Quên mật khẩu</Text>
         </TouchableOpacity>
         <Text style={style.text4}>19008644</Text>
@@ -175,10 +181,21 @@ const style = StyleSheet.create({
   text: {fontSize: 16, color: 'orange'},
   text2: {marginTop: -20, right: 50, color: 'grey', fontSize: 16},
   text3: {
-    top: 20,
     color: 'orange',
     fontSize: 16,
     textDecorationLine: 'underline',
   },
+  touchable2: {
+    top: 20,
+  },
   text4: {top: 150, color: 'orange', fontSize: 14},
+  login: {
+    height: (86 * 60) / 100,
+    width: (256 * 60) / 100,
+    backgroundColor: '#F59031',
+    borderRadius: 60,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  textLogin: {color: 'white', fontSize: 16},
 });

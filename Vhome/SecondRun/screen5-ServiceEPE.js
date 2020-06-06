@@ -70,7 +70,9 @@ export default function Services2() {
     <View style={style.container13}>
       <View style={style.container14}>
         <View style={style.container15}>
-          <TouchableOpacity onPress={() => setOnline(!online)}>
+          <TouchableOpacity
+            style={style.touchable}
+            onPress={() => setOnline(!online)}>
             <Image
               style={style.image6}
               source={online ? Data.screen5E.on : Data.screen5E.off}
@@ -145,6 +147,8 @@ const style = StyleSheet.create({
   image6: {
     resizeMode: 'contain',
     width: '65%',
+  },
+  touchable: {
     left: screenWidth - 80,
     top: 10,
   },

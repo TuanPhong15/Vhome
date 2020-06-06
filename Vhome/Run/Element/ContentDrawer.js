@@ -30,10 +30,12 @@ export default function ContentDrawer({navigation}) {
         </Text>
 
         <View style={style.container1}>
-          <TouchableOpacity>
+          <TouchableOpacity style={style.touchableContinue}>
             <Text style={style.text3}>Tiếp tục </Text>
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => hideModal(!unhideModal)}>
+          <TouchableOpacity
+            style={style.touchableCancel3}
+            onPress={() => hideModal(!unhideModal)}>
             <Text style={style.text4}>Huỷ</Text>
           </TouchableOpacity>
         </View>
@@ -44,7 +46,9 @@ export default function ContentDrawer({navigation}) {
             <View style={style.container3}>
               <Text style={style.text6}>Giới thiệu về V-Home</Text>
 
-              <TouchableOpacity onPress={() => hideModal1(!unhideModal1)}>
+              <TouchableOpacity
+                style={style.touchableCancel}
+                onPress={() => hideModal1(!unhideModal1)}>
                 <Image style={style.image2} source={Data.ContentDraw.close} />
               </TouchableOpacity>
             </View>
@@ -98,7 +102,9 @@ export default function ContentDrawer({navigation}) {
                 style={style.image5}
               />
             </View>
-            <TouchableOpacity onPress={() => navigation.navigate('Thông báo')}>
+            <TouchableOpacity
+              style={style.touchable}
+              onPress={() => navigation.navigate('Thông báo')}>
               <Text style={style.text10}>Thông báo</Text>
             </TouchableOpacity>
             <View style={style.container11}>
@@ -112,7 +118,9 @@ export default function ContentDrawer({navigation}) {
             <View style={style.container15}>
               <Image source={Data.ContentDraw.history} style={style.image7} />
             </View>
-            <TouchableOpacity onPress={() => navigation.navigate('Lịch sử')}>
+            <TouchableOpacity
+              style={style.touchable}
+              onPress={() => navigation.navigate('Lịch sử')}>
               <Text style={style.text11}>Lịch sử</Text>
             </TouchableOpacity>
             <View style={style.container16}>
@@ -130,6 +138,7 @@ export default function ContentDrawer({navigation}) {
               />
             </View>
             <TouchableOpacity
+              style={style.touchable}
               onPress={() => navigation.navigate('Điểm thưởng')}>
               <Text style={style.text12}>Điểm thưởng</Text>
             </TouchableOpacity>
@@ -141,7 +150,9 @@ export default function ContentDrawer({navigation}) {
             <View style={style.container23}>
               <Image source={Data.ContentDraw.criteria} style={style.image11} />
             </View>
-            <TouchableOpacity onPress={() => hideModal(!unhideModal)}>
+            <TouchableOpacity
+              style={style.touchable}
+              onPress={() => hideModal(!unhideModal)}>
               <Text style={style.text13}>Chính sách và cam kết</Text>
             </TouchableOpacity>
           </View>
@@ -156,7 +167,9 @@ export default function ContentDrawer({navigation}) {
                 style={style.image12}
               />
             </View>
-            <TouchableOpacity onPress={() => hideModal1(!unhideModal1)}>
+            <TouchableOpacity
+              style={style.touchable}
+              onPress={() => hideModal1(!unhideModal1)}>
               <Text style={style.text14}>Giới thiệu về V-Home</Text>
             </TouchableOpacity>
           </View>
@@ -168,10 +181,12 @@ export default function ContentDrawer({navigation}) {
           <Text style={style.text15}>+ 84 19008644</Text>
 
           <View style={style.container29}>
-            <TouchableOpacity onPress={() => hideModal2(!unhideModal2)}>
+            <TouchableOpacity
+              style={style.touchableCancel2}
+              onPress={() => hideModal2(!unhideModal2)}>
               <Text style={style.text16}>Huỷ</Text>
             </TouchableOpacity>
-            <TouchableOpacity>
+            <TouchableOpacity style={style.touchableCall}>
               <Text style={style.text17}>Gọi</Text>
             </TouchableOpacity>
           </View>
@@ -182,7 +197,9 @@ export default function ContentDrawer({navigation}) {
             <View style={style.container32}>
               <Image source={Data.ContentDraw.cskh} style={style.image14} />
             </View>
-            <TouchableOpacity onPress={() => hideModal2(!unhideModal2)}>
+            <TouchableOpacity
+              style={style.touchable}
+              onPress={() => hideModal2(!unhideModal2)}>
               <Text style={style.text18}>HOTLINE: 19008644</Text>
             </TouchableOpacity>
           </View>
@@ -194,7 +211,9 @@ export default function ContentDrawer({navigation}) {
             <View style={style.container36}>
               <Image source={Data.ContentDraw.language} style={style.image16} />
             </View>
-            <TouchableOpacity onPress={() => hideState(!unhideState)}>
+            <TouchableOpacity
+              style={style.touchable}
+              onPress={() => hideState(!unhideState)}>
               <Text style={style.text20}>Ngôn ngữ </Text>
             </TouchableOpacity>
             <View style={style.container37}>
@@ -248,7 +267,7 @@ export default function ContentDrawer({navigation}) {
             <View style={style.container48}>
               <Image source={Data.ContentDraw.log_out} style={style.image19} />
             </View>
-            <TouchableOpacity>
+            <TouchableOpacity style={style.touchable}>
               <Text style={style.text20}>Đăng xuất</Text>
             </TouchableOpacity>
           </View>
@@ -278,9 +297,12 @@ const style = StyleSheet.create({
   container1: {bottom: 35, flexDirection: 'row', alignSelf: 'center'},
   text3: {
     fontSize: 20,
+  },
+  touchableContinue: {
     right: screenWidth / 7,
   },
-  text4: {fontSize: 20, left: screenWidth / 10, color: '#F59031'},
+  text4: {fontSize: 20, color: '#F59031'},
+  touchableCancel3: {left: screenWidth / 10},
   text5: {flex: 1},
   container2: {
     flexDirection: 'column',
@@ -293,11 +315,10 @@ const style = StyleSheet.create({
   container3: {flexDirection: 'row'},
   text6: {fontSize: 26, color: '#F59031', top: 5},
   image2: {
-    left: screenWidth / 13,
     height: (32 * 80) / 100,
     width: (32 * 80) / 100,
-    top: 6,
   },
+  touchableCancel: {top: 6, left: screenWidth / 13},
   container4: {
     marginTop: 8,
     opacity: 0.2,
@@ -327,7 +348,7 @@ const style = StyleSheet.create({
     resizeMode: 'contain',
     height: '70%',
   },
-  text10: {fontSize: 18, top: 2, left: 10},
+  text10: {fontSize: 18},
   container11: {height: 30},
   image6: {
     resizeMode: 'contain',
@@ -348,7 +369,7 @@ const style = StyleSheet.create({
     resizeMode: 'contain',
     height: '70%',
   },
-  text11: {fontSize: 18, top: 2, left: 10},
+  text11: {fontSize: 18},
   container16: {height: 30},
   image8: {
     resizeMode: 'contain',
@@ -369,7 +390,7 @@ const style = StyleSheet.create({
     resizeMode: 'contain',
     height: '70%',
   },
-  text12: {fontSize: 18, top: 2, left: 10},
+  text12: {fontSize: 18},
   container20: {
     width: (11 * screenWidth) / 12,
     height: 1,
@@ -384,7 +405,7 @@ const style = StyleSheet.create({
     resizeMode: 'contain',
     height: '70%',
   },
-  text13: {fontSize: 18, top: 2, left: 10},
+  text13: {fontSize: 18},
   container24: {
     width: (11 * screenWidth) / 12,
     height: 1,
@@ -399,7 +420,7 @@ const style = StyleSheet.create({
     resizeMode: 'contain',
     height: '70%',
   },
-  text14: {fontSize: 18, top: 2, left: 10},
+  text14: {fontSize: 18},
   container28: {
     width: (11 * screenWidth) / 12,
     height: 1,
@@ -423,14 +444,18 @@ const style = StyleSheet.create({
   container29: {bottom: 35, flexDirection: 'row', alignSelf: 'center'},
   text16: {
     fontSize: 20,
-    right: screenWidth / 7,
     color: 'deepskyblue',
+  },
+  touchableCancel2: {
+    right: screenWidth / 7,
   },
   text17: {
     fontSize: 20,
-    left: screenWidth / 7,
     fontWeight: '600',
     color: 'deepskyblue',
+  },
+  touchableCall: {
+    left: screenWidth / 7,
   },
   container30: {flexDirection: 'column', marginTop: 20},
   container31: {flexDirection: 'row'},
@@ -440,7 +465,7 @@ const style = StyleSheet.create({
     resizeMode: 'contain',
     height: '70%',
   },
-  text18: {fontSize: 18, top: 2, left: 10},
+  text18: {fontSize: 18},
   container33: {
     width: (11 * screenWidth) / 12,
     height: 1,
@@ -450,7 +475,7 @@ const style = StyleSheet.create({
   container34: {flexDirection: 'column', marginTop: 20},
   container35: {flexDirection: 'row'},
   container36: {height: 40},
-  text19: {fontSize: 18, top: 2, left: 10},
+  text19: {fontSize: 18},
   container37: {height: 30},
   image15: {
     resizeMode: 'contain',
@@ -470,8 +495,7 @@ const style = StyleSheet.create({
     height: '70%',
   },
   container40: {flexDirection: 'row'},
-  container41: {height: 40},
-  text20: {fontSize: 18, top: 2, left: 10},
+  text20: {fontSize: 18},
   image17: {
     left: screenWidth / 1.75,
     height: (42 * 9) / 10,
@@ -513,4 +537,5 @@ const style = StyleSheet.create({
     backgroundColor: 'grey',
     opacity: 0.45,
   },
+  touchable: {top: 2, left: 10},
 });
