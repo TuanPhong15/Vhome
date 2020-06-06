@@ -32,16 +32,17 @@ export default function Pass({navigation}) {
       </View>
 
       <View style={styles.Container5}>
-        <TouchableOpacity onPress={() => setModalVisibility(!ModalVisibility)}>
-          <Image
-            source={Data.screen4.password_retrieval}
-            style={styles.Container6}
-          />
+        <TouchableOpacity
+          style={styles.touchable}
+          onPress={() => setModalVisibility(!ModalVisibility)}>
+          <View style={styles.takePassword}>
+            <Text style={styles.text}>Lấy lại mật khẩu</Text>
+          </View>
         </TouchableOpacity>
       </View>
       <Text style={styles.Container7}>Bạn chưa nhận được mật khẩu.</Text>
 
-      <TouchableOpacity>
+      <TouchableOpacity style={styles.touchable2}>
         <Text style={styles.Container8}>Gửi lại mã xác nhận</Text>
       </TouchableOpacity>
       <Modal isVisible={ModalVisibility}>
@@ -92,10 +93,11 @@ const styles = StyleSheet.create({
     resizeMode: 'stretch',
   },
   Container4: {flex: 1, fontSize: 18},
-  Container5: {height: 160, width: 160},
+  Container5: {height: 160, width: 160, alignItems: 'center'},
   Container6: {resizeMode: 'contain', height: '100%', width: '100%'},
   Container7: {color: 'grey', fontSize: 18},
-  Container8: {color: 'orange', fontSize: 17, marginTop: 10},
+  Container8: {color: '#F59031', fontSize: 17},
+  touchable2: {marginTop: 10},
   Container9: {
     resizeMode: 'contain',
     position: 'absolute',
@@ -122,4 +124,14 @@ const styles = StyleSheet.create({
     right: 50,
     bottom: -110,
   },
+  takePassword: {
+    width: (272 * 60) / 100,
+    height: (86 * 60) / 100,
+    backgroundColor: '#F59031',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 60,
+  },
+  text: {fontSize: 16, color: 'white'},
+  touchable: {top: 50},
 });

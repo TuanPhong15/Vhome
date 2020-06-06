@@ -401,8 +401,12 @@ export default function HealthCare() {
       </Modal>
       <Image style={styles.Container98} source={Data.screen9.cssk} />
       <Text style={styles.Container99}>Chăm sóc sức khoẻ</Text>
-      <TouchableOpacity onPress={() => hideModal(!modal)}>
-        <Image source={Data.screen9.call_service} style={styles.Container100} />
+      <TouchableOpacity
+        style={styles.touchable}
+        onPress={() => hideModal(!modal)}>
+        <View style={styles.Container100}>
+          <Text style={styles.callService}>Gọi dịch vụ</Text>
+        </View>
       </TouchableOpacity>
     </View>
   );
@@ -835,9 +839,16 @@ const styles = StyleSheet.create({
     top: -20,
   },
   Container100: {
-    alignSelf: 'center',
     width: (258 * 65) / 100,
     height: (86 * 65) / 100,
-    top: screenHeight - 500,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#F59031',
+    borderRadius: 60,
   },
+  touchable: {
+    top: screenHeight - 500,
+    alignSelf: 'center',
+  },
+  callService: {fontSize: 16, color: 'white'},
 });

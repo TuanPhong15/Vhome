@@ -1,3 +1,4 @@
+/* eslint-disable no-sequences */
 import React, {useState} from 'react';
 import {
   View,
@@ -114,7 +115,7 @@ const style = StyleSheet.create({
     left: 50,
     bottom: -110,
   },
-  text6: {
+  text5: {
     fontSize: 20,
     position: 'absolute',
     alignSelf: 'center',

@@ -7,8 +7,7 @@ import {
   TextInput,
   StyleSheet,
 } from 'react-native';
-import adr from '../database/adr.json';
-import {Data} from "../database/Data"
+import {Data} from '../database/Data';
 export default function SignIn({navigation}) {
   const [PasswordVisibility, setPasswordVisibility] = useState(true);
 
@@ -43,14 +42,20 @@ export default function SignIn({navigation}) {
           style={styles.Container12}
           onPress={() => setPasswordVisibility(!PasswordVisibility)}>
           <Image
-            source={PasswordVisibility ? Data.screen2.showpass : Data.screen2.hidepass}
+            source={
+              PasswordVisibility ? Data.screen2.showpass : Data.screen2.hidepass
+            }
             style={styles.Container13}
           />
         </TouchableOpacity>
       </View>
       <View style={styles.Container14}>
-        <TouchableOpacity onPress={() => navigation.navigate('ServiceDraw')}>
-          <Image source={Data.screen2.login} style={styles.Container15} />
+        <TouchableOpacity
+          style={styles.touchable}
+          onPress={() => navigation.navigate('ServiceDraw')}>
+          <View style={styles.login}>
+            <Text style={styles.textLogin}>Đăng nhập</Text>
+          </View>
         </TouchableOpacity>
       </View>
       <View style={styles.Container16}>
@@ -61,6 +66,7 @@ export default function SignIn({navigation}) {
         </View>
         <Text style={styles.Container19}>Bạn chưa có tài khoản?</Text>
         <TouchableOpacity
+          style={styles.touchable2}
           onPress={() => navigation.navigate('Lấy lại mật khẩu')}>
           <Text style={styles.Container20}>Quên mật khẩu</Text>
         </TouchableOpacity>
@@ -164,6 +170,7 @@ const styles = StyleSheet.create({
     position: 'relative',
     height: 140,
     width: 140,
+    alignItems: 'center',
   },
   Container15: {
     resizeMode: 'contain',
@@ -180,10 +187,22 @@ const styles = StyleSheet.create({
   Container18: {fontSize: 16, color: '#F59031'},
   Container19: {marginTop: -20, right: 50, color: 'grey', fontSize: 16},
   Container20: {
-    top: 20,
     color: '#F59031',
     fontSize: 16,
     textDecorationLine: 'underline',
   },
+  touchable2: {
+    top: 20,
+  },
   Container21: {top: 150, color: '#F59031', fontSize: 14},
+  login: {
+    height: (86 * 60) / 100,
+    width: (256 * 60) / 100,
+    backgroundColor: '#F59031',
+    borderRadius: 60,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  textLogin: {color: 'white', fontSize: 16},
+  touchable: {marginTop: 20},
 });

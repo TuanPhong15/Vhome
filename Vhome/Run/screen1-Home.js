@@ -21,11 +21,15 @@ export default function HomeScreen({navigation}) {
       <TouchableOpacity
         onPress={() => navigation.navigate('Đăng nhập')}
         style={styles.containnerIIIT}>
-        <Image style={styles.containerIV} source={Data.screen1.customer} />
+        <View style={styles.customer}>
+          <Text style={styles.fontCustomer}>Khách hàng</Text>
+        </View>
       </TouchableOpacity>
       <View style={styles.containerV} />
       <TouchableOpacity onPress={() => navigation.navigate('SignIn2')}>
-        <Image style={styles.containerVI} source={Data.screen1.employees} />
+        <View style={styles.provider}>
+          <Text style={styles.fontProvider}>Nhân viên V-Home</Text>
+        </View>
       </TouchableOpacity>
       <Text style={styles.footer}>V-HOME V1.0</Text>
     </View>
@@ -52,7 +56,7 @@ const styles = StyleSheet.create({
     height: (screenWidth * 1) / 6,
   },
   containnerIIIT: {
-    marginTop: -12,
+    marginTop: -0.5,
   },
   containerIV: {width: 182.5, height: 53.75},
   containerV: {
@@ -65,5 +69,29 @@ const styles = StyleSheet.create({
     top: screenHeight / 6,
     color: '#F59031',
     fontSize: 15,
+  },
+  customer: {
+    width: 182.5,
+    height: 53.75,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderColor: '#F59031',
+    borderRadius: 80,
+    borderWidth: 1,
+  },
+  provider: {
+    width: 182.5,
+    height: 53.75,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderColor: '#F59031',
+    borderRadius: 80,
+    borderWidth: 1,
+  },
+  fontProvider: {
+    fontSize: 17,
+  },
+  fontCustomer: {
+    fontSize: 17,
   },
 });

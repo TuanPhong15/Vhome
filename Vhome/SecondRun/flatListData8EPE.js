@@ -1,7 +1,7 @@
 const flatListData2 = [
   {
     key: '3',
-    image: '../assets/element/redeem_reward2.png',
+    image: '/Users/anhlumi/Vhome/Vhome/assets/element/redeem_reward2.png',
     name: '200 điểm',
     reward:
       'Thẻ nạp 50k cho mạng Viet-tel khi hoàn thành 3 công việc trong ngày ',

@@ -1,3 +1,4 @@
+/* eslint-disable no-sequences */
 //fix eslint xong loi
 import React, {useState} from 'react';
 import {

@@ -55,15 +55,16 @@ export default function SignUp({navigation}) {
         </Text>
       </View>
       <View style={styles.Container21}>
-        <TouchableOpacity>
-          <Image
-            source={Data.screen3.registration}
-            style={styles.Container22}
-          />
+        <TouchableOpacity style={styles.touchable}>
+          <View style={styles.registration}>
+            <Text style={styles.text}>Đăng kí</Text>
+          </View>
         </TouchableOpacity>
         <Text style={styles.Container23}>Bạn đã có tài khoản?</Text>
 
-        <TouchableOpacity onPress={() => navigation.navigate('Home')}>
+        <TouchableOpacity
+          style={styles.touchable2}
+          onPress={() => navigation.navigate('Home')}>
           <Text style={styles.Container24}>Về đăng nhập</Text>
         </TouchableOpacity>
       </View>
@@ -206,5 +207,16 @@ const styles = StyleSheet.create({
   },
   Container22: {resizeMode: 'contain', height: '80%'},
   Container23: {fontSize: 15, marginLeft: -120, color: 'grey'},
-  Container24: {marginLeft: 120, top: -18, color: 'orange', fontSize: 15},
+  Container24: {color: 'orange', fontSize: 15},
+  registration: {
+    width: (258 * 60) / 100,
+    height: (86 * 60) / 100,
+    backgroundColor: '#F59031',
+    borderRadius: 60,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  text: {fontSize: 18, color: 'white'},
+  touchable: {top: -25},
+  touchable2: {top: -18, marginLeft: 120},
 });
