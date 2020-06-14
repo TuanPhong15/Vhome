@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import {View, Image, TouchableHighlight, StyleSheet} from 'react-native';
 import {DrawerActions} from '@react-navigation/native';
-import adr from '../database/adr.json';
-
+import {Data} from '../database/Data';
 export default class drawHeader extends Component {
   render() {
     return (
@@ -11,7 +10,7 @@ export default class drawHeader extends Component {
           style={styles.Container2}
           // eslint-disable-next-line no-undef
           onPress={() => navigation.dispatch(DrawerActions.openDrawer())}>
-          <Image style={styles.Container3} source={{uri: adr.header.f1}} />
+          <Image style={styles.Container3} source={Data.header.menu2} />
         </TouchableHighlight>
       </View>
     );

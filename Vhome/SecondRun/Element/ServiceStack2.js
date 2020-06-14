@@ -6,7 +6,7 @@ import Notification2 from '../screen6-NotificationEPE';
 import History2 from '../screen7-HistoryEPE';
 import Reward2 from '../screen8-RewardEPE';
 import HealthCare2 from '../screen9-HealthCareEPE';
-import OpenDrawer2 from '../Element/OpenDrawer2';
+import OpenDrawer2 from './OpenDrawer2';
 const Stack = createStackNavigator();
 
 export default function ServiceStack2() {

@@ -9,8 +9,8 @@ import {
   Dimensions,
   StyleSheet,
 } from 'react-native';
-import {Data} from '../database/Data';
-import flatListData2 from '../SecondRun/flatListData5EPE';
+import {Data} from '../../database/Data';
+import flatListData2 from './flatListData5EPE';
 const screenWidth = Dimensions.get('window').width;
 class FlatlistItem extends Component {
   constructor(props) {

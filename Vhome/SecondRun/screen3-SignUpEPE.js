@@ -60,7 +60,7 @@ export default function SignUp2({navigation}) {
         <View style={style.container4}>
           <View style={style.container5}>
             <TouchableOpacity
-              style={style.touchable4}
+              style={style.touchable7}
               onPress={() => setJob('Sửa bồn rửa bát')}>
               <Text style={style.text}>Sửa bồn rửa bát</Text>
             </TouchableOpacity>
@@ -232,14 +232,14 @@ const style = StyleSheet.create({
     width: screenWidth - 60,
     height: 1,
   },
-  touchable: {top: 58},
+  touchable: {top: 58, left: 30},
   container7: {
     backgroundColor: 'grey',
     top: 70,
     width: screenWidth - 60,
     height: 1,
   },
-  touchable2: {top: 82},
+  touchable2: {top: 82, left: 30},
   container8: {
     flexDirection: 'row',
     // justifyContent: 'center',
@@ -298,7 +298,6 @@ const style = StyleSheet.create({
   text2: {fontSize: 18, color: 'grey'},
   container11: {
     alignItems: 'center',
-    height: 80,
     alignSelf: 'center',
     position: 'absolute',
     marginTop: screenHeight / 1.35,
@@ -310,7 +309,8 @@ const style = StyleSheet.create({
   text3: {fontSize: 15, marginLeft: -120, color: 'grey'},
   text4: {color: 'orange', fontSize: 15},
   touchable5: {marginLeft: 120, top: -20},
-  touchable4: {bottom: 30},
+  touchable4: {bottom: 35},
+  touchable7: {bottom: -35, left: 30},
   registration: {
     width: (258 * 60) / 100,
     height: (86 * 60) / 100,
