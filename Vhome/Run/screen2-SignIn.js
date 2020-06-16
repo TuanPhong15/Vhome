@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState, useRef } from 'react';
 import {
   View,
   Image,
@@ -8,11 +8,15 @@ import {
   StyleSheet,
   Alert,
 } from 'react-native';
-import {Data} from '../database/Data';
-export default function SignIn({navigation}) {
+import { Data } from '../database/Data';
+export default function SignIn({ navigation }) {
   const [PasswordVisibility, setPasswordVisibility] = useState(true);
   const [userPhone, setUserPhone] = useState('');
   const [userPass, setUserPass] = useState('');
+  const passRef = useRef(null);
+  const onFocusPass = () => {
+    passRef.current.focus();
+  };
   // const passRef = React.createRef('pass');
 
   // const [check, setCheck] = useState('');
@@ -37,9 +41,6 @@ export default function SignIn({navigation}) {
       Alert.alert('Sai tên đăng nhập hoặc mật khẩu');
     }
   };
-  // const focusNextField = nextField => {
-  //   [nextField].focus();
-  // };
   return (
     <View style={styles.Container1}>
       <View style={styles.Container2}>
@@ -56,20 +57,10 @@ export default function SignIn({navigation}) {
           returnKeyType="go"
           onChangeText={text => {
             setUserPhone(text);
-            // setCheck(text === '' ? true : false);
           }}
-          // onSubmitEditing={(event) => { pass.focus() }}
-
           placeholder="Số điện thoại"
-          onSubmitEditing={() => {
-            this.secondTextInput.focus();
-          }}
-          // onSubmitEditing={focusNextField('pass')}
-          // blurOnSubmit={false}
-
-          // onSubmitEditing={() => focusNextField('pass')}
+          onSubmitEditing={onFocusPass}
         />
-        {/* <Text>{check}</Text> */}
       </View>
 
       <View style={styles.Container8}>
@@ -77,18 +68,13 @@ export default function SignIn({navigation}) {
           <Image source={Data.screen2.pass} style={styles.Container10} />
         </View>
         <TextInput
-          // ref={passRef}
+          ref={passRef}
           secureTextEntry={PasswordVisibility}
           style={styles.Container11}
           placeholder="Mật khẩu"
           returnKeyType="done"
-          // ref="pass"
-          ref={input => {
-            this.secondTextInput = input;
-          }}
           onChangeText={text => {
             setUserPass(text);
-            // setCheck(text === '' ? true : false);
           }}
         />
         <TouchableOpacity
@@ -104,17 +90,7 @@ export default function SignIn({navigation}) {
         </TouchableOpacity>
       </View>
       <View style={styles.Container14}>
-        <TouchableOpacity
-          style={styles.touchable}
-          // onPress={() => {
-          // check ? (Alert.alert('SAI')) : navigation.navigate('Đăng ký')
-          // if (check) {
-          //   Alert.alert('sai');
-          // } else {
-          //   navigation.navigate('Đăng ký');
-          // }
-          // }}>
-          onPress={CheckInput}>
+        <TouchableOpacity style={styles.touchable} onPress={CheckInput}>
           <View style={styles.login}>
             <Text style={styles.textLogin}>Đăng nhập</Text>
           </View>
@@ -247,8 +223,8 @@ const styles = StyleSheet.create({
   Container17: {
     left: 85,
   },
-  Container18: {fontSize: 16, color: '#F59031'},
-  Container19: {marginTop: -20, right: 50, color: 'grey', fontSize: 16},
+  Container18: { fontSize: 16, color: '#F59031' },
+  Container19: { marginTop: -20, right: 50, color: 'grey', fontSize: 16 },
   Container20: {
     color: '#F59031',
     fontSize: 16,
@@ -257,7 +233,7 @@ const styles = StyleSheet.create({
   touchable2: {
     top: 20,
   },
-  Container21: {top: 150, color: '#F59031', fontSize: 14},
+  Container21: { top: 150, color: '#F59031', fontSize: 14 },
   login: {
     height: (86 * 60) / 100,
     width: (256 * 60) / 100,
@@ -266,6 +242,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  textLogin: {color: 'white', fontSize: 16},
-  touchable: {marginTop: 20},
+  textLogin: { color: 'white', fontSize: 16 },
+  touchable: { marginTop: 20 },
 });

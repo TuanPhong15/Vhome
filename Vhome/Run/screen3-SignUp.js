@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState, useRef } from 'react';
 import {
   View,
   Image,
@@ -7,9 +7,14 @@ import {
   TextInput,
   StyleSheet,
 } from 'react-native';
-import {Data} from '../database/Data';
-export default function SignUp({navigation}) {
+import { Data } from '../database/Data';
+export default function SignUp({ navigation }) {
   const [Tick, setTick] = useState(true);
+  const nameRef = useRef(null);
+  const passRef = useRef(null);
+  const onFocus = ref => {
+    ref.current.focus();
+  };
   return (
     <View style={styles.Container1}>
       <View style={styles.Container2}>
@@ -22,15 +27,25 @@ export default function SignUp({navigation}) {
           style={styles.Container4}
           placeholder="Số điện thoại"
           keyboardType="phone-pad"
+          onSubmitEditing={() => onFocus(nameRef)}
         />
       </View>
       <View style={styles.Container5}>
         <Image source={Data.screen3.user} style={styles.Container6} />
-        <TextInput style={styles.Container7} placeholder="Họ và tên" />
+        <TextInput
+          style={styles.Container7}
+          placeholder="Họ và tên"
+          ref={nameRef}
+          onSubmitEditing={() => onFocus(passRef)}
+        />
       </View>
       <View style={styles.Container8}>
         <Image source={Data.screen3.pass} style={styles.Container9} />
-        <TextInput style={styles.Container10} placeholder="Mật khẩu" />
+        <TextInput
+          style={styles.Container10}
+          placeholder="Mật khẩu"
+          ref={passRef}
+        />
       </View>
       <View style={styles.Container11}>
         <Image source={Data.screen3.repass} style={styles.Container12} />
@@ -98,7 +113,7 @@ const styles = StyleSheet.create({
     width: 23,
     resizeMode: 'stretch',
   },
-  Container4: {flex: 1, fontSize: 18},
+  Container4: { flex: 1, fontSize: 18 },
   Container5: {
     flexDirection: 'row',
     justifyContent: 'center',
@@ -118,7 +133,7 @@ const styles = StyleSheet.create({
     width: 23,
     resizeMode: 'stretch',
   },
-  Container7: {flex: 1, fontSize: 18},
+  Container7: { flex: 1, fontSize: 18 },
   Container8: {
     flexDirection: 'row',
     justifyContent: 'center',
@@ -139,7 +154,7 @@ const styles = StyleSheet.create({
     width: 23,
     resizeMode: 'stretch',
   },
-  Container10: {flex: 1, fontSize: 18},
+  Container10: { flex: 1, fontSize: 18 },
   Container11: {
     flexDirection: 'row',
     justifyContent: 'center',
@@ -160,7 +175,7 @@ const styles = StyleSheet.create({
     width: 23,
     resizeMode: 'stretch',
   },
-  Container13: {flex: 1, fontSize: 18},
+  Container13: { flex: 1, fontSize: 18 },
   Container14: {
     flexDirection: 'row',
     justifyContent: 'center',
@@ -181,7 +196,7 @@ const styles = StyleSheet.create({
     width: 23,
     resizeMode: 'stretch',
   },
-  Container16: {flex: 1, fontSize: 18},
+  Container16: { flex: 1, fontSize: 18 },
   Container17: {
     flexDirection: 'row',
     justifyContent: 'center',
@@ -197,7 +212,7 @@ const styles = StyleSheet.create({
     resizeMode: 'contain',
     height: '18%',
   },
-  Container20: {fontSize: 18, color: 'grey'},
+  Container20: { fontSize: 18, color: 'grey' },
   Container21: {
     alignItems: 'center',
     height: 80,
@@ -205,9 +220,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     marginBottom: 20,
   },
-  Container22: {resizeMode: 'contain', height: '80%'},
-  Container23: {fontSize: 15, marginLeft: -120, color: 'grey'},
-  Container24: {color: 'orange', fontSize: 15},
+  Container22: { resizeMode: 'contain', height: '80%' },
+  Container23: { fontSize: 15, marginLeft: -120, color: 'grey' },
+  Container24: { color: 'orange', fontSize: 15 },
   registration: {
     width: (258 * 60) / 100,
     height: (86 * 60) / 100,
@@ -216,7 +231,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  text: {fontSize: 18, color: 'white'},
-  touchable: {top: -25},
-  touchable2: {top: -18, marginLeft: 120},
+  text: { fontSize: 18, color: 'white' },
+  touchable: { top: -25 },
+  touchable2: { top: -18, marginLeft: 120 },
 });
