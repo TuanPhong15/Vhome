@@ -33,7 +33,6 @@ export default function SignIn({navigation}) {
       Alert.alert('Sai tên đăng nhập hoặc mật khẩu');
     }
   };
-
   return (
     <View style={styles.Container1}>
       <View style={styles.Container2}>
@@ -51,7 +50,6 @@ export default function SignIn({navigation}) {
           returnKeyType="go"
           onChangeText={text => {
             setUserPhone(text);
-            // setCheck(text === '' ? true : false);
           }}
           placeholder="Số điện thoại"
         />
