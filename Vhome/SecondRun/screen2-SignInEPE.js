@@ -10,10 +10,10 @@ import {
 import {Data} from '../database/Data';
 export default function SignIn2({navigation}) {
   const [PasswordVisibility, setPasswordVisibility] = useState(true);
-  const passRef = React.createRef('pass');
-  const focusNextField = nextField => {
-    this.refs[nextField].focus();
-  };
+  // const passRef = React.createRef('pass');
+  // const focusNextField = nextField => {
+  //   this.refs[nextField].focus();
+  // };
   return (
     <View style={style.all}>
       <View style={style.container1}>
@@ -28,7 +28,7 @@ export default function SignIn2({navigation}) {
           style={style.textinput}
           placeholder="Số điện thoại nhân viên"
           keyboardType="numeric"
-          onSubmitEditing={focusNextField('pass')}
+          // onSubmitEditing={focusNextField('pass')}
         />
       </View>
 
@@ -37,7 +37,7 @@ export default function SignIn2({navigation}) {
           <Image source={Data.screen2.pass} style={style.image3} />
         </View>
         <TextInput
-          ref={passRef}
+          // ref={passRef}
           secureTextEntry={PasswordVisibility}
           style={style.textinput2}
           placeholder="Mật khẩu"
