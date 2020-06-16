@@ -1,6 +1,6 @@
 /* eslint-disable no-sequences */
 //fix eslint xong loi
-import React, {useState} from 'react';
+import React, {useState, useRef} from 'react';
 import {
   View,
   Image,
@@ -13,6 +13,7 @@ import {
 import {Data} from '../database/Data';
 const screenWidth = Dimensions.get('window').width;
 const screenHeight = Dimensions.get('window').height;
+
 export default function SignUp2({navigation}) {
   const [Tick, setTick] = useState(true);
   const [Job, setJob] = useState('Hút bể phốt');
@@ -22,27 +23,39 @@ export default function SignUp2({navigation}) {
   // const [Job5, setJob5] = useState('Chăm sóc sức khoẻ');
   const [show, setShow] = useState(false);
   const [show2, setShow2] = useState(true);
+  // const [Tick, setTick] = useState(true);
+  const nameRef = useRef(null);
+  const passRef = useRef(null);
+  const repassRef = useRef(null);
+  const introductionRef = useRef(null);
+  const focusNextField = nextField => {
+    nextField.current.focus();
+  };
   return (
     <View style={style.header}>
       <View style={style.container1}>
-        <Image
-          //We are showing the Image from online
-          source={Data.screen3E.phone}
-          style={style.image1}
-        />
+        <Image source={Data.screen3E.phone} style={style.image1} />
         <TextInput
           style={style.textinput}
           placeholder="Số điện thoại nhân viên"
           keyboardType="phone-pad"
+          onSubmitEditing={() => focusNextField(nameRef)}
         />
       </View>
       <View style={style.container2}>
         <Image source={Data.screen3E.user} style={style.image2} />
-        <TextInput style={style.textinput} placeholder="Họ và tên" />
+        <TextInput
+          style={style.textinput}
+          placeholder="Họ và tên"
+          onSubmitEditing={() => focusNextField(passRef)}
+          ref={nameRef}
+        />
       </View>
       <View style={style.container3}>
         <Image source={Data.screen3E.pass} style={style.image3} />
         <TextInput
+          ref={passRef}
+          onSubmitEditing={() => focusNextField(repassRef)}
           style={style.textinput}
           placeholder="Mật khẩu"
           secureTextEntry="true"
@@ -51,6 +64,11 @@ export default function SignUp2({navigation}) {
       <View style={style.container3}>
         <Image source={Data.screen3E.repass} style={style.image2} />
         <TextInput
+          // ref={repassRef}
+          // onSubmitEditing={() => focusNextField(introductionRef)}
+          onSubmitEditing={() => {
+            setShow(!show), setShow2(!show2);
+          }}
           style={style.textinput}
           placeholder="Nhập lại mật khẩu"
           secureTextEntry="true"
@@ -61,20 +79,27 @@ export default function SignUp2({navigation}) {
           <View style={style.container5}>
             <TouchableOpacity
               style={style.touchable7}
-              onPress={() => setJob('Sửa bồn rửa bát')}>
+              onPress={() => {
+                setJob('Sửa bồn rửa bát'), setShow(!show), setShow2(!show2);
+                // focusNextField(introductionRef);
+              }}>
               <Text style={style.text}>Sửa bồn rửa bát</Text>
             </TouchableOpacity>
             <View style={style.container6} />
             <TouchableOpacity
               style={style.touchable}
-              onPress={() => setJob('Thông tắc cống')}>
+              onPress={() => {
+                setJob('Thông tắc cống'), setShow(!show), setShow2(!show2);
+              }}>
               <Text style={style.text}>Thông tắc cống</Text>
             </TouchableOpacity>
             <View style={style.container7} />
 
             <TouchableOpacity
               style={style.touchable2}
-              onPress={() => setJob('Thông tắc bồn cầu')}>
+              onPress={() => {
+                setJob('Thông tắc bồn cầu'), setShow(!show), setShow2(!show2);
+              }}>
               <Text style={style.text}>Thông tắc bồn cầu</Text>
             </TouchableOpacity>
           </View>
@@ -98,7 +123,11 @@ export default function SignUp2({navigation}) {
           <View style={style.container9}>
             <Image source={Data.screen3E.magiamgia} style={style.image5} />
 
-            <TextInput style={style.textinput} placeholder="Mã giới thiệu" />
+            <TextInput
+              style={style.textinput}
+              placeholder="Mã giới thiệu"
+              ref={introductionRef}
+            />
           </View>
           <View style={style.container10}>
             <TouchableOpacity

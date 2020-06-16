@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useRef} from 'react';
 import {
   View,
   Image,
@@ -13,14 +13,10 @@ export default function SignIn({navigation}) {
   const [PasswordVisibility, setPasswordVisibility] = useState(true);
   const [userPhone, setUserPhone] = useState('');
   const [userPass, setUserPass] = useState('');
-  // const passRef = React.createRef('pass');
-
-  // const [check, setCheck] = useState('');
-  // const focusNextField = () => {
-  //   nextField => {
-  //     nextField.focus();
-  //   };
-  // };
+  const phoneRef = useRef(null);
+  const focusNextField = nextField => {
+    nextField.current.focus();
+  };
   const CheckInput = () => {
     if (userPhone === '' || userPass === '') {
       Alert.alert('Vui lòng nhập đủ thông tin');
@@ -32,14 +28,12 @@ export default function SignIn({navigation}) {
       userPass.trim().length >= 5 &&
       userPass.trim().length <= 15
     ) {
-      navigation.navigate('Đăng ký');
+      navigation.navigate('ServiceDraw');
     } else {
       Alert.alert('Sai tên đăng nhập hoặc mật khẩu');
     }
   };
-  // const focusNextField = nextField => {
-  //   [nextField].focus();
-  // };
+
   return (
     <View style={styles.Container1}>
       <View style={styles.Container2}>
@@ -52,24 +46,15 @@ export default function SignIn({navigation}) {
 
         <TextInput
           style={styles.Container7}
+          onSubmitEditing={() => focusNextField(phoneRef)}
           keyboardType="numbers-and-punctuation"
           returnKeyType="go"
           onChangeText={text => {
             setUserPhone(text);
             // setCheck(text === '' ? true : false);
           }}
-          // onSubmitEditing={(event) => { pass.focus() }}
-
           placeholder="Số điện thoại"
-          onSubmitEditing={() => {
-            this.secondTextInput.focus();
-          }}
-          // onSubmitEditing={focusNextField('pass')}
-          // blurOnSubmit={false}
-
-          // onSubmitEditing={() => focusNextField('pass')}
         />
-        {/* <Text>{check}</Text> */}
       </View>
 
       <View style={styles.Container8}>
@@ -77,18 +62,13 @@ export default function SignIn({navigation}) {
           <Image source={Data.screen2.pass} style={styles.Container10} />
         </View>
         <TextInput
-          // ref={passRef}
+          ref={phoneRef}
           secureTextEntry={PasswordVisibility}
           style={styles.Container11}
           placeholder="Mật khẩu"
           returnKeyType="done"
-          // ref="pass"
-          ref={input => {
-            this.secondTextInput = input;
-          }}
           onChangeText={text => {
             setUserPass(text);
-            // setCheck(text === '' ? true : false);
           }}
         />
         <TouchableOpacity
@@ -104,17 +84,7 @@ export default function SignIn({navigation}) {
         </TouchableOpacity>
       </View>
       <View style={styles.Container14}>
-        <TouchableOpacity
-          style={styles.touchable}
-          // onPress={() => {
-          // check ? (Alert.alert('SAI')) : navigation.navigate('Đăng ký')
-          // if (check) {
-          //   Alert.alert('sai');
-          // } else {
-          //   navigation.navigate('Đăng ký');
-          // }
-          // }}>
-          onPress={CheckInput}>
+        <TouchableOpacity style={styles.touchable} onPress={CheckInput}>
           <View style={styles.login}>
             <Text style={styles.textLogin}>Đăng nhập</Text>
           </View>

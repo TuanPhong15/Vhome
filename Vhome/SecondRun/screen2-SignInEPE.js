@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useRef} from 'react';
 import {
   View,
   Image,
@@ -6,14 +6,33 @@ import {
   Text,
   TextInput,
   StyleSheet,
+  Alert,
 } from 'react-native';
 import {Data} from '../database/Data';
 export default function SignIn2({navigation}) {
   const [PasswordVisibility, setPasswordVisibility] = useState(true);
-  // const passRef = React.createRef('pass');
-  // const focusNextField = nextField => {
-  //   this.refs[nextField].focus();
-  // };
+  const [cusPhone, setcusPhone] = useState('');
+  const [cusPass, setcusPass] = useState('');
+  const passRef = useRef(null);
+  const CheckInput = () => {
+    if (cusPhone === '' || cusPass === '') {
+      Alert.alert('Vui lòng nhập đủ thông tin');
+    } else if (
+      cusPhone.trim().length >= 10 &&
+      cusPhone.trim().length <= 11 &&
+      !isNaN(cusPhone) &&
+      cusPhone[0] === '0' &&
+      cusPass.trim().length >= 5 &&
+      cusPass.trim().length <= 15
+    ) {
+      navigation.navigate('ServiceDraw2');
+    } else {
+      Alert.alert('Sai tên đăng nhập hoặc mật khẩu');
+    }
+  };
+  const focusNextField = nextField => {
+    nextField.current.focus();
+  };
   return (
     <View style={style.all}>
       <View style={style.container1}>
@@ -27,8 +46,11 @@ export default function SignIn2({navigation}) {
         <TextInput
           style={style.textinput}
           placeholder="Số điện thoại nhân viên"
-          keyboardType="numeric"
-          // onSubmitEditing={focusNextField('pass')}
+          onSubmitEditing={() => focusNextField(passRef)}
+          keyboardType="numbers-and-punctuation"
+          onChangeText={text => {
+            setcusPhone(text);
+          }}
         />
       </View>
 
@@ -37,10 +59,13 @@ export default function SignIn2({navigation}) {
           <Image source={Data.screen2.pass} style={style.image3} />
         </View>
         <TextInput
-          // ref={passRef}
+          ref={passRef}
           secureTextEntry={PasswordVisibility}
           style={style.textinput2}
           placeholder="Mật khẩu"
+          onChangeText={text => {
+            setcusPass(text);
+          }}
         />
         <TouchableOpacity
           activeOpacity={0.8}
@@ -55,9 +80,7 @@ export default function SignIn2({navigation}) {
         </TouchableOpacity>
       </View>
       <View style={style.container6}>
-        <TouchableOpacity
-          style={style.touchable2}
-          onPress={() => navigation.navigate('ServiceDraw2')}>
+        <TouchableOpacity style={style.touchable2} onPress={CheckInput}>
           <View style={style.login}>
             <Text style={style.textLogin}>Đăng nhập</Text>
           </View>

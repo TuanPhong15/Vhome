@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useRef} from 'react';
 import {
   View,
   Image,
@@ -10,27 +10,41 @@ import {
 import {Data} from '../database/Data';
 export default function SignUp({navigation}) {
   const [Tick, setTick] = useState(true);
+  const nameRef = useRef(null);
+  const passRef = useRef(null);
+  const repassRef = useRef(null);
+  const introductionRef = useRef(null);
+  const focusNextField = nextField => {
+    nextField.current.focus();
+  };
   return (
     <View style={styles.Container1}>
       <View style={styles.Container2}>
-        <Image
-          //We are showing the Image from online
-          source={Data.screen3.phone}
-          style={styles.Container3}
-        />
+        <Image source={Data.screen3.phone} style={styles.Container3} />
         <TextInput
           style={styles.Container4}
           placeholder="Số điện thoại"
           keyboardType="phone-pad"
+          onSubmitEditing={() => focusNextField(nameRef)}
         />
       </View>
       <View style={styles.Container5}>
         <Image source={Data.screen3.user} style={styles.Container6} />
-        <TextInput style={styles.Container7} placeholder="Họ và tên" />
+        <TextInput
+          style={styles.Container7}
+          placeholder="Họ và tên"
+          ref={nameRef}
+          onSubmitEditing={() => focusNextField(passRef)}
+        />
       </View>
       <View style={styles.Container8}>
         <Image source={Data.screen3.pass} style={styles.Container9} />
-        <TextInput style={styles.Container10} placeholder="Mật khẩu" />
+        <TextInput
+          onSubmitEditing={() => focusNextField(repassRef)}
+          style={styles.Container10}
+          placeholder="Mật khẩu"
+          ref={passRef}
+        />
       </View>
       <View style={styles.Container11}>
         <Image source={Data.screen3.repass} style={styles.Container12} />
@@ -39,7 +53,11 @@ export default function SignUp({navigation}) {
       <View style={styles.Container14}>
         <Image source={Data.screen3.magiamgia} style={styles.Container15} />
 
-        <TextInput style={styles.Container16} placeholder="Mã giới thiệu" />
+        <TextInput
+          style={styles.Container16}
+          placeholder="Mã giới thiệu"
+          ref={introductionRef}
+        />
       </View>
       <View style={styles.Container17}>
         <TouchableOpacity
