@@ -13,7 +13,7 @@ export default function SignIn({navigation}) {
   const [PasswordVisibility, setPasswordVisibility] = useState(true);
   const [userPhone, setUserPhone] = useState('');
   const [userPass, setUserPass] = useState('');
-  const phoneRef = useRef(null);
+  const passRef = useRef(null);
   const focusNextField = nextField => {
     nextField.current.focus();
   };
@@ -46,7 +46,7 @@ export default function SignIn({navigation}) {
 
         <TextInput
           style={styles.Container7}
-          onSubmitEditing={() => focusNextField(phoneRef)}
+          onSubmitEditing={() => focusNextField(passRef)}
           keyboardType="numbers-and-punctuation"
           returnKeyType="go"
           onChangeText={text => {
@@ -62,7 +62,7 @@ export default function SignIn({navigation}) {
           <Image source={Data.screen2.pass} style={styles.Container10} />
         </View>
         <TextInput
-          ref={phoneRef}
+          ref={passRef}
           secureTextEntry={PasswordVisibility}
           style={styles.Container11}
           placeholder="Mật khẩu"
