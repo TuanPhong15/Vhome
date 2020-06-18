@@ -7,6 +7,7 @@ import Notification from '../screen6-Notification';
 import History from '../screen7-History';
 import Reward from '../screen8-Reward';
 import OpenDrawer from './OpenDrawer';
+import OpenMapView from './OpenMapView'
 export default function ServiceStack2() {
   return (
     <Stack.Navigator>
@@ -19,6 +20,7 @@ export default function ServiceStack2() {
           },
           headerTitle: props => <TextTitle {...props} />,
           headerLeft: props => <OpenDrawer {...props} />,
+          headerRight: props => <OpenMapView {...props}/>,
         }}
       />
       <Stack.Screen

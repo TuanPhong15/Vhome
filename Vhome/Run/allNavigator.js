@@ -4,6 +4,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import HomeScreen from './screen1-Home';
+import Map from '../home/MapComponent';
 import SignIn from './screen2-SignIn';
 import SignIn2 from '../SecondRun/screen2-SignInEPE';
 import SignUp from './screen3-SignUp';
@@ -49,6 +50,17 @@ export default function App() {
           component={HomeScreen}
           options={{
             headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          name="Bản đồ"
+          component={Map}
+          options={{
+            headerStyle: {
+              backgroundColor: '#F59031',
+            },
+            headerTintColor: 'white',
+            headerBackTitleVisible: true,
           }}
         />
         <Stack.Screen
