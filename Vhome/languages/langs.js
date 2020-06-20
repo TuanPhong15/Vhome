@@ -45,7 +45,7 @@ let langs = new LocalizedStrings({
     cancel: 'Cancel',
     viewPolicy: 'View policy at',
     titleIntro:
-      'V-Home is an application supporting customers to call services from basic to complex, the focus is repair and maintenance of electronics-refrigeration, construction and leasing machines. Help to connect customers and service effectively. \n\n For Partners: Promote cooperation and development; Committed to being a "multifaceted partner", we provide our partners with satisfaction and peace of mind.  n For Employees: Orient training from within, building the environment. professional, dynamic, creative and humanistic; Facilitate income and equal opportunity for all employees. \n\n For Society: Harmonizing corporate interests with social benefits; actively contributing to community-based activities, demonstrating a sense of civic responsibility and national pride.',
+      'V-Home is an application supporting customers to call services from basic to complex, the focus is repair and maintenance of electronics-refrigeration, construction and leasing machines. Help to connect customers and service effectively. \n\n For Partners: Promote cooperation and development; Committed to being a "multifaceted partner", we provide our partners with satisfaction and peace of mind.  \n\n For Employees: Orient training from within, building the environment. professional, dynamic, creative and humanistic; Facilitate income and equal opportunity for all employees. \n\n For Society: Harmonizing corporate interests with social benefits; actively contributing to community-based activities, demonstrating a sense of civic responsibility and national pride.',
     inbox: 'Notification',
     searchService: 'Search service',
     userInfo: 'Update info user',

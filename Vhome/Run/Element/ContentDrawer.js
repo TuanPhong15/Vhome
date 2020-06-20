@@ -11,32 +11,41 @@ import {
 } from 'react-native';
 import Modal from 'react-native-modal';
 import {Data} from '../../database/Data';
+import langs from '../../languages/langs';
+import {connect} from 'react-redux';
 const screenWidth = Dimensions.get('window').width;
 const screenHeight = Dimensions.get('window').height;
-export default function ContentDrawer({navigation}) {
+import {setLanguage} from '../../redux/actions/config';
+import {POLICY_WEB} from '../../config/config';
+function ContentDrawer({navigation}) {
   const [unhideModal, hideModal] = useState(false);
   const [unhideModal1, hideModal1] = useState(false);
   const [unhideModal2, hideModal2] = useState(false);
   const [unhideState, hideState] = useState(false);
   const [VietNamese, hideVietNamese] = useState(false);
+
+  const onChangeLanguage = language => {
+    setLanguage(language);
+  };
+  //  const [setLanguage2, hidesetLanguage] = useState('vi');
   return (
     <View style={style.all}>
       <Modal isVisible={unhideModal} animationIn="fadeIn">
         <Image style={style.image1} source={Data.ContentDraw.box_policy} />
 
         <Text style={style.text1}>
-          Đi đến xem chính sách tại: {'\n'}{' '}
-          <Text style={style.text2}> http://appvhome.com.</Text>
+          {langs.viewPolicy} {'\n'}{' '}
+          <Text style={style.text2}> {POLICY_WEB}</Text>
         </Text>
 
         <View style={style.container1}>
           <TouchableOpacity style={style.touchableContinue}>
-            <Text style={style.text3}>Tiếp tục </Text>
+            <Text style={style.text3}>{langs.continute}</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={style.touchableCancel3}
             onPress={() => hideModal(!unhideModal)}>
-            <Text style={style.text4}>Huỷ</Text>
+            <Text style={style.text4}>{langs.cancel}</Text>
           </TouchableOpacity>
         </View>
       </Modal>
@@ -44,7 +53,7 @@ export default function ContentDrawer({navigation}) {
         <SafeAreaView style={style.text5}>
           <View style={style.container2}>
             <View style={style.container3}>
-              <Text style={style.text6}>Giới thiệu về V-Home</Text>
+              <Text style={style.text6}>{langs.vhomeIntro}</Text>
 
               <TouchableOpacity
                 style={style.touchableCancel}
@@ -55,25 +64,7 @@ export default function ContentDrawer({navigation}) {
             <View style={style.container4} />
 
             <ScrollView>
-              <Text style={style.text7}>
-                V-Home là ứng dụng hỗ trợ khách {'\n'}hàng gọi các dịch vụ từ cơ
-                bản đến {'\n'}phức tạp , trọng tâm là sửa chữa bảo{'\n'}dưỡng đồ
-                điện tử-điện lạnh, thi công{'\n'}xây dựng và cho thuê máy móc.
-                {'\n'}Giúp kết nối dịch vụ và khách hàng{'\n'}một cách hiệu quả.
-                {'\n'}
-                {'\n'}Đối với Đối tác:Đề cao tinh thần{'\n'}hợp tác cùng phát
-                triển; cam kết trở{'\n'}thành:"Người đồng hành vạn năng -{'\n'}
-                tin cậy,"mang đến cho đối tác sự hài {'\n'}lòng, an tâm khi hợp
-                tác.{'\n'}
-                {'\n'}Đối với Nhân Viên:Định hướng đào{'\n'}tạo từ bên trong,xây
-                dựng môi{'\n'}trường làm việc chuyên nghiệp,năng{'\n'}động, sáng
-                tạo và nhân văn;tạo{'\n'}điều kiện thu nhập và cơ hội phát{'\n'}
-                triển công bằng cho tất cả nhân{'\n'}viên.{'\n'}
-                {'\n'}Đối với Xã Hội: Hài hoà lợi ích doanh{'\n'}nghiệp với lợi
-                ích xã hội;đóng góp{'\n'}tích cực vào các hoạt động hướng về
-                {'\n'}cộng đồng, thể hiện tinh thần trách{'\n'}nhiệm công dân và
-                niềm tự hào dân{'\n'}tộc.{' '}
-              </Text>
+              <Text style={style.text7}>{langs.titleIntro}</Text>
             </ScrollView>
           </View>
         </SafeAreaView>
@@ -105,7 +96,7 @@ export default function ContentDrawer({navigation}) {
             <TouchableOpacity
               style={style.touchable}
               onPress={() => navigation.navigate('Thông báo')}>
-              <Text style={style.text10}>Thông báo</Text>
+              <Text style={style.text10}>{langs.notification}</Text>
             </TouchableOpacity>
             <View style={style.container11}>
               <Image source={Data.ContentDraw.next} style={style.image6} />
@@ -121,7 +112,7 @@ export default function ContentDrawer({navigation}) {
             <TouchableOpacity
               style={style.touchable}
               onPress={() => navigation.navigate('Lịch sử')}>
-              <Text style={style.text11}>Lịch sử</Text>
+              <Text style={style.text11}>{langs.history}</Text>
             </TouchableOpacity>
             <View style={style.container16}>
               <Image source={Data.ContentDraw.next} style={style.image8} />
@@ -140,7 +131,7 @@ export default function ContentDrawer({navigation}) {
             <TouchableOpacity
               style={style.touchable}
               onPress={() => navigation.navigate('Điểm thưởng')}>
-              <Text style={style.text12}>Điểm thưởng</Text>
+              <Text style={style.text12}>{langs.rewardPoints}</Text>
             </TouchableOpacity>
           </View>
           <View style={style.container20} />
@@ -153,7 +144,7 @@ export default function ContentDrawer({navigation}) {
             <TouchableOpacity
               style={style.touchable}
               onPress={() => hideModal(!unhideModal)}>
-              <Text style={style.text13}>Chính sách và cam kết</Text>
+              <Text style={style.text13}>{langs.policyTermsShort}</Text>
             </TouchableOpacity>
           </View>
           <View style={style.container24} />
@@ -170,7 +161,7 @@ export default function ContentDrawer({navigation}) {
             <TouchableOpacity
               style={style.touchable}
               onPress={() => hideModal1(!unhideModal1)}>
-              <Text style={style.text14}>Giới thiệu về V-Home</Text>
+              <Text style={style.text14}>{langs.vhomeIntro}</Text>
             </TouchableOpacity>
           </View>
           <View style={style.container28} />
@@ -184,10 +175,10 @@ export default function ContentDrawer({navigation}) {
             <TouchableOpacity
               style={style.touchableCancel2}
               onPress={() => hideModal2(!unhideModal2)}>
-              <Text style={style.text16}>Huỷ</Text>
+              <Text style={style.text16}>{langs.cancel}</Text>
             </TouchableOpacity>
             <TouchableOpacity style={style.touchableCall}>
-              <Text style={style.text17}>Gọi</Text>
+              <Text style={style.text17}>{langs.callNow}</Text>
             </TouchableOpacity>
           </View>
         </Modal>
@@ -200,7 +191,7 @@ export default function ContentDrawer({navigation}) {
             <TouchableOpacity
               style={style.touchable}
               onPress={() => hideModal2(!unhideModal2)}>
-              <Text style={style.text18}>HOTLINE: 19008644</Text>
+              <Text style={style.text18}>{langs.hotline} 19008644</Text>
             </TouchableOpacity>
           </View>
           <View style={style.container33} />
@@ -214,7 +205,7 @@ export default function ContentDrawer({navigation}) {
             <TouchableOpacity
               style={style.touchable}
               onPress={() => hideState(!unhideState)}>
-              <Text style={style.text20}>Ngôn ngữ </Text>
+              <Text style={style.text20}>{langs.language}</Text>
             </TouchableOpacity>
             <View style={style.container37}>
               <Image
@@ -234,8 +225,11 @@ export default function ContentDrawer({navigation}) {
               <View style={style.container40}>
                 <View style={style.container41} />
 
-                <TouchableOpacity onPress={() => hideVietNamese(!VietNamese)}>
-                  <Text style={style.text20}>Tiếng Việt</Text>
+                <TouchableOpacity
+                  onPress={
+                    (() => hideVietNamese(!VietNamese), onChangeLanguage('vi'))
+                  }>
+                  <Text style={style.text20}>{langs.vietnamese}</Text>
                 </TouchableOpacity>
                 <View>
                   <Image
@@ -247,8 +241,11 @@ export default function ContentDrawer({navigation}) {
               <View style={style.container42} />
               <View style={style.container43}>
                 <View style={style.container44} />
-                <TouchableOpacity onPress={() => hideVietNamese(!VietNamese)}>
-                  <Text style={style.text20}>Tiếng Anh</Text>
+                <TouchableOpacity
+                  onPress={
+                    (() => hideVietNamese(!VietNamese), onChangeLanguage('en'))
+                  }>
+                  <Text style={style.text20}>{langs.english}</Text>
                 </TouchableOpacity>
                 <View>
                   <Image
@@ -268,7 +265,7 @@ export default function ContentDrawer({navigation}) {
               <Image source={Data.ContentDraw.log_out} style={style.image19} />
             </View>
             <TouchableOpacity style={style.touchable}>
-              <Text style={style.text20}>Đăng xuất</Text>
+              <Text style={style.text20}>{langs.logout}</Text>
             </TouchableOpacity>
           </View>
           <View style={style.container49} />
@@ -277,6 +274,19 @@ export default function ContentDrawer({navigation}) {
     </View>
   );
 }
+const mapDispathToProps = {
+  setLanguage,
+};
+const mapStateToProps = state => {
+  return {
+    language: state.language,
+  };
+};
+export default connect(
+  mapStateToProps,
+  mapDispathToProps,
+)(ContentDrawer);
+
 const style = StyleSheet.create({
   all: {flex: 1},
   image1: {

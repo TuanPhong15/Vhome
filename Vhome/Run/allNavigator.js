@@ -1,10 +1,14 @@
 import React from 'react';
+import {createStore} from 'redux';
+import {Provider} from 'react-redux';
+import combineReducers from '../redux/reducer/index';
 import {Dimensions, StyleSheet} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import HomeScreen from './screen1-Home';
 import Map from '../home/MapComponent';
+import OpenMapView from '../Run/Element/OpenMapView';
 import SignIn from './screen2-SignIn';
 import SignIn2 from '../SecondRun/screen2-SignInEPE';
 import SignUp from './screen3-SignUp';
@@ -22,6 +26,8 @@ import ServiceStack from './Element/ServiceStack';
 const screenWidth = Dimensions.get('window').width;
 const Stack = createStackNavigator();
 const Slack = createDrawerNavigator();
+let store = createStore(combineReducers);
+
 function ServiceDraw() {
   return (
     <Slack.Navigator
@@ -43,157 +49,170 @@ function ServiceDraw2() {
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen
-          name="Home"
-          component={HomeScreen}
-          options={{
-            headerShown: false,
-          }}
-        />
-        <Stack.Screen
-          name="Bản đồ"
-          component={Map}
-          options={{
-            headerStyle: {
-              backgroundColor: '#F59031',
-            },
-            headerTintColor: 'white',
-            headerBackTitleVisible: true,
-          }}
-        />
-        <Stack.Screen
-          name="Đăng nhập"
-          component={SignIn}
-          options={{
-            headerStyle: {
-              backgroundColor: '#F59031',
-            },
-            headerTintColor: 'white',
-            headerBackTitleVisible: false,
-          }}
-        />
-        <Stack.Screen
-          name="SignIn2"
-          component={SignIn2}
-          options={{
-            headerStyle: {
-              backgroundColor: '#F59031',
-            },
-            headerTintColor: 'white',
-            headerBackTitleVisible: false,
-            title: 'Đăng nhập',
-          }}
-        />
-        <Stack.Screen
-          name="Đăng ký"
-          component={SignUp}
-          options={{
-            headerStyle: {
-              backgroundColor: '#F59031',
-            },
-            headerTintColor: 'white',
-            headerBackTitleVisible: false,
-          }}
-        />
-        <Stack.Screen
-          name="SignUp2"
-          component={SignUp2}
-          options={{
-            headerStyle: {
-              backgroundColor: '#F59031',
-            },
-            headerTintColor: 'white',
-            headerBackTitleVisible: false,
-            title: 'Đăng ký',
-          }}
-        />
-        <Stack.Screen
-          name="Lấy lại mật khẩu"
-          component={Pass}
-          options={{
-            headerStyle: {
-              backgroundColor: '#F59031',
-            },
-            headerTintColor: 'white',
-            headerBackTitleVisible: false,
-          }}
-        />
-        <Stack.Screen
-          name="forgetPass2"
-          component={Pass2}
-          options={{
-            headerStyle: {
-              backgroundColor: '#F59031',
-            },
-            headerTintColor: 'white',
-            headerBackTitleVisible: false,
-            title: 'Lấy lại mật khẩu',
-          }}
-        />
+    <Provider store={store}>
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen
+            name="Home"
+            component={HomeScreen}
+            options={{
+              headerShown: false,
+            }}
+          />
+          <Stack.Screen
+            name="Bản đồ"
+            component={Map}
+            options={{
+              headerStyle: {
+                backgroundColor: '#F59031',
+              },
+              headerTintColor: 'white',
+              headerBackTitleVisible: false,
+            }}
+          />
+          <Stack.Screen
+            name="Bản đồ 2"
+            component={OpenMapView}
+            options={{
+              headerStyle: {
+                backgroundColor: '#F59031',
+              },
+              headerTintColor: 'white',
+              headerBackTitleVisible: true,
+            }}
+          />
+          <Stack.Screen
+            name="Đăng nhập"
+            component={SignIn}
+            options={{
+              headerStyle: {
+                backgroundColor: '#F59031',
+              },
+              headerTintColor: 'white',
+              headerBackTitleVisible: false,
+            }}
+          />
+          <Stack.Screen
+            name="SignIn2"
+            component={SignIn2}
+            options={{
+              headerStyle: {
+                backgroundColor: '#F59031',
+              },
+              headerTintColor: 'white',
+              headerBackTitleVisible: false,
+              title: 'Đăng nhập',
+            }}
+          />
+          <Stack.Screen
+            name="Đăng ký"
+            component={SignUp}
+            options={{
+              headerStyle: {
+                backgroundColor: '#F59031',
+              },
+              headerTintColor: 'white',
+              headerBackTitleVisible: false,
+            }}
+          />
+          <Stack.Screen
+            name="SignUp2"
+            component={SignUp2}
+            options={{
+              headerStyle: {
+                backgroundColor: '#F59031',
+              },
+              headerTintColor: 'white',
+              headerBackTitleVisible: false,
+              title: 'Đăng ký',
+            }}
+          />
+          <Stack.Screen
+            name="Lấy lại mật khẩu"
+            component={Pass}
+            options={{
+              headerStyle: {
+                backgroundColor: '#F59031',
+              },
+              headerTintColor: 'white',
+              headerBackTitleVisible: false,
+            }}
+          />
+          <Stack.Screen
+            name="forgetPass2"
+            component={Pass2}
+            options={{
+              headerStyle: {
+                backgroundColor: '#F59031',
+              },
+              headerTintColor: 'white',
+              headerBackTitleVisible: false,
+              title: 'Lấy lại mật khẩu',
+            }}
+          />
 
-        <Stack.Screen
-          name="ServiceDraw"
-          component={ServiceDraw}
-          options={{
-            headerShown: false,
-          }}
-        />
-        <Stack.Screen
-          name="ServiceDraw2"
-          component={ServiceDraw2}
-          options={{
-            headerShown: false,
-          }}
-        />
-        <Stack.Screen
-          name="HealthCare"
-          component={HealthCare}
-          options={{
-            headerStyle: {
-              backgroundColor: '#F59031',
-            },
-            headerBackTitleVisible: false,
-            headerTintColor: 'white',
-            headerTitle: 'Chăm sóc sức khoẻ',
-          }}
-        />
-        <Stack.Screen
-          name="Environment"
-          component={Environment}
-          options={{
-            headerStyle: {
-              backgroundColor: '#F59031',
-            },
-            headerBackTitleVisible: false,
-            headerTintColor: 'white',
-          }}
-        />
-        <Stack.Screen
-          name="Electric"
-          component={Electric}
-          options={{
-            headerStyle: {
-              backgroundColor: '#F59031',
-            },
-            headerBackTitleVisible: false,
-            headerTintColor: 'white',
-          }}
-        />
-        <Stack.Screen
-          name="fixHome"
-          component={fixHome}
-          options={{
-            headerStyle: {
-              backgroundColor: '#F59031',
-            },
-            headerBackTitleVisible: false,
-            headerTintColor: 'white',
-          }}
-        />
-      </Stack.Navigator>
-    </NavigationContainer>
+          <Stack.Screen
+            name="ServiceDraw"
+            component={ServiceDraw}
+            options={{
+              headerShown: false,
+            }}
+          />
+          <Stack.Screen
+            name="ServiceDraw2"
+            component={ServiceDraw2}
+            options={{
+              headerShown: false,
+            }}
+          />
+          <Stack.Screen
+            name="HealthCare"
+            component={HealthCare}
+            options={{
+              headerStyle: {
+                backgroundColor: '#F59031',
+              },
+              headerBackTitleVisible: false,
+              headerTintColor: 'white',
+              headerTitle: 'Chăm sóc sức khoẻ',
+            }}
+          />
+          <Stack.Screen
+            name="Environment"
+            component={Environment}
+            options={{
+              headerStyle: {
+                backgroundColor: '#F59031',
+              },
+              headerBackTitleVisible: false,
+              headerTintColor: 'white',
+            }}
+          />
+          <Stack.Screen
+            name="Electric"
+            component={Electric}
+            options={{
+              headerStyle: {
+                backgroundColor: '#F59031',
+              },
+              headerBackTitleVisible: false,
+              headerTintColor: 'white',
+            }}
+          />
+          <Stack.Screen
+            name="fixHome"
+            component={fixHome}
+            options={{
+              headerStyle: {
+                backgroundColor: '#F59031',
+              },
+              headerBackTitleVisible: false,
+              headerTintColor: 'white',
+            }}
+          />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </Provider>
   );
 }
 const styles = StyleSheet.create({

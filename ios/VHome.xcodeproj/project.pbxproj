@@ -58,6 +58,7 @@
 		2D02E4901E0B4A5D006451C7 /* VHome-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "VHome-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4757F112A0A3691D7F4BEBE1 /* Pods-VHome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VHome.debug.xcconfig"; path = "Target Support Files/Pods-VHome/Pods-VHome.debug.xcconfig"; sourceTree = "<group>"; };
 		612A8D89247FBE08A18B8270 /* Pods-VHome-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VHome-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-VHome-tvOSTests/Pods-VHome-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6359341A249BAE210072F62D /* vi-VN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "vi-VN"; path = "vi-VN.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		72C0F78FD8E51D97FD2B1CD9 /* Pods-VHome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VHome.release.xcconfig"; path = "Target Support Files/Pods-VHome/Pods-VHome.release.xcconfig"; sourceTree = "<group>"; };
 		813D116EBD871FA233271EFC /* libPods-VHome.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VHome.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		97490827AE75741568A513BF /* libPods-VHomeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VHomeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -310,6 +311,7 @@
 				English,
 				en,
 				Base,
+				"vi-VN",
 			);
 			mainGroup = 83CBB9F61A601CBA00E9B192;
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
@@ -570,6 +572,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				13B07FB21A68108700A75B9A /* Base */,
+				6359341A249BAE210072F62D /* vi-VN */,
 			);
 			name = LaunchScreen.xib;
 			path = VHome;

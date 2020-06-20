@@ -7,8 +7,8 @@ export default function Map() {
     <MapView
       style={{flex: 1}}
       region={{
-        latitude: 42.882004,
-        longitude: 74.582748,
+        latitude: 20.97598113336549,
+        longitude: 105.84446830548454,
         latitudeDelta: 0.0922,
         longitudeDelta: 0.0421,
       }}

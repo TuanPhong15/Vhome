@@ -1,5 +1,7 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
+import {TouchableOpacity, Image, StyleSheet} from 'react-native';
+
 const Stack = createStackNavigator();
 import TextTitle from './TextTitle';
 import Services from '../screen5-Service';
@@ -7,21 +9,29 @@ import Notification from '../screen6-Notification';
 import History from '../screen7-History';
 import Reward from '../screen8-Reward';
 import OpenDrawer from './OpenDrawer';
-import OpenMapView from './OpenMapView'
+// import OpenMapView from './OpenMapView';
+import {Data} from '../../database/Data';
+
 export default function ServiceStack2() {
   return (
     <Stack.Navigator>
       <Stack.Screen
         name="Home function"
         component={Services}
-        options={{
+        options={({navigation}) => ({
           headerStyle: {
             backgroundColor: '#F59031',
           },
           headerTitle: props => <TextTitle {...props} />,
           headerLeft: props => <OpenDrawer {...props} />,
-          headerRight: props => <OpenMapView {...props}/>,
-        }}
+          headerRight: () => (
+            <TouchableOpacity
+              style={style.touchable}
+              onPress={() => navigation.navigate('Bản đồ')}>
+              <Image style={style.map} source={Data.OpenDraw.map} />
+            </TouchableOpacity>
+          ),
+        })}
       />
       <Stack.Screen
         name="Thông báo"
@@ -59,3 +69,7 @@ export default function ServiceStack2() {
     </Stack.Navigator>
   );
 }
+const style = StyleSheet.create({
+  touchable: {marginRight: 5, marginTop: -10},
+  map: {width: 30, height: 30, tintColor: 'white'},
+});

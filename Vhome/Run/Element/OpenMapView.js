@@ -1,8 +1,7 @@
 import React from 'react';
 import {View, TouchableOpacity, Image, StyleSheet} from 'react-native';
 import {Data} from '../../database/Data';
-import Map from '../../home/MapComponent';
-export default function OpenDrawer({navigation}) {
+export default function OpenMapView({navigation}) {
   return (
     <View style={style.header}>
       <TouchableOpacity

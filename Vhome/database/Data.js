@@ -102,6 +102,7 @@ export const Data = {
   },
   OpenDraw: {
     menu2: require('../assets/element/menu2.png'),
+    map: require('../assets/element/map.png'),
   },
   Title: {
     search: require('../assets/element/search.png'),
