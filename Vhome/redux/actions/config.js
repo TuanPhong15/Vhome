@@ -1,5 +1,5 @@
 import * as types from '../types';
-import langs from '../../languages/langs';
+import langs from '../../languages/index';
 
 export const setLanguage = lang => {
   for (let i = 0; i < langs.length; i++) {

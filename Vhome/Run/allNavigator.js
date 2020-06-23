@@ -1,14 +1,15 @@
 import React from 'react';
 import {createStore} from 'redux';
 import {Provider} from 'react-redux';
+import langs from '../languages/langs';
 import combineReducers from '../redux/reducer/index';
 import {Dimensions, StyleSheet} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {createDrawerNavigator} from '@react-navigation/drawer';
-import HomeScreen from './screen1-Home';
 import Map from '../home/MapComponent';
 import OpenMapView from '../Run/Element/OpenMapView';
+import HomeScreen from './screen1-Home';
 import SignIn from './screen2-SignIn';
 import SignIn2 from '../SecondRun/screen2-SignInEPE';
 import SignUp from './screen3-SignUp';
@@ -31,7 +32,7 @@ let store = createStore(combineReducers);
 function ServiceDraw() {
   return (
     <Slack.Navigator
-      drawerStyle={styles.Container0}
+      drawerStyle={styles.DrawerStyle2}
       drawerContent={props => <ContentDrawer {...props} />}>
       <Slack.Screen name="allServices" component={ServiceStack} />
     </Slack.Navigator>
@@ -40,7 +41,7 @@ function ServiceDraw() {
 function ServiceDraw2() {
   return (
     <Slack.Navigator
-      drawerStyle={styles.Container1}
+      drawerStyle={styles.DrawerStyle}
       drawerContent={props => <ContentDrawer2 {...props} />}>
       <Slack.Screen name="allServices" component={ServiceStack2} />
     </Slack.Navigator>
@@ -82,7 +83,7 @@ export default function App() {
             }}
           />
           <Stack.Screen
-            name="Đăng nhập"
+            name={langs.login}
             component={SignIn}
             options={{
               headerStyle: {
@@ -216,11 +217,11 @@ export default function App() {
   );
 }
 const styles = StyleSheet.create({
-  Container1: {
+  DrawerStyle: {
     backgroundColor: 'white',
     width: (11 * screenWidth) / 12,
   },
-  Container0: {
+  DrawerStyle2: {
     backgroundColor: 'white',
     width: (11 * screenWidth) / 12,
   },

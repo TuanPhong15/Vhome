@@ -17,17 +17,24 @@ const screenWidth = Dimensions.get('window').width;
 const screenHeight = Dimensions.get('window').height;
 import {setLanguage} from '../../redux/actions/config';
 import {POLICY_WEB} from '../../config/config';
+
 function ContentDrawer({navigation}) {
   const [unhideModal, hideModal] = useState(false);
   const [unhideModal1, hideModal1] = useState(false);
   const [unhideModal2, hideModal2] = useState(false);
   const [unhideState, hideState] = useState(false);
   const [VietNamese, hideVietNamese] = useState(false);
-
   const onChangeLanguage = language => {
     setLanguage(language);
   };
-  //  const [setLanguage2, hidesetLanguage] = useState('vi');
+  const changetoVN = () => {
+    hideVietNamese(!VietNamese), onChangeLanguage('vi');
+  };
+
+  const changetoEN = () => {
+    hideVietNamese(!VietNamese), onChangeLanguage('en');
+  };
+
   return (
     <View style={style.all}>
       <Modal isVisible={unhideModal} animationIn="fadeIn">
@@ -225,10 +232,7 @@ function ContentDrawer({navigation}) {
               <View style={style.container40}>
                 <View style={style.container41} />
 
-                <TouchableOpacity
-                  onPress={
-                    (() => hideVietNamese(!VietNamese), onChangeLanguage('vi'))
-                  }>
+                <TouchableOpacity onPress={changetoVN}>
                   <Text style={style.text20}>{langs.vietnamese}</Text>
                 </TouchableOpacity>
                 <View>
@@ -241,10 +245,7 @@ function ContentDrawer({navigation}) {
               <View style={style.container42} />
               <View style={style.container43}>
                 <View style={style.container44} />
-                <TouchableOpacity
-                  onPress={
-                    (() => hideVietNamese(!VietNamese), onChangeLanguage('en'))
-                  }>
+                <TouchableOpacity onPress={changetoEN}>
                   <Text style={style.text20}>{langs.english}</Text>
                 </TouchableOpacity>
                 <View>

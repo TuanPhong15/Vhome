@@ -1,13 +1,13 @@
 import LocalizedStrings from 'react-native-localization';
 
-let langs = new LocalizedStrings({
+const langs = {
   en: {
     login: 'Login',
     customer: 'Customer',
     employees: 'V-Home employees',
     phonenumber: 'Mobile',
     password: 'Password',
-    register: 'Register',
+    register: 'Register Now',
     notRegister: "You have't account?",
     forgotPassword: 'Forgot password',
     loginWithFacebook: 'Login with facebook',
@@ -132,6 +132,10 @@ let langs = new LocalizedStrings({
     inputMount: 'Total mount',
     errorMountIsNull: "Total mount can't null",
     requiredLogin: 'You need to log in to continue performing this function',
+    healthCare: 'Health Care',
+    environment: 'Environment',
+    electronics: 'Electrics Service',
+    fixHome: 'Fix home',
   },
   vi: {
     login: 'Đăng nhập',
@@ -139,7 +143,7 @@ let langs = new LocalizedStrings({
     employees: 'Nhân viên V-Home',
     phonenumber: 'Số điện thoại',
     password: 'Mật khẩu',
-    register: 'Đăng ký',
+    register: 'Đăng ký ngay',
     notRegister: 'Bạn chưa có tài khoản?',
     forgotPassword: 'Quên mật khẩu',
     loginWithFacebook: 'Đăng nhập bằng facebook',
@@ -265,7 +269,11 @@ let langs = new LocalizedStrings({
     inputMount: 'Tổng đơn giá',
     errorMountIsNull: 'Bạn chưa nhập tổng đơn giá',
     requiredLogin: 'Bạn cần đăng nhập để tiếp tục thực hiện chức năng này',
+    healthCare: 'Chăm sóc sức khoẻ',
+    environment: 'DV bảo vệ môi trường',
+    electronics: 'DV điện/nước',
+    fixHome: 'Sửa chữa nhà',
   },
-});
+};
 
-export default langs;
+export default new LocalizedStrings(langs);

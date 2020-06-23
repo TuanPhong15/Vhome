@@ -9,6 +9,8 @@ import {
   Alert,
 } from 'react-native';
 import {Data} from '../database/Data';
+import langs from '../languages/langs';
+
 export default function SignIn({navigation}) {
   const [PasswordVisibility, setPasswordVisibility] = useState(true);
   const [userPhone, setUserPhone] = useState('');
@@ -18,8 +20,10 @@ export default function SignIn({navigation}) {
     nextField.current.focus();
   };
   const CheckInput = () => {
-    if (userPhone === '' || userPass === '') {
-      Alert.alert('Vui lòng nhập đủ thông tin');
+    if (userPhone === '') {
+      Alert.alert(langs.errorUsernameIsNull);
+    } else if (userPass === '') {
+      Alert.alert(langs.errorUsernameIsNull);
     } else if (
       userPhone.trim().length >= 10 &&
       userPhone.trim().length <= 11 &&
@@ -30,7 +34,7 @@ export default function SignIn({navigation}) {
     ) {
       navigation.navigate('ServiceDraw');
     } else {
-      Alert.alert('Sai tên đăng nhập hoặc mật khẩu');
+      Alert.alert(langs.errorPhonenumberIncorrect);
     }
   };
   return (
@@ -51,7 +55,7 @@ export default function SignIn({navigation}) {
           onChangeText={text => {
             setUserPhone(text);
           }}
-          placeholder="Số điện thoại"
+          placeholder={langs.phonenumber}
         />
       </View>
 
@@ -63,7 +67,7 @@ export default function SignIn({navigation}) {
           ref={passRef}
           secureTextEntry={PasswordVisibility}
           style={styles.Container11}
-          placeholder="Mật khẩu"
+          placeholder={langs.password}
           returnKeyType="done"
           onChangeText={text => {
             setUserPass(text);
@@ -84,21 +88,21 @@ export default function SignIn({navigation}) {
       <View style={styles.Container14}>
         <TouchableOpacity style={styles.touchable} onPress={CheckInput}>
           <View style={styles.login}>
-            <Text style={styles.textLogin}>Đăng nhập</Text>
+            <Text style={styles.textLogin}>{langs.login}</Text>
           </View>
         </TouchableOpacity>
       </View>
       <View style={styles.Container16}>
         <View style={styles.Container17}>
           <TouchableOpacity onPress={() => navigation.navigate('Đăng ký')}>
-            <Text style={styles.Container18}>Đăng kí ngay</Text>
+            <Text style={styles.Container18}>{langs.register}</Text>
           </TouchableOpacity>
         </View>
-        <Text style={styles.Container19}>Bạn chưa có tài khoản?</Text>
+        <Text style={styles.Container19}>{langs.notRegister}</Text>
         <TouchableOpacity
           style={styles.touchable2}
           onPress={() => navigation.navigate('Lấy lại mật khẩu')}>
-          <Text style={styles.Container20}>Quên mật khẩu</Text>
+          <Text style={styles.Container20}>{langs.forgotPassword}</Text>
         </TouchableOpacity>
         <Text style={styles.Container21}>19008644</Text>
       </View>

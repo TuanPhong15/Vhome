@@ -8,8 +8,11 @@ import {
   StyleSheet,
 } from 'react-native';
 import {Data} from '../database/Data';
+import langs from '../languages/langs';
+import {VERSION} from '../config/config';
 const screenWidth = Dimensions.get('window').width;
 const screenHeight = Dimensions.get('window').height;
+
 export default function HomeScreen({navigation}) {
   return (
     <View style={styles.header}>
@@ -19,19 +22,19 @@ export default function HomeScreen({navigation}) {
       <View style={styles.containerII} />
       <View style={styles.containerIII} />
       <TouchableOpacity
-        onPress={() => navigation.navigate('Đăng nhập')}
+        onPress={() => navigation.navigate(langs.login)}
         style={styles.containnerIIIT}>
         <View style={styles.customer}>
-          <Text style={styles.fontCustomer}>Khách hàng</Text>
+          <Text style={styles.fontCustomer}>{langs.customer}</Text>
         </View>
       </TouchableOpacity>
       <View style={styles.containerV} />
       <TouchableOpacity onPress={() => navigation.navigate('SignIn2')}>
         <View style={styles.provider}>
-          <Text style={styles.fontProvider}>Nhân viên V-Home</Text>
+          <Text style={styles.fontProvider}>{langs.employees}</Text>
         </View>
       </TouchableOpacity>
-      <Text style={styles.footer}>V-HOME V1.0</Text>
+      <Text style={styles.footer}>{VERSION}</Text>
     </View>
   );
 }
